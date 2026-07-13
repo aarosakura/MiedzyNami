@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder Languages – Find a tutor who you really click with</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #242424;
+            background: #fff;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        :root {
+            --dark-green: #00463a;
+            --bright-green: #55ed47;
+            --lime: #c9f0b7;
+            --pale-lime: #defcd1;
+            --pale-purple: #e4cbfc;
+            --pale-orange: #f8d08b;
+            --pale-yellow: #fff282;
+            --pale-pink: #ffb4a3;
+            --light-mint: #b5dfab;
+            --grey-100: #242424;
+            --grey-200: #515151;
+            --grey-400: #d1d1d1;
+        }
+
+        .container {
+            max-width: 1370px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .container-fluid {
+            padding: 0 15px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col-12 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+        .col-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+        .col-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
+        .col-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+        .col-7 { flex: 0 0 58.333%; max-width: 58.333%; padding: 0 15px; }
+        .col-lg-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+        .col-lg-5 { flex: 0 0 41.666%; max-width: 41.666%; padding: 0 15px; }
+        .col-lg-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
+        .col-lg-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+        .col-lg-2 { flex: 0 0 16.666%; max-width: 16.666%; padding: 0 15px; }
+
+        @media (max-width: 992px) {
+            .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid transparent;
+            border-radius: 50rem;
+            padding: 1.25rem 1.438rem;
+            font-size: 1rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--bright-green);
+            color: var(--dark-green);
+            border-color: var(--bright-green);
+        }
+        .btn-primary:hover {
+            background: #35ea24;
+            border-color: #2ae819;
+            color: var(--dark-green);
+        }
+
+        .btn-secondary {
+            background: var(--dark-green);
+            color: #fff;
+            border-color: var(--dark-green);
+        }
+        .btn-secondary:hover {
+            background: #00201a;
+            border-color: #001310;
+            color: #fff;
+        }
+
+        .btn-outline-secondary {
+            background: transparent;
+            color: var(--dark-green);
+            border-color: var(--dark-green);
+        }
+        .btn-outline-secondary:hover {
+            background: var(--dark-green);
+            color: #fff;
+        }
+
+        .btn-light {
+            background: #f7f6f5;
+            color: var(--dark-green);
+            border-color: #f7f6f5;
+        }
+
+        .btn-sm {
+            padding: 0.875rem 0.938rem;
+            font-size: 0.9375rem;
+        }
+
+        .btn-lg {
+            padding: 2rem 3.905rem;
+            font-size: 1.875rem;
+        }
+
+        .btn-link {
+            background: none;
+            border: none;
+            color: var(--dark-green);
+            font-weight: 600;
+            padding: 1.25rem 1.438rem;
+        }
+        .btn-link:hover {
+            color: #38d02a;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .h1, h1 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 4.25rem;
+            font-weight: 600;
+            line-height: 1;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .h2, h2 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 3.625rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .h3, h3 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .h4, h4 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.15;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .display-1 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 8.75rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .display-2 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 6.25rem;
+            font-weight: 600;
+            line-height: 1;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .body-1 {
+            font-size: 1.625rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .body-2 {
+            font-size: 1.375rem;
+            letter-spacing: -0.02em;
+            line-height: 1.4;
+        }
+
+        .body-3 {
+            font-size: 1.25rem;
+            letter-spacing: -0.02em;
+            line-height: 1.4;
+        }
+
+        .body-4 {
+            font-size: 1.0625rem;
+            letter-spacing: -0.015em;
+            line-height: 1.3;
+        }
+
+        .medium { font-weight: 500; }
+
+        /* ===== UTILITY ===== */
+        .text-center { text-align: center; }
+        .text-white { color: #fff; }
+        .text-dark-green { color: var(--dark-green); }
+        .text-grey-200 { color: var(--grey-200); }
+        .text-grey-400 { color: var(--grey-400); }
+        .text-lime { color: var(--lime); }
+
+        .bg-white { background: #fff; }
+        .bg-light { background: #f7f6f5; }
+        .bg-bright-green { background: var(--bright-green); }
+        .bg-dark-green { background: var(--dark-green); }
+        .bg-pale-lime { background: var(--pale-lime); }
+        .bg-pale-purple { background: var(--pale-purple); }
+        .bg-pale-orange { background: var(--pale-orange); }
+        .bg-pale-yellow { background: var(--pale-yellow); }
+        .bg-pale-pink { background: var(--pale-pink); }
+        .bg-lime { background: var(--lime); }
+
+        .border-bottom { border-bottom: 1px solid var(--grey-400); }
+        .border-top { border-top: 1px solid var(--grey-400); }
+        .border-dark-green-10 { border-color: rgba(0,70,58,0.1); }
+        .border-light-mint { border-color: var(--light-mint); }
+
+        .rounded-lg { border-radius: 1.5rem; }
+        .rounded { border-radius: 1rem; }
+
+        .d-flex { display: flex; }
+        .d-block { display: block; }
+        .d-none { display: none; }
+        .d-contents { display: contents; }
+
+        .flex-column { flex-direction: column; }
+        .flex-row { flex-direction: row; }
+        .flex-wrap { flex-wrap: wrap; }
+        .align-items-center { align-items: center; }
+        .justify-content-center { justify-content: center; }
+        .justify-content-between { justify-content: space-between; }
+        .justify-content-start { justify-content: flex-start; }
+        .justify-content-end { justify-content: flex-end; }
+
+        .w-100 { width: 100%; }
+        .w-50 { width: 50%; }
+        .h-100 { height: 100%; }
+        .position-relative { position: relative; }
+        .position-absolute { position: absolute; }
+        .bottom-0 { bottom: 0; }
+        .top-0 { top: 0; }
+        .left-0 { left: 0; }
+        .right-0 { right: 0; }
+        .overflow-hidden { overflow: hidden; }
+
+        .py-3 { padding: 0.75rem 0; }
+        .py-4 { padding: 1.25rem 0; }
+        .py-5 { padding: 2rem 0; }
+        .py-7 { padding: 4rem 0; }
+        .py-8 { padding: 4.5rem 0; }
+        .py-9 { padding: 6.5rem 0; }
+        .px-2 { padding: 0 0.5rem; }
+        .px-3 { padding: 0 0.75rem; }
+        .px-4 { padding: 0 1.25rem; }
+        .px-5 { padding: 0 2rem; }
+        .px-6 { padding: 0 2.5rem; }
+        .px-0 { padding: 0; }
+        .pt-4 { padding-top: 1.25rem; }
+        .pt-5 { padding-top: 2rem; }
+        .pt-7 { padding-top: 4rem; }
+        .pt-8 { padding-top: 4.5rem; }
+        .pb-4 { padding-bottom: 1.25rem; }
+        .pb-5 { padding-bottom: 2rem; }
+        .pb-7 { padding-bottom: 4rem; }
+        .pb-8 { padding-bottom: 4.5rem; }
+        .pb-0 { padding-bottom: 0; }
+
+        .my-4 { margin: 1.25rem 0; }
+        .my-5 { margin: 2rem 0; }
+        .my-6 { margin: 2.5rem 0; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-4 { margin-top: 1.25rem; }
+        .mt-5 { margin-top: 2rem; }
+        .mt-6 { margin-top: 2.5rem; }
+        .mt-7 { margin-top: 4rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1.25rem; }
+        .mb-5 { margin-bottom: 2rem; }
+        .mb-6 { margin-bottom: 2.5rem; }
+        .mb-7 { margin-bottom: 4rem; }
+        .mb-8 { margin-bottom: 4.5rem; }
+        .mb-0 { margin-bottom: 0; }
+        .mx-auto { margin: 0 auto; }
+        .ml-auto { margin-left: auto; }
+        .mr-auto { margin-right: auto; }
+        .mr-2 { margin-right: 0.5rem; }
+        .ml-2 { margin-left: 0.5rem; }
+        .mr-4 { margin-right: 1.25rem; }
+
+        .gap-3 { gap: 0.75rem; }
+
+        @media (min-width: 768px) {
+            .d-md-flex { display: flex; }
+            .d-md-none { display: none; }
+            .py-md-10 { padding: 8.75rem 0; }
+            .py-md-8 { padding: 4.5rem 0; }
+            .px-md-5 { padding: 0 2rem; }
+            .px-md-8 { padding: 0 4.5rem; }
+            .mb-md-0 { margin-bottom: 0; }
+            .mb-md-5 { margin-bottom: 2rem; }
+            .mb-md-6 { margin-bottom: 2.5rem; }
+            .mb-md-8 { margin-bottom: 4.5rem; }
+            .mb-md-11 { margin-bottom: 12.5rem; }
+            .pt-md-8 { padding-top: 4.5rem; }
+            .pb-md-10 { padding-bottom: 8.75rem; }
+        }
+
+        @media (min-width: 992px) {
+            .d-lg-flex { display: flex; }
+            .d-lg-none { display: none; }
+            .d-lg-block { display: block; }
+            .flex-lg-row { flex-direction: row; }
+            .flex-lg-row-reverse { flex-direction: row-reverse; }
+            .py-lg-0 { padding: 0; }
+            .px-lg-4 { padding: 0 1.25rem; }
+            .px-lg-6 { padding: 0 2.5rem; }
+            .px-lg-8 { padding: 0 4.5rem; }
+            .pt-lg-6 { padding-top: 2.5rem; }
+            .pt-lg-7 { padding-top: 4rem; }
+            .pt-lg-8 { padding-top: 4.5rem; }
+            .pt-lg-9 { padding-top: 6.5rem; }
+            .pb-lg-6 { padding-bottom: 2.5rem; }
+            .pb-lg-7 { padding-bottom: 4rem; }
+            .pb-lg-9 { padding-bottom: 6.5rem; }
+            .mb-lg-0 { margin-bottom: 0; }
+            .mb-lg-5 { margin-bottom: 2rem; }
+            .mb-lg-6 { margin-bottom: 2.5rem; }
+            .mb-lg-8 { margin-bottom: 4.5rem; }
+            .mt-lg-0 { margin-top: 0; }
+            .mt-lg-5 { margin-top: 2rem; }
+            .mt-lg-6 { margin-top: 2.5rem; }
+            .mt-lg-9 { margin-top: 6.5rem; }
+        }
+
+        @media (max-width: 992px) {
+            .h1, h1 { font-size: 2.688rem; }
+            .h2, h2 { font-size: 2.5rem; }
+            .display-1 { font-size: 6.875rem; }
+            .display-2 { font-size: 5rem; }
+            .body-1 { font-size: 1.25rem; }
+            .body-2 { font-size: 1.063rem; }
+            .body-3 { font-size: 0.9375rem; }
+            .body-4 { font-size: 0.9375rem; }
+        }
+
+        @media (max-width: 768px) {
+            .h1, h1 { font-size: 2.625rem; }
+            .h2, h2 { font-size: 2rem; }
+            .display-1 { font-size: 6.25rem; }
+            .display-2 { font-size: 3.125rem; }
+        }
+
+        /* ===== CARD ===== */
+        .card {
+            background: #f9f7f1;
+            border-radius: 1.5rem;
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            word-wrap: break-word;
+            background-clip: border-box;
+            position: relative;
+        }
+        .card-body { padding: 1.25rem; flex: 1 1 auto; }
+        @media (min-width: 992px) { .card-body { padding: 2rem; } }
+
+        /* ===== BADGE ===== */
+        .badge {
+            display: inline-block;
+            padding: 0.75rem 0.875rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+        .badge-pill { border-radius: 10rem; }
+        .badge-secondary { background: var(--dark-green); color: #fff; }
+        .badge-white { background: #fff; color: var(--grey-100); }
+
+        /* ===== SHADOW ===== */
+        .shadow-pale-green {
+            position: relative;
+            margin-bottom: 1.25rem;
+            margin-right: 1.25rem;
+        }
+        .shadow-pale-green::before {
+            content: '';
+            position: absolute;
+            top: 1.25rem;
+            left: 1.25rem;
+            width: 100%;
+            height: 100%;
+            background: #bbdfaa;
+            border-radius: 1rem;
+            z-index: 1;
+        }
+        .shadow-pale-green > * { position: relative; z-index: 3; border-radius: 1rem; }
+        @media (max-width: 768px) {
+            .shadow-pale-green { margin-bottom: 0.75rem; margin-right: 0.75rem; }
+            .shadow-pale-green::before { top: 0.75rem; left: 0.75rem; }
+        }
+
+        .shadow-bottom-inner {
+            background: linear-gradient(0deg, rgba(0,0,0,0.5), transparent 40%);
+        }
+
+        /* ===== NAV ===== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 1.25rem;
+            background: #fff;
+            border-bottom: 1px solid var(--grey-400);
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+        }
+        .navbar .logo { margin-right: 2rem; }
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex: 1;
+        }
+        .navbar .nav-links a { text-decoration: none; }
+        .hamburger {
+            display: none;
+            background: var(--bright-green);
+            border: none;
+            border-radius: 50%;
+            padding: 0.5rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+        @media (max-width: 1260px) {
+            .navbar .nav-links { display: none; }
+            .hamburger { display: block; }
+        }
+
+        /* ===== HERO ===== */
+        .hero-section .hero-image {
+            background-image: url('https://a.storyblok.com/f/116773/1733x1155/ebfceff7ca/0001.jpg/m/444x144:1372x1150');
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 500px;
+        }
+        @media (max-width: 992px) {
+            .hero-section .hero-image { min-height: 300px; }
+        }
+
+        /* ===== STATS GRID ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            gap: 1rem;
+        }
+        .stats-grid hr { grid-column: 1 / -1; }
+
+        /* ===== ICON ===== */
+        .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--size, 122px);
+            height: var(--size, 122px);
+        }
+        @media (min-width: 992px) {
+            .icon {
+                width: var(--size-lg, 138px);
+                height: var(--size-lg, 138px);
+            }
+        }
+
+        /* ===== LOGO CONTAINER ===== */
+        .logo-container {
+            display: flex;
+            gap: 1.25rem;
+            overflow-x: auto;
+            padding: 0.75rem;
+            scrollbar-width: none;
+        }
+        .logo-container::-webkit-scrollbar { display: none; }
+        .logo-container > * {
+            aspect-ratio: 1;
+            width: 11rem;
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .logo-container > * { flex: 1 0 6.563rem; width: 6.563rem; }
+            .logo-container { gap: 0.5rem; }
+        }
+
+        .logo {
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: 80%;
+            border-radius: 34%;
+            padding: 0.75rem 0;
+        }
+        .guardian-logo { background-color: #1f2e60; background-image: url('https://a.storyblok.com/f/116773/118x103/ae2c200d5a/the-guardian.png/m/300x0'); }
+        .telegraph-logo { background-color: #fff; background-image: url('https://a.storyblok.com/f/116773/136x52/f4ae5a9b4a/the-telegraph.png/m/300x0'); border: 1px solid #e7e7e7; }
+        .tech-radar-logo { background-color: #2e6e92; background-image: url('https://a.storyblok.com/f/116773/128x128/b06e371b6a/tech-radar-logo.png/m/300x0'); }
+        .bbc-logo { background-color: #fff; background-image: url('https://a.storyblok.com/f/116773/150x85/04ce9810ec/bbc-logo.png/m/300x0'); border: 1px solid #e7e7e7; }
+        .northern-stars-logo { background-color: #512a5b; background-image: url('https://a.storyblok.com/f/116773/134x83/22742e8488/northern-stars.png/m/300x0'); }
+
+        /* ===== SAFETY ICON ===== */
+        .safety-icon { width: 55px; height: 55px; flex-shrink: 0; }
+
+        /* ===== RESPONSIVE HELPERS ===== */
+        .img-fluid { max-width: 100%; height: auto; }
+        .object-fit-cover { object-fit: cover; }
+        .list-unstyled { list-style: none; padding-left: 0; }
+        .text-nowrap { white-space: nowrap; }
+        .text-pre-line { white-space: pre-line; }
+
+        /* ===== FLICKING CAROUSEL ===== */
+        .flicking-viewport {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .flicking-camera {
+            display: flex;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .carousel-card {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            width: 100%;
+        }
+        @media (min-width: 768px) {
+            .carousel-card { flex: 0 0 346px; width: 346px; }
+        }
+        @media (min-width: 1261px) {
+            .carousel-card { flex: 0 0 488px; width: 488px; }
+        }
+
+        /* ===== MOBILE MENU OVERLAY ===== */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 1040;
+            padding: 1.25rem;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu .close-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+        .mobile-menu .menu-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0,70,58,0.1);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-green);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mobile-menu .menu-item:last-child { border-bottom: none; }
+
+        /* ===== STICKY SCROLL ===== */
+        .scroll-container { height: 175vh; }
+        .sticky-container {
+            min-height: 100vh;
+            position: sticky;
+            top: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .link-border { border-bottom: 1px solid var(--light-mint); }
+        @media (min-width: 992px) { .link-border { border-bottom: none; } }
+
+        /* ===== RESPONSIVE FIXES ===== */
+        @media (max-width: 767px) {
+            .btn-lg { padding: 1.5625rem 2.5rem; font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="https://a.storyblok.com/f/116773/143x31/8cbea3f4f4/tutorful-logo-dark-green.svg" width="120" height="31" alt="Placeholder Languages">
+        </a>
+        <div class="nav-links">
+            <a href="#" class="btn btn-link btn-sm">About ferg</a>
+            <a href="#" class="btn btn-link btn-sm">How it fergs</a>
+            <a href="#" class="btn btn-link btn-sm">Specialist ferg competition preparation</a>
+            <a href="#" class="btn btn-link btn-sm">School age learners</a>
+            <a href="#" class="btn btn-link btn-sm">Adult learners</a>
+            <a href="#" class="btn btn-link btn-sm">Resources</a>
+            <a href="#" class="btn btn-link btn-sm ml-auto">Login</a>
+            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center">
+                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"><circle cx="4.95103" cy="5.89976" r="4.10103" stroke="#00463A" stroke-width="1.7"/><path d="M10.4479 12.6529C10.7798 12.9848 11.318 12.9848 11.65 12.6529C11.9819 12.3209 11.9819 11.7827 11.65 11.4508L10.4479 12.6529ZM7.53958 9.7446L10.4479 12.6529L11.65 11.4508L8.74167 8.54251L7.53958 9.7446Z" fill="#00463A"/></svg>
+                <span class="ml-2">Find a tutor</span>
+            </a>
+        </div>
+        <button class="hamburger" onclick="toggleMobileMenu()">
+            <svg width="42" height="43" viewBox="0 0 42 43"><path d="M14 19.9487H28" stroke="#00463A" stroke-width="2"/><path d="M14 24.9487H28" stroke="#00463A" stroke-width="2"/></svg>
+        </button>
+    </nav>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMobileMenu()">✕</button>
+        <a href="#" class="menu-item">About us <span>›</span></a>
+        <a href="#" class="menu-item">How it works <span>›</span></a>
+        <a href="#" class="menu-item">Specialist school competition preparation <span>›</span></a>
+        <a href="#" class="menu-item">School age learners <span>›</span></a>
+        <a href="#" class="menu-item">Adult learners <span>›</span></a>
+        <a href="#" class="menu-item">Resources <span>›</span></a>
+        <a href="#" class="btn btn-primary mt-4">Find a tutor</a>
+        <a href="#" class="btn btn-link mt-2">Login</a>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-12 col-lg-6 order-1 order-lg-0 d-flex flex-column">
+                    <div class="flex-grow-1 mx-auto py-7 px-4" style="max-width: 600px;">
+                        <a href="#" style="display:inline-block; margin-bottom:1.5rem;">
+                            <img src="https://a.storyblok.com/f/116773/97x39/18a52f6641/hero-trust-people.png/m/200x0" alt="Trustpilot" width="97" height="39">
+                            <svg width="180" height="37" viewBox="0 0 180 37"><text fill="#00463A" font-family="Inter" font-size="13.9" x="0.2" y="33.1">Trustpilot rating: Excellent</text><path d="M7.24 0.08l2.08 4.19 4.63 0.68-3.35 3.27 0.78 4.61-4.14-2.17-4.14 2.17 0.78-4.61-3.35-3.27 4.63-0.68L7.24 0.08z" fill="#49D63C"/></svg>
+                        </a>
+                        <h1 class="h1 my-5">
+                            Find a tutor who<br>
+                            you really click with.
+                        </h1>
+                        <a href="#" class="btn btn-primary">Find a tutor</a>
+                    </div>
+                    <div class="bg-pale-lime">
+                        <img src="https://a.storyblok.com/f/116773/1461x654/fcfcd6aacb/hero-app.png/m/" alt="Placeholder Languages mobile app" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 order-0 order-lg-1 hero-image d-none d-lg-block"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INTRO TEXT ===== -->
+    <section class="d-flex justify-content-center container py-9">
+        <div style="max-width:56%; text-align:center;">
+            <h2 class="h2">
+                Book one-to-one
+                <svg width="47" height="47" viewBox="0 0 47 47" style="display:inline-block;vertical-align:middle;"><path d="M29.64 0H17.36C7.77 0 0 7.77 0 17.36v12.28C0 39.23 7.77 47 17.36 47h12.28C39.23 47 47 39.23 47 29.64V17.36C47 7.77 39.23 0 29.64 0z" fill="#92D0FF"/><path d="M29.01 15.86a6.58 6.58 0 0 0-4.23 1.22 6.89 6.89 0 0 1 2.92 6.77 6.89 6.89 0 0 1-2.92 6.77 6.58 6.58 0 0 0 4.23 1.22c4.41 0 7.99-3.57 7.99-7.98s-3.58-7.98-7.99-7.98z" fill="#00463A"/><path d="M33.38 23.85a4.32 4.32 0 1 1-8.63 0 4.32 4.32 0 0 1 8.63 0" stroke="#92D0FF" stroke-width="1.5"/><path d="M10.37 23.85c0 4.41 3.57 7.99 7.99 7.99 2.04 0 3.91-.78 5.33-2.04a6.66 6.66 0 0 1-2.66-5.25c0-2.36 1.04-4.48 2.66-5.94a7.8 7.8 0 0 0-5.33-2.05c-4.41 0-7.99 3.58-7.99 7.99z" fill="#00463A"/><path d="M21.03 23.85a6.66 6.66 0 0 0 2.66 5.94 6.66 6.66 0 0 0 0-11.88 6.66 6.66 0 0 0-2.66 5.94z" fill="#00463A"/><path d="M22.59 23.85a4.32 4.32 0 1 1-8.63 0 4.32 4.32 0 0 1 8.63 0" stroke="#92D0FF" stroke-width="1.5"/></svg>
+                tuition with our
+                <svg width="47" height="47" viewBox="0 0 47 47" style="display:inline-block;vertical-align:middle;"><path d="M29.64 0H17.36C7.77 0 0 7.77 0 17.36v12.28C0 39.23 7.77 47 17.36 47h12.28C39.23 47 47 39.23 47 29.64V17.36C47 7.77 39.23 0 29.64 0z" fill="#DFC3F0"/><rect x="13" y="12.34" width="8.64" height="8.64" rx="1.57" fill="#00463A"/><rect x="13" y="22.55" width="8.64" height="8.64" rx="1.57" fill="#00463A"/><path d="M24.83 23.75l3.9 12.36c.26.84 1.44.87 1.75.05l2.02-5.36a.5.5 0 0 1 .54-.3l5.36-2.02c.82-.31.79-1.49-.05-1.75l-12.36-3.9a.56.56 0 0 0-.71.7l3.9 12.36c.26.84 1.44.87 1.75.05l2.02-5.36a.5.5 0 0 1 .54-.3l5.36-2.02c.82-.31.79-1.49-.05-1.75l-12.36-3.9a.56.56 0 0 0-.71.7z" fill="#00463A"/></svg>
+                hand-picked and highly-qualified tutors.
+                <svg width="83" height="54" viewBox="0 0 83 54" style="display:inline-block;vertical-align:middle;"><rect width="83" height="54" fill="transparent"/></svg>
+                And help your child get the exam
+                <svg width="47" height="47" viewBox="0 0 47 47" style="display:inline-block;vertical-align:middle;"><path d="M29.64 0H17.36C7.77 0 0 7.77 0 17.36v12.28C0 39.23 7.77 47 17.36 47h12.28C39.23 47 47 39.23 47 29.64V17.36C47 7.77 39.23 0 29.64 0z" fill="#FFF282"/><rect x="12.64" y="23.16" width="6.63" height="8.84" rx="0.74" fill="#00463A"/><rect x="20" y="19.48" width="6.63" height="12.52" rx="0.74" fill="#00463A"/><rect x="27.37" y="15.79" width="6.63" height="16.21" rx="0.74" fill="#00463A"/></svg>
+                results they deserve.
+            </h2>
+        </div>
+    </section>
+
+    <!-- ===== AS FEATURED IN ===== -->
+    <div class="mb-7">
+        <section class="d-flex align-items-center flex-wrap mx-auto" style="max-width:fit-content; gap:1rem;">
+            <p class="body-2 medium mr-4">As featured in:</p>
+            <div class="d-flex logo-container">
+                <div class="logo guardian-logo"></div>
+                <div class="logo telegraph-logo"></div>
+                <div class="logo tech-radar-logo"></div>
+                <div class="logo bbc-logo"></div>
+                <div class="logo northern-stars-logo"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== STATS SECTION ===== -->
+    <div class="bg-gradient scroll-container">
+        <div class="sticky-container pt-5 pt-lg-8 d-flex justify-content-center align-items-start">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="stats-grid">
+                            <span class="display-2">11K+</span>
+                            <span class="body-2">Tutors to choose from 🧑🏽‍🏫</span>
+                            <hr class="w-100 my-4 border-dark-green-10">
+                            <span class="display-2">3.1M+</span>
+                            <span class="body-2">Lessons completed ✍️</span>
+                            <hr class="w-100 my-4 border-dark-green-10">
+                            <span class="display-2">200K+</span>
+                            <span class="body-2">Happy students 😄</span>
+                            <hr class="w-100 my-4 border-dark-green-10">
+                            <span class="display-2">81K+</span>
+                            <span class="body-2">5-star tutor reviews ⭐</span>
+                            <hr class="w-100 my-4 border-dark-green-10">
+                            <span class="display-2">90%</span>
+                            <span class="body-2">Improve by one grade ⚡️</span>
+                            <hr class="w-100 my-4 border-dark-green-10">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card bg-bright-green">
+                            <div class="card-body p-0">
+                                <div class="pt-4 px-4">
+                                    <p class="h3 mb-4">
+                                        A great first lesson<br>
+                                        Guaranteed.
+                                    </p>
+                                </div>
+                                <div class="position-relative w-100">
+                                    <div class="card bg-white">
+                                        <div class="card-body p-0">
+                                            <div class="pt-4 px-4">
+                                                <p class="h3 mb-4">
+                                                    Book online lessons<br>
+                                                    with experienced<br>
+                                                    tutors from just £20p/h.
+                                                </p>
+                                            </div>
+                                            <div class="pb-4 px-4">
+                                                <a href="#" class="btn btn-secondary mb-4">Find a tutor</a>
+                                                <div class="d-flex justify-content-end">
+                                                    <span class="icon" style="--size:122px;--size-lg:138px;">
+                                                        <svg width="139" height="139" viewBox="0 0 139 139"><path d="M87.7 0H51.4C23.07 0 .1 22.98.1 51.31v36.3c0 28.33 22.97 51.3 51.3 51.3h36.31c28.33 0 51.29-22.97 51.29-51.3V51.31C139 22.98 116.03 0 87.7 0z" fill="#E4CBFC"/><path d="M84.57 49.34H54.63c-6.36 0-11.53 5.16-11.53 11.53v12.99c0 6.37 5.17 11.54 11.53 11.54h29.94c6.37 0 11.53-5.17 11.53-11.54V60.87c0-6.37-5.16-11.53-11.53-11.53z" fill="#00463A"/><path d="M85.1 91.34H53.79v5.34H85.1v-5.34z" fill="#00463A"/></svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pb-4 px-4">
+                                    <p class="body-3 mb-4 text-dark-green">
+                                        Not happy with your first lesson? Let us know, and we'll pay for your next one with a new tutor.
+                                    </p>
+                                    <div class="d-flex justify-content-end">
+                                        <span class="icon" style="--size:122px;--size-lg:138px;">
+                                            <svg width="139" height="140" viewBox="0 0 139 140"><path d="M87.7.12H51.4C23.07.12.1 23.08.1 51.41v36.31c0 28.33 22.97 51.29 51.3 51.29h36.31c28.33 0 51.29-22.96 51.29-51.29V51.41C139 23.08 116.03.12 87.7.12z" fill="#C9F0B7"/><path d="M100.73 66.43l-9.37-5.96 2.42-10.85c.59-2.66-1.78-5.03-4.43-4.44L78.49 47.6l-5.96-9.38c-1.46-2.3-4.81-2.3-6.27 0l-5.96 9.38-10.85-2.42c-2.66-.59-5.02 1.78-4.43 4.44l2.42 10.85-9.38 5.96c-2.3 1.46-2.3 4.81 0 6.27l9.38 5.96-2.42 10.85c-.59 2.66 1.78 5.02 4.43 4.43l10.85-2.42 5.96 9.38c1.46 2.3 4.81 2.3 6.27 0l5.96-9.38 10.85 2.42c2.66.59 5.02-1.78 4.43-4.43l-2.42-10.85 9.38-5.96c2.3-1.46 2.3-4.81 0-6.27zm-34.13 14.8l-12.02-12.02 3.86-3.86 8.16 8.16 14.39-14.39 3.86 3.86-18.25 18.25z" fill="#00463A"/></svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== TRUSTED TUTORS ===== -->
+    <div class="container my-7">
+        <div class="d-flex flex-wrap flex-column-reverse flex-lg-row">
+            <div class="col-12 col-lg-6 pr-xl-9">
+                <h2 class="mb-4">
+                    Trusted tutors -<br>
+                    handpicked by our team.
+                </h2>
+                <p class="body-2 mb-5">
+                    We pick the best, background-checked tutors from across the UK. All our tutors have 2+ years' experience and are individually evaluated. We only accept 1 in 8 of the tutors who apply.
+                </p>
+                <a href="#" class="btn btn-outline-secondary">Our tutors</a>
+            </div>
+            <div class="col d-flex justify-content-center mb-6 justify-content-lg-end offset-lg-1">
+                <div class="shadow-pale-green">
+                    <img src="https://a.storyblok.com/f/116773/1733x1155/7af67690ec/personalised-private-tuition.jpg/m/200x40:1155x1100" alt="Girl with laptop" class="img-fluid" width="587" height="630">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== START LEARNING ===== -->
+    <div class="container my-7">
+        <div class="d-flex flex-wrap flex-column-reverse flex-lg-row-reverse">
+            <div class="col-12 col-lg-6 pl-xl-9 offset-lg-1">
+                <h2 class="mb-4">
+                    Start learning<br>
+                    again - at any age.
+                </h2>
+                <p class="body-2 mb-5">
+                    From learning a new instrument, to mastering a language, you're never too old to learn something new.
+                </p>
+                <a href="#" class="btn btn-outline-secondary">Adult tuition</a>
+            </div>
+            <div class="col d-flex justify-content-center mb-6 justify-content-lg-start">
+                <div class="shadow-pale-green">
+                    <img src="https://a.storyblok.com/f/116773/1733x1155/7af67690ec/personalised-private-tuition.jpg/m/200x40:1155x1100" alt="Placeholder Languages phone" class="img-fluid" width="587" height="650">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== GCSE STAT ===== -->
+    <div class="container py-5">
+        <div class="d-flex flex-wrap bg-bright-green rounded-lg p-5 align-items-center">
+            <span class="icon" style="--size:124px;--size-lg:170px;">
+                <svg width="170" height="171" viewBox="0 0 170 171"><path d="M107.15.59H62.74C28.09.59 0 28.68 0 63.33v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V63.33c0-34.65-28.09-62.74-62.74-62.74z" fill="#C9F0B7"/><rect x="54" y="82.59" width="19" height="28" rx="3" fill="#00463A"/><rect x="75" y="71.59" width="20" height="39" rx="3" fill="#00463A"/><rect x="97" y="59.59" width="19" height="51" rx="3" fill="#00463A"/></svg>
+            </span>
+            <span class="display-1 px-lg-6 py-3">8h</span>
+            <div class="ml-lg-auto">
+                <div class="body-1 mb-4">
+                    It takes just 8 hours of tutoring<br>
+                    to move up one 📚 GCSE grade.
+                </div>
+                <div class="body-3">(On average)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PERSONALISED TUITION ===== -->
+    <div class="container py-5">
+        <div class="text-center py-5">
+            <h2 class="h2 mb-4">Personalised private tuition that gets results.</h2>
+            <p class="body-2 mx-auto" style="max-width:700px;">
+                Our experienced tutors take the time to understand where each student needs to focus and their preferred way of learning. They will make a difference that you can see – and we can measure.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 my-5">
+                <span class="badge badge-pill badge-white">🏆 you achieved level 2!</span>
+                <span class="badge badge-pill badge-white">👏🏼 well done!</span>
+            </div>
+            <p class="body-1 font-weight-bold">90% of our students improve by at least one grade.</p>
+            <p class="body-3 text-grey-200">98% of our students said their tutors made a difference</p>
+            <a href="#" class="btn btn-primary mt-4">Find a tutor</a>
+        </div>
+    </div>
+
+    <!-- ===== TESTIMONIALS CAROUSEL ===== -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <h2 class="h2 text-center mb-5">98% of our students said<br>their tutors made a difference</h2>
+            <div class="flicking-viewport">
+                <div class="flicking-camera" id="carousel">
+                    <div class="card carousel-card bg-light">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
+                            </div>
+                            <p class="body-3 medium text-dark-green">Excellent tutor very patient</p>
+                            <p class="body-3">Excellent tutor very patient, knowledgeable and professional. My niece loves her lessons with Ashkan, her tutor.</p>
+                            <div class="d-flex mt-4 justify-content-between">
+                                <div>
+                                    <div class="body-4 text-grey-200">Denise</div>
+                                    <div class="body-4 text-grey-200">United Kingdom</div>
+                                </div>
+                                <div class="bg-pale-yellow rounded-circle d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.5rem;font-weight:600;">D</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card carousel-card bg-light">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
+                            </div>
+                            <p class="body-3 medium text-dark-green">Excellent online tutoring</p>
+                            <p class="body-3">After reviewing a number of different tutors we selected Kerri who supports our 9 year old. The classes are tailored and engaging.</p>
+                            <div class="d-flex mt-4 justify-content-between">
+                                <div>
+                                    <div class="body-4 text-grey-200">Catherine</div>
+                                    <div class="body-4 text-grey-200">London</div>
+                                </div>
+                                <div class="bg-pale-pink rounded-circle d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.5rem;font-weight:600;">C</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card carousel-card bg-light">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
+                            </div>
+                            <p class="body-3 medium text-dark-green">Tutorful - the best place to find tutors!</p>
+                            <p class="body-3">For any parent looking for a tutor for their children, Tutorful is for you. So much information about the tutors.</p>
+                            <div class="d-flex mt-4 justify-content-between">
+                                <div>
+                                    <div class="body-4 text-grey-200">Cleopatra, Parent</div>
+                                    <div class="body-4 text-grey-200">London</div>
+                                </div>
+                                <div class="bg-pale-orange rounded-circle d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.5rem;font-weight:600;">C</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card carousel-card bg-light">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
+                            </div>
+                            <p class="body-3 medium text-dark-green">Amazing teacher</p>
+                            <p class="body-3">Erin is an exceptional English tutor. Her professionalism and ability to connect with students have made a significant impact.</p>
+                            <div class="d-flex mt-4 justify-content-between">
+                                <div>
+                                    <div class="body-4 text-grey-200">Angelika</div>
+                                    <div class="body-4 text-grey-200">United Kingdom</div>
+                                </div>
+                                <div class="bg-pale-purple rounded-circle d-flex align-items-center justify-content-center" style="width:60px;height:60px;font-size:1.5rem;font-weight:600;">A</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== STEPS SECTION ===== -->
+    <section class="container-fluid bg-lime py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5">
+                    <div class="sticky-top py-7" style="top:100px;">
+                        <h2 class="h2 mb-4">The right tutor for your child. Peace of mind for you.</h2>
+                        <p class="body-2">From focused tutoring in a single subject, to ongoing academic support from a SEN specialist, we make finding the right tutor simpler.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 offset-lg-1 pt-lg-7 pb-4">
+                    <div class="card border-0 bg-transparent">
+                        <p class="text-dark-green body-1">Start with a simple search 🔍</p>
+                        <p class="body-2 mb-6">Find matches by subject, academic level or exam.</p>
+                    </div>
+                    <div class="card border-0 bg-transparent">
+                        <p class="text-dark-green body-1">Shortlist 3 favourites 💜</p>
+                        <p class="body-2 mb-6">Read detailed profiles and filter tutors by availability, SEN experience, price and more.</p>
+                    </div>
+                    <div class="card border-0 bg-transparent">
+                        <p class="text-dark-green body-1">Book your first lesson with confidence ✅</p>
+                        <p class="body-2 mb-6">If for any reason your tutor or lesson isn't the right fit, we'll cover the cost of your next lesson with a new tutor.</p>
+                    </div>
+                    <div class="card border-0 bg-transparent">
+                        <p class="text-dark-green body-1">Learn safely on our platform 🔒</p>
+                        <p class="body-2 mb-6">Book, pay for and attend video lessons securely through our platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOCUSED LEARNING ===== -->
+    <div class="bg-dark-green py-8">
+        <div class="container">
+            <div class="row justify-content-between mb-8">
+                <h2 class="h2 text-lime col-12 col-sm-6">Focused learning that fits around your life.</h2>
+                <p class="body-2 text-white col-12 col-sm-5">
+                    With online tutoring, you can create a regular learning schedule with personalised lessons delivered by someone with specialist knowledge.
+                </p>
+            </div>
+            <div class="row flex-column flex-sm-row justify-content-between">
+                <div class="col-12 col-sm-4 col-md-3 d-flex flex-column align-items-center mb-5 mb-sm-0">
+                    <span class="icon mb-3" style="--size:124px;--size-lg:170px;">
+                        <svg width="171" height="171"><path d="M107.7.21H63.3C28.64.21.55 28.3.55 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#E4CBFC"/><path d="M112.03 83.94v15.07c0 .26-.01.68-.03.95l-.04.61c-.03.24-.06.48-.09.72l-.04.39-.06.59-.03.26-.05.42-.05.27-.06.31-.06.33-.04.18-.05.25-.06.24-.06.18-.07.32-.03.11-.08.36-.02.06-.15.6a23.5 23.5 0 0 1-.11.37c-.07.27-.15.53-.23.78l-.05.13-.11.35-.03.06-.1.28-.01.05-.14.39c-.06.14-.11.27-.17.4l-.13.37-.05.1-.04.08-.06.14-.05.09-.03.08-.12.28-.01.02-.08.2-.02.03-.08.19-.03.06-.12.25-.14.28-.05.08-.1.17-.14.24-.21.34-.05.07-.15.23-.1.15-.16.23-.1.14-.22.3-.08.1-.1.13-.15.18-.16.2-.26.29-.11.11-.13.13-.11.1-.21.21-.17.14-.21.2-.14.11-.23.18-.17.12-.2.15-.18.12-.22.13-.2.11-.24.12-.18.08-.37.17-.11.04-.23.09-.3.11-.18.06-.21.07-.21.06-.17.04-.52.14-.38.09-.1.02-.2.04-.38.07h-.02c-1.89.73-3.94 1.14-6.09 1.14H76.18c-2.15 0-4.2-.41-6.09-1.14h-.02c-.11-.04-.22-.09-.33-.14l-.05-.02-.06-.02c-.23-.1-.46-.2-.69-.32l-.04-.02-.07-.03c-.21-.1-.42-.21-.62-.32l-.06-.04-.08-.04c-.16-.09-.32-.19-.48-.28l-.09-.05-.1-.06c-.19-.12-.38-.24-.56-.36l-.06-.04-.04-.03-.02-.01h-.01l-.13-.08-.04-.02-.08-.06-.18-.1-.12-.08-.05-.02-.01-.01c-.2-.12-.4-.24-.59-.37l-.06-.04-.07-.05c-.13-.08-.26-.17-.39-.26l-.03-.02-.06-.04-.12-.08-.07-.04-.03-.02-.05-.03-.1-.07-.01-.01-.08-.05-.02-.01-.15-.1-.08-.06-.07-.05c-.14-.1-.28-.2-.42-.3l-.08-.06-.04-.03-.05-.03-.09-.07-.09-.07-.11-.08-.03-.02-.15-.12-.09-.08-.18-.15-.08-.06-.16-.14-.19-.17-.14-.12-.13-.13-.23-.21-.15-.15-.11-.1-.22-.22-.04-.04-.08-.08-.08-.09-.17-.2-.15-.18-.03-.04-.16-.2-.06-.09-.14-.2-.04-.05-.1-.14-.12-.18-.14-.2-.02-.04-.12-.18-.1-.17-.04-.06-.12-.2-.03-.06-.03-.05-.07-.13-.14-.24-.03-.06-.08-.15-.06-.12-.06-.13-.03-.06-.03-.08-.05-.12-.08-.17-.03-.09-.05-.13-.01-.04c-.09-.26-.18-.52-.26-.79l-.06-.2-.04-.16-.06-.2-.01-.04-.03-.1-.01-.04-.05-.18v-.01l-.03-.12-.02-.08-.02-.09-.03-.09-.01-.05v-.01l-.02-.07-.01-.03-.01-.06c-.03-.27-.05-.53-.08-.8v-.01-.01c-.02-.26-.03-.68-.03-.93V79.87c0-.25.01-.67.03-.93v-.01-.01c.01-.2.03-.41.04-.61v-.08-.03c.03-.24.05-.49.08-.73v-.03-.03c.04-.27.09-.54.14-.8v-.01-.01c.08-.28.14-.55.22-.82v-.02-.03c.05-.23.1-.45.16-.66l.03-.15.02-.07c.07-.25.15-.49.23-.72l.04-.12.02-.08.06-.18.02-.05.08-.22.01-.03.06-.15.01-.03.08-.19.08-.2.02-.05.06-.13.11-.26.02-.05.16-.35.03-.05.01-.03.1-.2.05-.1.09-.18.11-.22.01-.02.03-.05.14-.26.05-.09.14-.26.07-.12.08-.14.11-.2.14-.24.01-.02.03-.05.12-.2.09-.15.09-.14.05-.08.13-.2.15-.23.08-.12.14-.2.18-.25.05-.07.1-.13.16-.21.23-.29.08-.1.1-.11.14-.16.12-.13.19-.19.12-.11.22-.2.14-.12.16-.14.2-.15.1-.08.17-.12.23-.15.15-.1.2-.12.14-.08.27-.14.15-.07.26-.11.09-.04.21-.08.3-.1.1-.03.21-.07.31-.08.14-.04.2-.04.31-.06h.03c1.89-.73 3.94-1.14 6.09-1.14h17.03c2.15 0 4.2.41 6.09 1.14h.02c.11.04.23.09.34.14l.08.02.07.02c.23.1.47.2.7.31l.05.02.06.03c.2.1.4.2.6.32l.07.03.08.05c.17.09.33.18.49.28l.05.03.05.03.07.04.04.03.01.01c.2.12.39.25.58.37l.06.04.07.05.13.08.08.05.04.03.11.07.07.05.03.02.05.03.1.08.07.04.14.1.08.06.06.04.15.11.08.06.07.05.14.1.09.07.07.05.11.08.08.07.03.02.14.11.1.09.07.06.08.07.05.04.09.08.08.08.04.03.14.14.13.13.1.1.17.17.1.11.13.14.06.07.12.13.14.16.14.17.01.01.12.16.04.05.08.1.16.22.03.04.13.2.06.08.09.14.12.18.09.14.08.13.04.06.12.18.12.19.05.09.09.14.11.18.08.14.04.07.06.1.09.15.02.03.07.12.04.07.08.15.03.06.06.11.04.08.07.14.06.12.09.19.05.1.04.09.03.06.05.11.03.07.05.11.02.06.04.09.06.12.08.18.03.06.04.09.05.13.06.13.05.13.06.14.05.14.08.19c.01.04.02.08.03.12l.02.06.03.1.02.06.02.08.02.06.03.09.02.08.01.04.02.08.02.08.02.05.03.13.02.07.02.08.01.05.02.1.02.07.04.15.02.08.02.08.01.05.02.08v.01c.01.04.02.08.02.13.02.08.02.15.03.23v.01c.01.03.01.06.01.08.01.05.01.09.02.14.02.13.03.26.03.4v.01.01c.02.26.03.68.03.93zm-14.7 4.72-9.95 1.98a.96.96 0 0 1-1.13-.77l1.98-9.95c.02-.4.19-.79.47-1.08l22.69-22.69c1.83-1.83 4.8-1.83 6.63 0l3.61 3.61c1.83 1.83 1.83 4.8 0 6.63l-22.69 22.69c-.29.29-.67.45-1.07.47z" fill="#00463A"/><path d="M99.86 101.07l-4.22-19.52h.08l4.22 19.52z" fill="#00463A"/></svg>
+                    </span>
+                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">Personalised</span> learning that reflects each student's needs.</p>
+                </div>
+                <div class="col-12 col-sm-4 col-md-3 d-flex flex-column align-items-center mb-5 mb-sm-0">
+                    <span class="icon mb-3" style="--size:124px;--size-lg:170px;">
+                        <svg width="171" height="171"><path d="M107.81.21H63.4C28.74.21.65 28.3.65 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#C9F0B7"/><path d="M102.55 62.43a22.2 22.2 0 0 0-13.03 3.76 29.8 29.8 0 0 1 9 20.82c0 8.18-3.46 15.58-8.99 20.82a22.2 22.2 0 0 0 13.02 3.76c13.58 0 24.58-11 24.58-24.58s-11-24.58-24.58-24.58z" fill="#00463A"/><path d="M115.97 87.01a13.28 13.28 0 1 1-26.56 0 13.28 13.28 0 0 1 26.56 0" stroke="#C9F0B7" stroke-width="4.61"/><path d="M45.18 87.01a24.58 24.58 0 0 0 41.78 17.32 23.94 23.94 0 0 1-8.19-18.28c0-7.26 3.18-13.79 8.18-18.29a23.97 23.97 0 0 0-16.47-6.29c-13.58 0-24.58 11-24.58 24.58z" fill="#00463A"/><path d="M77.97 87.01a23.94 23.94 0 0 0 8.18 18.28 23.94 23.94 0 0 0 0-36.57 23.94 23.94 0 0 0-8.18 18.29z" fill="#00463A"/><path d="M82.79 87.01a13.28 13.28 0 1 1-26.56 0 13.28 13.28 0 0 1 26.56 0" stroke="#C9F0B7" stroke-width="4.61"/></svg>
+                    </span>
+                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">One-to-one</span> attention that makes a bigger impact, faster.</p>
+                </div>
+                <div class="col-12 col-sm-4 col-md-3 d-flex flex-column align-items-center">
+                    <span class="icon mb-3" style="--size:124px;--size-lg:170px;">
+                        <svg width="171" height="171"><path d="M107.31.21H62.9C28.24.21.15 28.3.15 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#FFF282"/><path d="M99.79 64.68v-8.46h-6.56v7.32h-17.51v-7.32h-6.56v8.46c-6.15 2.43-10.5 8.5-10.5 15.6v18.95c0 9.25 7.38 16.74 16.49 16.74h18.66c9.11 0 16.49-7.49 16.49-16.74V80.28c0-7.1-4.36-13.16-10.5-15.6zm-11.97 37.32h-5.33v-14.54l-2.76 2.96-3.87-3.72 7.36-7.89c.75-.8 1.9-1.06 2.92-.65 1.01.41 1.68 1.4 1.68 2.51v21.33z" fill="#00463A"/></svg>
+                    </span>
+                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">Flexibility</span> to fit around school and family life.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SAFETY SECTION ===== -->
+    <div class="container py-5">
+        <h2 class="h1 text-center pt-8 pb-5">Our students' safety<br>comes first.</h2>
+        <div class="shadow-pale-green">
+            <div class="position-relative overflow-hidden rounded">
+                <div class="bg-dark-green text-white p-5" style="min-height:400px;display:flex;align-items:center;justify-content:center;font-size:2rem;">
+                    <div class="text-center">
+                        <p>🎥 Safety Video Placeholder</p>
+                        <p class="body-3">Enhanced background checks • Recorded lessons • Secure messaging</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-5 my-5">
+            <div class="d-flex align-items-center">
+                <svg width="55" height="55" viewBox="0 0 55 55" class="safety-icon"><path d="M34.56.68H20.44C9.43.68.5 9.61.5 20.63v14.11c0 11.02 8.93 19.94 19.94 19.94h14.12c11.01 0 19.94-8.93 19.94-19.94V20.63c0-11.02-8.93-19.94-19.94-19.94z" fill="#fff"/><path d="M35.43 29.87v.47a4.8 4.8 0 0 1-4.77 4.77H25.34a4.8 4.8 0 0 1-4.77-4.77V25.02a4.8 4.8 0 0 1 4.77-4.77h3.88v-3.07h-3.88c-4.32 0-7.84 3.52-7.84 7.84v5.32c0 4.32 3.52 7.84 7.84 7.84h5.32c4.32 0 7.84-3.52 7.84-7.84v-.47h-3.07z" fill="#00463A"/><path d="M25.02 24.94l-2.17 2.17 5.36 5.36 10.16-11.1-2.17-2.17-8.02 8.9-3.16-3.16z" fill="#00463A"/></svg>
+                <span class="body-2 ml-3">Enhanced background checks for tutors (DBS).</span>
+            </div>
+            <div class="d-flex align-items-center">
+                <svg width="55" height="55" viewBox="0 0 55 55" class="safety-icon"><path d="M34.56.68H20.44C9.43.68.5 9.61.5 20.63v14.11c0 11.02 8.93 19.94 19.94 19.94h14.12c11.01 0 19.94-8.93 19.94-19.94V20.63c0-11.02-8.93-19.94-19.94-19.94z" fill="#fff"/><path d="M32.86 24.12v6.01c-.01.12-.01.24-.02.36-.19 2.77-2.5 4.96-5.31 4.96H21.54c-2.94 0-5.32-2.38-5.32-5.32v-6.01c0-2.94 2.38-5.32 5.32-5.32h5.99c2.82 0 5.12 2.19 5.31 4.96.01.12.02.24.02.36z" fill="#00463A"/><path d="M38.78 21.46v11.34c0 .62-.69.99-1.2.64l-3.14-2.12a.76.76 0 0 1-.34-.65v-7.05c0-.26.12-.52.34-.67l3.14-2.12c.5-.35 1.2.02 1.2.64z" fill="#00463A"/></svg>
+                <span class="body-2 ml-3">All online lessons are recorded.</span>
+            </div>
+            <div class="d-flex align-items-center">
+                <svg width="55" height="55" viewBox="0 0 55 55" class="safety-icon"><path d="M34.56.68H20.44C9.43.68.5 9.61.5 20.63v14.11c0 11.02 8.93 19.94 19.94 19.94h14.12c11.01 0 19.94-8.93 19.94-19.94V20.63c0-11.02-8.93-19.94-19.94-19.94z" fill="#fff"/><path d="M32.67 17.96h-9.24a4.83 4.83 0 0 0-4.83 4.83v6.52a4.83 4.83 0 0 0 4.83 4.83h1.84l1.85 2.39c.47.6 1.39.6 1.86 0l1.85-2.39h1.84a4.83 4.83 0 0 0 4.83-4.83v-6.52a4.83 4.83 0 0 0-4.83-4.83zm-7.1 9.06a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm2.48 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm2.48 0a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5z" fill="#00463A"/></svg>
+                <span class="body-2 ml-3">Messages are only sent through our platform.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CTA SECTION ===== -->
+    <div class="bg-pale-lime rounded-lg container my-5 p-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-6">
+                <h2 class="h2">Brilliant tutors who bring<br>every subject to life</h2>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class="body-3">We handpick only the best-qualified and most-experienced tutors to provide you with inspiring lessons that make learning easier.</p>
+            </div>
+        </div>
+        <hr class="my-5 border-dark-green-10">
+        <div class="d-flex flex-wrap gap-3">
+            <a href="#" class="btn btn-primary btn-lg">Maths</a>
+            <a href="#" class="btn btn-primary btn-lg">English</a>
+            <a href="#" class="btn btn-primary btn-lg">Science</a>
+            <a href="#" class="btn btn-primary btn-lg">Music</a>
+            <a href="#" class="btn btn-primary btn-lg">GCSE</a>
+            <a href="#" class="btn btn-primary btn-lg">A-Level</a>
+            <a href="#" class="btn btn-primary btn-lg">Languages</a>
+            <a href="#" class="btn btn-primary btn-lg">11+</a>
+        </div>
+    </div>
+
+    <!-- ===== FINAL CTA ===== -->
+    <div class="bg-light text-center py-7">
+        <div class="container">
+            <h2 class="h1 mb-4">Have a great first lesson.<br>Guaranteed.</h2>
+            <p class="body-2 mb-5" style="max-width:600px;margin:0 auto 2rem;">
+                If things aren't right with your first lesson just let us know. We'll pay for your next lesson with a new tutor – and even help you find them.
+            </p>
+            <a href="#" class="btn btn-outline-secondary">Get started for free</a>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-lime pt-5">
+        <div class="container">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22300%22%20height%3D%2263%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20%25%7Bw%7D%20%25%7Bh%7D%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20style%3D%22fill%3Atransparent%3B%22%3E%3C%2Frect%3E%3C%2Fsvg%3E" alt="Placeholder Languages" class="w-100 img-fluid my-5">
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <p class="body-4 medium">Find a tutor who you really click with.</p>
+                    <div class="my-5">
+                        <a href="#" class="d-inline-block mr-2">
+                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#00463A" fill-opacity="0.1"/><path d="M37.41 28.81c2.43 0 2.72.01 3.67.05.89.04 1.37.19 1.69.31.42.16.73.36 1.04.68.32.32.51.62.68 1.04.12.32.27.8.31 1.69.04.96.05 1.24.05 3.67s-.01 2.71-.05 3.67c-.04.89-.19 1.37-.31 1.69-.16.42-.36.73-.68 1.04-.32.32-.62.51-1.04.68-.32.12-.8.27-1.69.31-.96.04-1.24.05-3.67.05s-2.71-.01-3.67-.05c-.89-.04-1.37-.19-1.69-.31-.42-.16-.73-.36-1.04-.68-.32-.32-.51-.62-.68-1.04-.12-.32-.27-.8-.31-1.69-.04-.96-.05-1.24-.05-3.67s.01-2.71.05-3.67c.04-.89.19-1.37.31-1.69.16-.42.36-.73.68-1.04.32-.32.62-.51 1.04-.68.32-.12.8-.27 1.69-.31.96-.04 1.24-.05 3.67-.05zm0-1.64c-2.47 0-2.78.01-3.74.05-.97.04-1.63.2-2.2.42-.6.23-1.11.54-1.61 1.05-.51.5-.82 1.01-1.05 1.61-.22.58-.38 1.24-.42 2.2-.04.97-.05 1.28-.05 3.75s.01 2.78.05 3.74c.04.97.2 1.63.42 2.2.23.6.54 1.11 1.05 1.61.5.51 1.01.82 1.61 1.05.58.22 1.24.38 2.2.42.97.04 1.28.05 3.75.05s2.78-.01 3.74-.05c.97-.04 1.63-.2 2.2-.42.6-.23 1.11-.54 1.61-1.05.5-.5.81-1.01 1.05-1.61.22-.58.38-1.24.42-2.2.04-.97.05-1.28.05-3.75s-.01-2.78-.05-3.74c-.04-.97-.2-1.63-.42-2.2-.23-.6-.54-1.11-1.05-1.61-.5-.5-1.01-.81-1.61-1.05-.58-.22-1.24-.38-2.2-.42-.97-.04-1.28-.05-3.74-.05z" fill="#00463A"/><path d="M37.41 31.59c-2.58 0-4.67 2.09-4.67 4.67s2.09 4.67 4.67 4.67 4.67-2.09 4.67-4.67-2.09-4.67-4.67-4.67zm0 7.69a3.03 3.03 0 1 1 0-6.05 3.03 3.03 0 0 1 0 6.05z" fill="#00463A"/><path d="M43.35 31.41a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0z" fill="#00463A"/></svg>
+                        </a>
+                        <a href="#" class="d-inline-block">
+                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#00463A" fill-opacity="0.1"/><path d="M31.44 37.77h2.58v10.62c0 .21.17.38.38.38h4.37c.21 0 .38-.17.38-.38v-10.57h2.97c.19 0 .35-.14.38-.34l.45-3.91a.38.38 0 0 0-.38-.42h-3.42v-2.45c0-.74.4-1.11 1.18-1.11h2.23c.21 0 .38-.17.38-.38v-3.59a.38.38 0 0 0-.38-.38h-3.08c-.02 0-.07 0-.14 0-.53 0-2.39.1-3.86 1.45-1.62 1.5-1.4 3.29-1.34 3.6v2.87h-2.71a.38.38 0 0 0-.38.38v3.86c0 .21.17.38.38.38z" fill="#00463A"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <h4 class="body-4 medium mb-4">Tutorful</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-dark-green">About us</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">How it works</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Specialist school competition preparation</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Adult learners</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Homeschooling</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Browse subjects</a></li>
+                        <li><a href="#" class="text-dark-green">Browse locations</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <h4 class="body-4 medium mb-4">Students</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-dark-green">Student FAQs</a></li>
+                        <li><a href="#" class="text-dark-green">Online tutoring FAQs</a></li>
+                    </ul>
+                    <h4 class="body-4 medium mb-4 mt-lg-6">Tutors</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-dark-green">Become a tutor</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Tutoring jobs</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Tutor FAQs</a></li>
+                        <li><a href="#" class="text-dark-green">Online tutoring FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <h4 class="body-4 medium mb-4">Resources</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-dark-green">Help centre</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Tutorful community</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Blog</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Guides</a></li>
+                        <li><a href="#" class="text-dark-green">Safeguarding</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <h4 class="body-4 medium mb-4">Popular cities</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="#" class="text-dark-green">London tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Manchester tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Birmingham tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Leeds tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Glasgow tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Liverpool tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Newcastle tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Nottingham tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Sheffield tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Bristol tutors</a></li>
+                        <li class="mb-3"><a href="#" class="text-dark-green">Edinburgh tutors</a></li>
+                        <li><a href="#" class="text-dark-green">Cardiff tutors</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row border-top border-light-mint py-5">
+                <div class="col-12 col-lg-7 body-4">© 2026 All rights reserved</div>
+                <div class="col-12 col-lg-5 d-flex flex-wrap gap-4">
+                    <a href="#" class="body-4 text-dark-green"><u>Privacy Policy</u></a>
+                    <a href="#" class="body-4 text-dark-green"><u>Cookie Policy</u></a>
+                    <a href="#" class="body-4 text-dark-green"><u>Terms & Conditions</u></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+
+        // ===== SIMPLE CAROUSEL =====
+        (function() {
+            const camera = document.getElementById('carousel');
+            if (!camera) return;
+            let scrollPos = 0;
+            const cards = camera.querySelectorAll('.carousel-card');
+            if (cards.length === 0) return;
+
+            // Clone first few cards for infinite feel
+            const clones = [];
+            for (let i = 0; i < 3; i++) {
+                const clone = cards[i].cloneNode(true);
+                camera.appendChild(clone);
+                clones.push(clone);
+            }
+
+            let autoScroll = setInterval(() => {
+                const cardWidth = cards[0].offsetWidth + 8;
+                scrollPos += cardWidth;
+                camera.style.transform = 'translateX(-' + scrollPos + 'px)';
+
+                if (scrollPos >= cards.length * cardWidth) {
+                    scrollPos = 0;
+                    camera.style.transition = 'none';
+                    camera.style.transform = 'translateX(0)';
+                    void camera.offsetHeight;
+                    camera.style.transition = 'transform 0.3s ease';
+                }
+            }, 4000);
+
+            camera.addEventListener('mouseenter', () => clearInterval(autoScroll));
+            camera.addEventListener('mouseleave', () => {
+                autoScroll = setInterval(() => {
+                    const cardWidth = cards[0].offsetWidth + 8;
+                    scrollPos += cardWidth;
+                    camera.style.transform = 'translateX(-' + scrollPos + 'px)';
+                    if (scrollPos >= cards.length * cardWidth) {
+                        scrollPos = 0;
+                        camera.style.transition = 'none';
+                        camera.style.transform = 'translateX(0)';
+                        void camera.offsetHeight;
+                        camera.style.transition = 'transform 0.3s ease';
+                    }
+                }, 4000);
+            });
+        })();
+    </script>
+
+</body>
+</html>
