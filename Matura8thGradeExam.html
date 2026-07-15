@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matura & 8th Grade Exams – Między Nami</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #242424;
+            background: #fff;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        :root {
+            --dark-green: #00463a;
+            --bright-green: #55ed47;
+            --lime: #c9f0b7;
+            --pale-lime: #defcd1;
+            --pale-purple: #e4cbfc;
+            --pale-orange: #f8d08b;
+            --pale-yellow: #fff282;
+            --pale-pink: #ffb4a3;
+            --light-mint: #b5dfab;
+            --grey-100: #242424;
+            --grey-200: #515151;
+            --grey-400: #d1d1d1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .container-fluid {
+            padding: 0 15px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .col-12 { flex: 0 0 100%; max-width: 100%; padding: 0 15px; }
+        .col-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+        .col-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
+        .col-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+        .col-lg-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+        .col-lg-5 { flex: 0 0 41.666%; max-width: 41.666%; padding: 0 15px; }
+        .col-lg-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
+        .col-lg-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+
+        @media (max-width: 992px) {
+            .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-align: center;
+            border: 1px solid transparent;
+            border-radius: 50rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.85rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            letter-spacing: -0.02em;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--bright-green);
+            color: var(--dark-green);
+            border-color: var(--bright-green);
+        }
+        .btn-primary:hover {
+            background: #35ea24;
+            border-color: #2ae819;
+            color: var(--dark-green);
+        }
+
+        .btn-secondary {
+            background: var(--dark-green);
+            color: #fff;
+            border-color: var(--dark-green);
+        }
+        .btn-secondary:hover {
+            background: #00201a;
+            border-color: #001310;
+            color: #fff;
+        }
+
+        .btn-outline-secondary {
+            background: transparent;
+            color: var(--dark-green);
+            border-color: var(--dark-green);
+        }
+        .btn-outline-secondary:hover {
+            background: var(--dark-green);
+            color: #fff;
+        }
+
+        .btn-sm {
+            padding: 0.4rem 0.7rem;
+            font-size: 0.75rem;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-link {
+            background: none;
+            border: none;
+            color: var(--dark-green);
+            font-weight: 500;
+            padding: 0.4rem 0.5rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .btn-link:hover {
+            color: #38d02a;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        .h1, h1 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .h2, h2 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .h3, h3 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .h4, h4 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--dark-green);
+            letter-spacing: -0.03em;
+        }
+
+        .body-1 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.4;
+        }
+
+        .body-2 {
+            font-size: 1.1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.5;
+        }
+
+        .body-3 {
+            font-size: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.5;
+        }
+
+        .body-4 {
+            font-size: 0.9rem;
+            letter-spacing: -0.015em;
+            line-height: 1.4;
+        }
+
+        .medium { font-weight: 500; }
+
+        /* ===== UTILITY ===== */
+        .text-center { text-align: center; }
+        .text-white { color: #fff; }
+        .text-dark-green { color: var(--dark-green); }
+        .text-grey-200 { color: var(--grey-200); }
+        .text-grey-400 { color: var(--grey-400); }
+        .text-lime { color: var(--lime); }
+
+        .bg-white { background: #fff; }
+        .bg-light { background: #f7f6f5; }
+        .bg-bright-green { background: var(--bright-green); }
+        .bg-dark-green { background: var(--dark-green); }
+        .bg-pale-lime { background: var(--pale-lime); }
+        .bg-pale-purple { background: var(--pale-purple); }
+        .bg-pale-orange { background: var(--pale-orange); }
+        .bg-pale-yellow { background: var(--pale-yellow); }
+        .bg-pale-pink { background: var(--pale-pink); }
+        .bg-lime { background: var(--lime); }
+
+        .border-bottom { border-bottom: 1px solid var(--grey-400); }
+        .border-top { border-top: 1px solid var(--grey-400); }
+        .border-dark-green-10 { border-color: rgba(0,70,58,0.1); }
+        .border-light-mint { border-color: var(--light-mint); }
+
+        .rounded-lg { border-radius: 1.5rem; }
+        .rounded { border-radius: 1rem; }
+
+        .d-flex { display: flex; }
+        .d-block { display: block; }
+        .d-none { display: none; }
+
+        .flex-column { flex-direction: column; }
+        .flex-row { flex-direction: row; }
+        .flex-wrap { flex-wrap: wrap; }
+        .align-items-center { align-items: center; }
+        .justify-content-center { justify-content: center; }
+        .justify-content-between { justify-content: space-between; }
+        .justify-content-start { justify-content: flex-start; }
+        .justify-content-end { justify-content: flex-end; }
+
+        .w-100 { width: 100%; }
+        .position-relative { position: relative; }
+        .overflow-hidden { overflow: hidden; }
+
+        .py-2 { padding: 0.5rem 0; }
+        .py-3 { padding: 0.75rem 0; }
+        .py-4 { padding: 1.25rem 0; }
+        .py-5 { padding: 2rem 0; }
+        .py-6 { padding: 3rem 0; }
+        .py-7 { padding: 4rem 0; }
+        .py-8 { padding: 4.5rem 0; }
+        .px-2 { padding: 0 0.5rem; }
+        .px-3 { padding: 0 0.75rem; }
+        .px-4 { padding: 0 1.25rem; }
+        .px-5 { padding: 0 2rem; }
+        .px-0 { padding: 0; }
+        .pt-4 { padding-top: 1.25rem; }
+        .pt-5 { padding-top: 2rem; }
+        .pb-4 { padding-bottom: 1.25rem; }
+        .pb-5 { padding-bottom: 2rem; }
+
+        .my-3 { margin: 0.75rem 0; }
+        .my-4 { margin: 1.25rem 0; }
+        .my-5 { margin: 2rem 0; }
+        .mt-2 { margin-top: 0.5rem; }
+        .mt-3 { margin-top: 0.75rem; }
+        .mt-4 { margin-top: 1.25rem; }
+        .mt-5 { margin-top: 2rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .mb-3 { margin-bottom: 0.75rem; }
+        .mb-4 { margin-bottom: 1.25rem; }
+        .mb-5 { margin-bottom: 2rem; }
+        .mx-auto { margin: 0 auto; }
+        .ml-auto { margin-left: auto; }
+        .mr-2 { margin-right: 0.5rem; }
+        .ml-2 { margin-left: 0.5rem; }
+
+        .gap-2 { gap: 0.5rem; }
+        .gap-3 { gap: 0.75rem; }
+        .gap-4 { gap: 1.25rem; }
+
+        @media (min-width: 768px) {
+            .d-md-flex { display: flex; }
+            .d-md-none { display: none; }
+        }
+
+        @media (min-width: 992px) {
+            .d-lg-flex { display: flex; }
+            .d-lg-none { display: none; }
+            .d-lg-block { display: block; }
+            .flex-lg-row { flex-direction: row; }
+            .flex-lg-row-reverse { flex-direction: row-reverse; }
+            .py-lg-0 { padding: 0; }
+            .mb-lg-0 { margin-bottom: 0; }
+        }
+
+        @media (max-width: 768px) {
+            .h1, h1 { font-size: 2.2rem; }
+            .h2, h2 { font-size: 1.8rem; }
+            .body-1 { font-size: 1rem; }
+            .body-2 { font-size: 0.95rem; }
+            .body-3 { font-size: 0.9rem; }
+        }
+
+        /* ===== CARD ===== */
+        .card {
+            background: #f9f7f1;
+            border-radius: 1.5rem;
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            word-wrap: break-word;
+            background-clip: border-box;
+            position: relative;
+        }
+        .card-body { padding: 1.25rem; flex: 1 1 auto; }
+        @media (min-width: 992px) { .card-body { padding: 1.5rem; } }
+
+        /* ===== BADGE ===== */
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 0.875rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+        .badge-pill { border-radius: 10rem; }
+        .badge-secondary { background: var(--dark-green); color: #fff; }
+        .badge-white { background: #fff; color: var(--grey-100); }
+
+        /* ===== NAV ===== */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 0.3rem 1rem;
+            background: #fff;
+            border-bottom: 1px solid var(--grey-400);
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            flex-wrap: nowrap;
+            gap: 0.3rem;
+            min-height: 44px;
+        }
+        .navbar .logo {
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+        .navbar .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0.1rem;
+            flex: 1;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .navbar .nav-links::-webkit-scrollbar { display: none; }
+        .navbar .nav-links a { 
+            text-decoration: none; 
+            white-space: nowrap;
+        }
+        .navbar .nav-links .btn-link {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.4rem;
+        }
+        .hamburger {
+            display: none;
+            background: var(--bright-green);
+            border: none;
+            border-radius: 50%;
+            padding: 0.3rem;
+            cursor: pointer;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+        @media (max-width: 1400px) {
+            .navbar .nav-links { display: none; }
+            .hamburger { display: block; }
+        }
+
+        /* ===== MOBILE MENU OVERLAY ===== */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 1040;
+            padding: 1.25rem;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu .close-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+        .mobile-menu .menu-item {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0,70,58,0.1);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark-green);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mobile-menu .menu-item:last-child { border-bottom: none; }
+
+        /* ===== FOOTER ===== */
+        .link-border { border-bottom: 1px solid var(--light-mint); }
+        @media (min-width: 992px) { .link-border { border-bottom: none; } }
+
+        /* ===== CALENDLY ===== */
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 650px;
+        }
+        @media (max-width: 768px) {
+            .calendly-inline-widget {
+                height: 550px;
+            }
+        }
+
+        /* ===== LIST STYLING ===== */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0,70,58,0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list .check {
+            color: var(--bright-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 576px) {
+            .container { padding: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+        <a href="index.html" class="logo" style="font-family:'Faro','Inter',sans-serif;font-size:1.1rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;text-decoration:none;flex-shrink:0;">
+            Między Nami
+        </a>
+        <div class="nav-links">
+            <a href="#" class="btn btn-link btn-sm">Language coaching</a>
+            <a href="#" class="btn btn-link btn-sm">English Competitions</a>
+            <a href="#" class="btn btn-link btn-sm">Matura &amp; 8th grade exams</a>
+            <a href="#" class="btn btn-link btn-sm">Business &amp; Medical English</a>
+            <a href="#" class="btn btn-link btn-sm">IELTS &amp; Cambridge Certificates (C1/C2)</a>
+            <a href="#" class="btn btn-link btn-sm">School age General lessons</a>
+            <a href="#" class="btn btn-link btn-sm">Adult Lessons</a>
+            <a href="#" class="btn btn-link btn-sm">Store</a>
+            <a href="#" class="btn btn-link btn-sm">Lesson plans</a>
+            <a href="aboutus.html" class="btn btn-link btn-sm">About us</a>
+            <a href="#" class="btn btn-link btn-sm ml-auto" style="margin-left:auto;">Login</a>
+            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;padding:0.3rem 0.7rem;font-size:0.75rem;">
+                <svg width="10" height="11" viewBox="0 0 12 13" fill="none" style="margin-right:3px;"><circle cx="4.95103" cy="5.89976" r="4.10103" stroke="#00463A" stroke-width="1.7"/><path d="M10.4479 12.6529C10.7798 12.9848 11.318 12.9848 11.65 12.6529C11.9819 12.3209 11.9819 11.7827 11.65 11.4508L10.4479 12.6529ZM7.53958 9.7446L10.4479 12.6529L11.65 11.4508L8.74167 8.54251L7.53958 9.7446Z" fill="#00463A"/></svg>
+                Book a consultation
+            </a>
+        </div>
+        <button class="hamburger" onclick="toggleMobileMenu()">
+            <svg width="28" height="29" viewBox="0 0 42 43"><path d="M14 19.9487H28" stroke="#00463A" stroke-width="2"/><path d="M14 24.9487H28" stroke="#00463A" stroke-width="2"/></svg>
+        </button>
+    </nav>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMobileMenu()">✕</button>
+        <a href="#" class="menu-item">Language coaching <span>›</span></a>
+        <a href="#" class="menu-item">English Competitions <span>›</span></a>
+        <a href="#" class="menu-item">Matura &amp; 8th grade exams <span>›</span></a>
+        <a href="#" class="menu-item">Business &amp; Medical English <span>›</span></a>
+        <a href="#" class="menu-item">IELTS &amp; Cambridge Certificates (C1/C2) <span>›</span></a>
+        <a href="#" class="menu-item">School age General lessons <span>›</span></a>
+        <a href="#" class="menu-item">Adult Lessons <span>›</span></a>
+        <a href="#" class="menu-item">Store <span>›</span></a>
+        <a href="#" class="menu-item">Lesson plans <span>›</span></a>
+        <a href="aboutus.html" class="menu-item">About us <span>›</span></a>
+        <a href="#" class="btn btn-primary mt-4">Book a consultation</a>
+        <a href="#" class="btn btn-link mt-2">Login</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="py-6">
+        <div class="container text-center">
+            <span class="badge badge-pill badge-secondary mb-3">📝 Exam Preparation</span>
+            <h1 class="h1 mb-3">
+                Matura &amp; 8th Grade<br>
+                English Exam Preparation
+            </h1>
+            <p class="body-1 text-grey-200 mx-auto" style="max-width:650px;">
+                One-to-one coaching to help your child achieve top results in their<br>
+                Matura or 8th Grade English exams.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                <a href="#calendly" class="btn btn-primary">Book a free consultation</a>
+                <a href="#what-we-do" class="btn btn-outline-secondary">Learn more ↓</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHAT WE DO ===== -->
+    <section id="what-we-do" class="py-6 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <h2 class="h2 mb-4">What We Do</h2>
+                    <p class="body-2 mb-3">
+                        I specialise in preparing students for the Matura and 8th Grade English exams. Every student is different, so every programme is tailored to their specific exam, level, and goals.
+                    </p>
+                    <ul class="feature-list body-3">
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Exam-specific preparation</strong> — Targeted coaching for both the Matura and 8th Grade exam formats</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Past papers &amp; practice</strong> — Working through real exam papers to understand the format and expectations</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Detailed feedback</strong> — Personalised feedback after every session on strengths and areas to improve</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Homework &amp; practice</strong> — Targeted exercises between sessions to build confidence and skills</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Bespoke learning materials</strong> — Proprietary worksheets and resources designed specifically for exam success</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Exam technique</strong> — Developing strategies for time management, question interpretation, and maximising marks</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span><strong>Speaking &amp; writing skills</strong> — Building fluency and accuracy for the oral and written components</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-5 offset-lg-1 mt-5 mt-lg-0">
+                    <div class="card bg-white">
+                        <div class="card-body">
+                            <h4 class="h4 mb-3">Who is this for?</h4>
+                            <ul class="feature-list body-3" style="list-style:none;padding:0;">
+                                <li style="border-bottom:1px solid rgba(0,70,58,0.08);padding:0.5rem 0;display:flex;gap:0.5rem;">
+                                    <span>📘</span>
+                                    <span><strong>8th Grade Exam</strong> — Students in their final year of primary school preparing for the Egzamin Ósmoklasisty</span>
+                                </li>
+                                <li style="padding:0.5rem 0;display:flex;gap:0.5rem;">
+                                    <span>📗</span>
+                                    <span><strong>Matura Exam</strong> — Students in their final year of secondary school preparing for the Matura exam</span>
+                                </li>
+                            </ul>
+                            <hr class="my-3 border-dark-green-10">
+                            <div class="d-flex justify-content-between body-4">
+                                <span>📖 <strong>Basic Level</strong></span>
+                                <span>📖 <strong>Extended Level</strong></span>
+                            </div>
+                            <p class="body-4 text-grey-200 mt-2 mb-0">
+                                💡 All levels welcome — from basic to extended Matura preparation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXAM OVERVIEW ===== -->
+    <section class="py-6">
+        <div class="container text-center">
+            <h2 class="h2 mb-3">What We Cover</h2>
+            <p class="body-2 text-grey-200 mb-5" style="max-width:600px;margin:0 auto 2rem;">
+                Everything your child needs to walk into their exam with confidence.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                    <div class="card bg-pale-lime">
+                        <div class="card-body text-center">
+                            <span style="font-size:2rem;">📖</span>
+                            <h4 class="h4 mt-2">Reading Comprehension</h4>
+                            <p class="body-4">Strategies for tackling complex texts and answering questions accurately.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                    <div class="card bg-pale-yellow">
+                        <div class="card-body text-center">
+                            <span style="font-size:2rem;">✍️</span>
+                            <h4 class="h4 mt-2">Writing Skills</h4>
+                            <p class="body-4">Structured essay writing, formal letters, and creative tasks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                    <div class="card bg-pale-purple">
+                        <div class="card-body text-center">
+                            <span style="font-size:2rem;">🎧</span>
+                            <h4 class="h4 mt-2">Listening Comprehension</h4>
+                            <p class="body-4">Building skills to understand spoken English in exam conditions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                    <div class="card bg-pale-pink">
+                        <div class="card-body text-center">
+                            <span style="font-size:2rem;">💬</span>
+                            <h4 class="h4 mt-2">Speaking Skills</h4>
+                            <p class="body-4">Oral exam preparation with confidence-building practice.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                    <div class="card bg-pale-orange">
+                        <div class="card-body text-center">
+                            <span style="font-size:2rem;">🧠</span>
+                            <h4 class="h4 mt-2">Grammar &amp; Vocabulary</h4>
+                            <p class="body-4">Mastering the language structures and vocabulary needed for top marks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                    <div class="card bg-pale-lime">
+                        <div class="card-body text-center">
+                            <span style="font-size:2rem;">⏰</span>
+                            <h4 class="h4 mt-2">Exam Technique</h4>
+                            <p class="body-4">Time management, question strategies, and stress management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL ===== -->
+    <section class="py-6 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="card bg-white text-center">
+                        <div class="card-body py-5 px-4">
+                            <span style="font-size:3rem;">⭐</span>
+                            <blockquote class="body-1" style="font-style:italic;max-width:600px;margin:1rem auto;">
+                                "My son went from struggling with English to scoring 95% on his Matura exam. The personalised approach made all the difference."
+                            </blockquote>
+                            <p class="body-4 text-grey-200 mb-0">— Parent of student, Matura exam</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CALENDLY ===== -->
+    <section id="calendly" class="py-6">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h2">Book a Free Consultation</h2>
+                <p class="body-2 text-grey-200" style="max-width:500px;margin:0 auto;">
+                    Choose a time that works for you. Let's discuss your child's goals and how I can help.
+                </p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="card bg-white p-3">
+                        <div class="card-body p-0">
+                            <!-- Calendly inline widget begin -->
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-link/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:650px;"></div>
+                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                            <!-- Calendly inline widget end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="body-4 text-grey-200">
+                    ⏰ 30-minute consultation • Free • No obligation
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="py-6 bg-bright-green">
+        <div class="container text-center">
+            <h2 class="h2 mb-3">Ready to help your child<br>succeed in their exams?</h2>
+            <p class="body-2 mb-4" style="max-width:500px;margin:0 auto 1.5rem;">
+                Let's work together to achieve the results your child deserves.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#calendly" class="btn btn-secondary">Book a consultation</a>
+                <a href="index.html" class="btn btn-outline-secondary bg-white">Return to homepage</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-lime pt-4 pb-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <span style="font-family:'Faro','Inter',sans-serif;font-size:1.5rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;">Między Nami</span>
+                    <p class="body-4 mt-1">English tutoring with a British touch.</p>
+                </div>
+                <div class="col-12 col-lg-6 text-lg-right">
+                    <p class="body-4">© 2026 All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
