@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Competitions – Między Nami</title>
+    <title>English Competitions – Between Us</title>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
@@ -16,8 +16,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #242424;
-            background: #fff;
+            color: #1e2b2c;
+            background: #f8fbfa;
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
@@ -27,14 +27,22 @@
             --bright-green: #55ed47;
             --lime: #c9f0b7;
             --pale-lime: #defcd1;
-            --pale-purple: #e4cbfc;
-            --pale-orange: #f8d08b;
-            --pale-yellow: #fff282;
-            --pale-pink: #ffb4a3;
-            --light-mint: #b5dfab;
-            --grey-100: #242424;
-            --grey-200: #515151;
-            --grey-400: #d1d1d1;
+            --grey-100: #1e2b2c;
+            --grey-200: #3d4f52;
+            --grey-300: #6b7f82;
+            --grey-400: #c8d4d6;
+            --teal-dark: #1a3c3f;
+            --teal-mid: #2d5f64;
+            --teal-soft: #4a7f85;
+            --teal-light: #9bbfc4;
+            --teal-pale: #d4e8eb;
+            --teal-ultra-pale: #edf5f6;
+            --sage-green: #b8cdc9;
+            --mint-green: #d4e8e4;
+            --sky-blue: #d4e4ed;
+            --warm-white: #f8fbfa;
+            --soft-blue-bg: #e8f0f2;
+            --card-shadow: rgba(26, 60, 63, 0.08);
         }
 
         .container {
@@ -81,7 +89,7 @@
             font-size: 0.85rem;
             line-height: 1;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.2s ease;
             letter-spacing: -0.02em;
             text-decoration: none;
         }
@@ -95,27 +103,42 @@
             background: #35ea24;
             border-color: #2ae819;
             color: var(--dark-green);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(85, 237, 71, 0.35);
         }
 
         .btn-secondary {
-            background: var(--dark-green);
+            background: var(--teal-dark);
             color: #fff;
-            border-color: var(--dark-green);
+            border-color: var(--teal-dark);
         }
         .btn-secondary:hover {
-            background: #00201a;
-            border-color: #001310;
+            background: #0f282a;
+            border-color: #0a1e1f;
             color: #fff;
+            transform: translateY(-1px);
         }
 
         .btn-outline-secondary {
             background: transparent;
-            color: var(--dark-green);
-            border-color: var(--dark-green);
+            color: var(--teal-dark);
+            border-color: var(--teal-dark);
         }
         .btn-outline-secondary:hover {
-            background: var(--dark-green);
+            background: var(--teal-dark);
             color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-soft {
+            background: transparent;
+            color: var(--teal-dark);
+            border-color: rgba(26, 60, 63, 0.25);
+        }
+        .btn-outline-soft:hover {
+            background: rgba(26, 60, 63, 0.06);
+            border-color: var(--teal-dark);
+            transform: translateY(-1px);
         }
 
         .btn-sm {
@@ -131,7 +154,7 @@
         .btn-link {
             background: none;
             border: none;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             font-weight: 500;
             padding: 0.4rem 0.5rem;
             font-size: 0.75rem;
@@ -149,7 +172,7 @@
             font-size: 3.2rem;
             font-weight: 600;
             line-height: 1.1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -158,7 +181,7 @@
             font-size: 2.2rem;
             font-weight: 600;
             line-height: 1.2;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -167,7 +190,7 @@
             font-size: 1.4rem;
             font-weight: 600;
             line-height: 1.2;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -176,7 +199,7 @@
             font-size: 1.1rem;
             font-weight: 600;
             line-height: 1.2;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -210,26 +233,29 @@
         /* ===== UTILITY ===== */
         .text-center { text-align: center; }
         .text-white { color: #fff; }
-        .text-dark-green { color: var(--dark-green); }
+        .text-dark-green { color: var(--teal-dark); }
         .text-grey-200 { color: var(--grey-200); }
+        .text-grey-300 { color: var(--grey-300); }
         .text-grey-400 { color: var(--grey-400); }
-        .text-lime { color: var(--lime); }
+        .text-teal-soft { color: var(--teal-soft); }
+        .text-teal-light { color: var(--teal-light); }
 
         .bg-white { background: #fff; }
+        .bg-warm-white { background: var(--warm-white); }
+        .bg-soft-blue { background: var(--soft-blue-bg); }
+        .bg-teal-pale { background: var(--teal-pale); }
+        .bg-teal-ultra-pale { background: var(--teal-ultra-pale); }
         .bg-light { background: #f7f6f5; }
         .bg-bright-green { background: var(--bright-green); }
-        .bg-dark-green { background: var(--dark-green); }
-        .bg-pale-lime { background: var(--pale-lime); }
-        .bg-pale-purple { background: var(--pale-purple); }
-        .bg-pale-orange { background: var(--pale-orange); }
-        .bg-pale-yellow { background: var(--pale-yellow); }
-        .bg-pale-pink { background: var(--pale-pink); }
-        .bg-lime { background: var(--lime); }
+        .bg-dark-green { background: var(--teal-dark); }
+        .bg-sage-green { background: var(--sage-green); }
+        .bg-mint-green { background: var(--mint-green); }
+        .bg-sky-blue { background: var(--sky-blue); }
 
         .border-bottom { border-bottom: 1px solid var(--grey-400); }
         .border-top { border-top: 1px solid var(--grey-400); }
-        .border-dark-green-10 { border-color: rgba(0,70,58,0.1); }
-        .border-light-mint { border-color: var(--light-mint); }
+        .border-dark-green-10 { border-color: rgba(26, 60, 63, 0.1); }
+        .border-light-mint { border-color: var(--mint-green); }
 
         .rounded-lg { border-radius: 1.5rem; }
         .rounded { border-radius: 1rem; }
@@ -248,7 +274,9 @@
         .justify-content-end { justify-content: flex-end; }
 
         .w-100 { width: 100%; }
+        .h-100 { height: 100%; }
         .position-relative { position: relative; }
+        .position-absolute { position: absolute; }
         .overflow-hidden { overflow: hidden; }
 
         .py-2 { padding: 0.5rem 0; }
@@ -288,6 +316,14 @@
         .gap-3 { gap: 0.75rem; }
         .gap-4 { gap: 1.25rem; }
 
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--teal-light);
+            border-radius: 10px;
+            margin: 0.5rem auto 1.5rem;
+        }
+
         @media (min-width: 768px) {
             .d-md-flex { display: flex; }
             .d-md-none { display: none; }
@@ -313,17 +349,31 @@
 
         /* ===== CARD ===== */
         .card {
-            background: #f9f7f1;
+            background: #fff;
             border-radius: 1.5rem;
-            border: 0;
+            border: 1px solid rgba(26, 60, 63, 0.06);
             display: flex;
             flex-direction: column;
             word-wrap: break-word;
             background-clip: border-box;
             position: relative;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.08);
         }
         .card-body { padding: 1.25rem; flex: 1 1 auto; }
         @media (min-width: 992px) { .card-body { padding: 1.5rem; } }
+
+        .card-soft {
+            background: var(--teal-ultra-pale);
+            border: none;
+        }
+        .card-soft:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.06);
+        }
 
         /* ===== BADGE ===== */
         .badge {
@@ -336,16 +386,21 @@
             text-align: center;
         }
         .badge-pill { border-radius: 10rem; }
-        .badge-secondary { background: var(--dark-green); color: #fff; }
+        .badge-secondary { background: var(--teal-dark); color: #fff; }
         .badge-white { background: #fff; color: var(--grey-100); }
+        .badge-teal-soft { background: var(--teal-pale); color: var(--teal-dark); }
+        .badge-sage { background: var(--sage-green); color: var(--teal-dark); }
+        .badge-sky { background: var(--sky-blue); color: var(--teal-dark); }
+        .badge-mint { background: var(--mint-green); color: var(--teal-dark); }
 
         /* ===== NAV ===== */
         .navbar {
             display: flex;
             align-items: center;
             padding: 0.3rem 1rem;
-            background: #fff;
-            border-bottom: 1px solid var(--grey-400);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(26, 60, 63, 0.06);
             position: sticky;
             top: 0;
             z-index: 1030;
@@ -399,7 +454,7 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            background: #fff;
+            background: #f8fbfa;
             z-index: 1040;
             padding: 1.25rem;
             flex-direction: column;
@@ -412,13 +467,14 @@
             font-size: 2rem;
             cursor: pointer;
             margin-left: auto;
+            color: var(--teal-dark);
         }
         .mobile-menu .menu-item {
             padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(0,70,58,0.1);
+            border-bottom: 1px solid rgba(26, 60, 63, 0.06);
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             text-decoration: none;
             display: flex;
             justify-content: space-between;
@@ -427,7 +483,7 @@
         .mobile-menu .menu-item:last-child { border-bottom: none; }
 
         /* ===== FOOTER ===== */
-        .link-border { border-bottom: 1px solid var(--light-mint); }
+        .link-border { border-bottom: 1px solid var(--mint-green); }
         @media (min-width: 992px) { .link-border { border-bottom: none; } }
 
         /* ===== CALENDLY ===== */
@@ -448,7 +504,7 @@
         }
         .feature-list li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(0,70,58,0.08);
+            border-bottom: 1px solid rgba(26, 60, 63, 0.06);
             display: flex;
             align-items: flex-start;
             gap: 0.75rem;
@@ -463,6 +519,85 @@
             line-height: 1.4;
         }
 
+        /* ===== HERO WITH BACKGROUND IMAGE ===== */
+        .hero-section {
+            min-height: 65vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section .hero-image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .hero-section .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-section .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 60, 63, 0.45);
+            z-index: 2;
+        }
+        .hero-section .hero-fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(to bottom, transparent, #f8fbfa);
+            z-index: 2;
+        }
+        .hero-section .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+        .hero-section .hero-content .badge {
+            background: rgba(26, 60, 63, 0.75);
+            backdrop-filter: blur(4px);
+            color: #fff;
+        }
+        .hero-section .hero-content h1 {
+            color: #fff;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        .hero-section .hero-content p {
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0.9;
+        }
+        .hero-section .hero-content .btn-primary {
+            box-shadow: 0 8px 30px rgba(85, 237, 71, 0.35);
+        }
+        .hero-section .hero-content .btn-outline-soft {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+        .hero-section .hero-content .btn-outline-soft:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 55vh;
+            }
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 576px) {
             .container { padding: 0 10px; }
@@ -473,8 +608,8 @@
 
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
-        <a href="https://aarosakura.github.io/MiedzyNami" class="logo" style="font-family:'Faro','Inter',sans-serif;font-size:1.1rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;text-decoration:none;flex-shrink:0;">
-            Między Nami
+        <a href="https://aarosakura.github.io/MiedzyNami" class="logo" style="font-family:'Faro','Inter',sans-serif;font-size:1.1rem;font-weight:600;color:var(--teal-dark);letter-spacing:-0.03em;text-decoration:none;flex-shrink:0;">
+            Between us
         </a>
         <div class="nav-links">
             <a href="https://aarosakura.github.io/MiedzyNami/languagecoaching.html" class="btn btn-link btn-sm">Language coaching</a>
@@ -488,7 +623,7 @@
             <a href="#" class="btn btn-link btn-sm">Lesson plans</a>
             <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="btn btn-link btn-sm">About us</a>
             <a href="#" class="btn btn-link btn-sm ml-auto" style="margin-left:auto;">Login</a>
-            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;padding:0.3rem 0.7rem;font-size:0.75rem;">
+            <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;padding:0.3rem 0.7rem;font-size:0.75rem;">
                 <svg width="10" height="11" viewBox="0 0 12 13" fill="none" style="margin-right:3px;"><circle cx="4.95103" cy="5.89976" r="4.10103" stroke="#00463A" stroke-width="1.7"/><path d="M10.4479 12.6529C10.7798 12.9848 11.318 12.9848 11.65 12.6529C11.9819 12.3209 11.9819 11.7827 11.65 11.4508L10.4479 12.6529ZM7.53958 9.7446L10.4479 12.6529L11.65 11.4508L8.74167 8.54251L7.53958 9.7446Z" fill="#00463A"/></svg>
                 Book a consultation
             </a>
@@ -511,36 +646,49 @@
         <a href="https://aarosakura.github.io/MiedzyNami/Store" class="menu-item">Store <span>›</span></a>
         <a href="#" class="menu-item">Lesson plans <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="menu-item">About us <span>›</span></a>
-        <a href="#" class="btn btn-primary mt-4">Book a consultation</a>
+        <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary mt-4">Book a consultation</a>
         <a href="#" class="btn btn-link mt-2">Login</a>
     </div>
 
-    <!-- ===== HERO ===== -->
-    <section class="py-6">
-        <div class="container text-center">
-            <span class="badge badge-pill badge-secondary mb-3">🏆 Specialist Preparation</span>
-            <h1 class="h1 mb-3">
-                English Competitions<br>
-                for School-Aged Children
-            </h1>
-            <p class="body-1 text-grey-200 mx-auto" style="max-width:650px;">
-                One-to-one coaching to help your child excel in regional and national<br>
-                English speaking competitions.
-            </p>
-            <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-                <a href="#calendly" class="btn btn-primary">Book a free consultation</a>
-                <a href="#what-we-do" class="btn btn-outline-secondary">Learn more ↓</a>
+    <!-- ===== HERO WITH BACKGROUND IMAGE ===== -->
+    <section class="hero-section">
+        <div class="hero-image-wrapper">
+            <img src="https://raw.githubusercontent.com/aarosakura/MiedzyNami/refs/heads/main/images/heroimage.png" alt="English tutoring" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-fade"></div>
+
+        <div class="container hero-content">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                    <span class="badge badge-pill mb-3" style="background:rgba(26,60,63,0.75); backdrop-filter:blur(4px); color:#fff;">
+                        🏆 Specialist Preparation
+                    </span>
+                    <h1 class="h1">
+                        English Competitions<br>
+                        for School-Aged Children
+                    </h1>
+                    <p class="body-1 mb-4" style="max-width:650px; margin:0 auto;">
+                        One-to-one coaching to help your child excel in regional and national<br>
+                        English speaking competitions.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="#calendly" class="btn btn-primary">Book a free consultation</a>
+                        <a href="#what-we-do" class="btn btn-outline-soft">Learn more ↓</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== WHAT WE DO ===== -->
-    <section id="what-we-do" class="py-6 bg-light">
+    <section id="what-we-do" class="py-6 bg-soft-blue">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6">
-                    <h2 class="h2 mb-4">What We Do</h2>
-                    <p class="body-2 mb-3">
+                    <span class="badge badge-pill badge-sage mb-3">📚 What We Do</span>
+                    <h2 class="h2 mb-4">Competition Preparation That Works</h2>
+                    <p class="body-2 mb-3 text-grey-200">
                         I specialise in preparing students for regional English speaking competitions. Every student is different, so every programme is tailored to their specific competition, level, and goals.
                     </p>
                     <ul class="feature-list body-3">
@@ -571,15 +719,15 @@
                     </ul>
                 </div>
                 <div class="col-12 col-lg-5 offset-lg-1 mt-5 mt-lg-0">
-                    <div class="card bg-white">
+                    <div class="card" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <h4 class="h4 mb-3">Who is this for?</h4>
                             <ul class="feature-list body-3" style="list-style:none;padding:0;">
-                                <li style="border-bottom:1px solid rgba(0,70,58,0.08);padding:0.5rem 0;display:flex;gap:0.5rem;">
+                                <li style="border-bottom:1px solid rgba(26,60,63,0.06);padding:0.5rem 0;display:flex;gap:0.5rem;">
                                     <span>🧒</span>
                                     <span><strong>Ages 7–11</strong> — Primary school competitions</span>
                                 </li>
-                                <li style="border-bottom:1px solid rgba(0,70,58,0.08);padding:0.5rem 0;display:flex;gap:0.5rem;">
+                                <li style="border-bottom:1px solid rgba(26,60,63,0.06);padding:0.5rem 0;display:flex;gap:0.5rem;">
                                     <span>🧑</span>
                                     <span><strong>Ages 11–14</strong> — Lower secondary competitions</span>
                                 </li>
@@ -589,7 +737,7 @@
                                 </li>
                             </ul>
                             <hr class="my-3 border-dark-green-10">
-                            <p class="body-4 text-grey-200 mb-0">
+                            <p class="body-4 text-grey-300 mb-0">
                                 💡 All levels welcome — from first-time participants to experienced competitors.
                             </p>
                         </div>
@@ -602,35 +750,88 @@
     <!-- ===== KEY COMPETITIONS ===== -->
     <section class="py-6">
         <div class="container text-center">
-            <h2 class="h2 mb-3">Competitions I Prepare For</h2>
-            <p class="body-2 text-grey-200 mb-5" style="max-width:600px;margin:0 auto 2rem;">
-                Regional and national English speaking competitions across Poland.
+            <span class="badge badge-pill badge-mint mb-3">🏅 Competitions I Prepare For</span>
+            <h2 class="h2 mb-3">Regional &amp; National Contests</h2>
+            <p class="body-2 text-grey-300 mb-5" style="max-width:600px;margin:0 auto 2rem;">
+                English speaking competitions across Poland.
             </p>
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                    <div class="card bg-pale-lime">
+                    <div class="card card-soft h-100">
                         <div class="card-body text-center">
                             <span style="font-size:2rem;">🇵🇱</span>
                             <h4 class="h4 mt-2">Regional Competitions</h4>
-                            <p class="body-4">Preparation for local and regional English speaking contests.</p>
+                            <p class="body-4 text-grey-200">Preparation for local and regional English speaking contests.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                    <div class="card bg-pale-yellow">
+                    <div class="card card-soft h-100">
                         <div class="card-body text-center">
                             <span style="font-size:2rem;">🏆</span>
                             <h4 class="h4 mt-2">National Competitions</h4>
-                            <p class="body-4">High-level preparation for Ogólnopolska Olimpiada Języka Angielskiego and other national contests.</p>
+                            <p class="body-4 text-grey-200">High-level preparation for Ogólnopolska Olimpiada Języka Angielskiego and other national contests.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 mb-3">
-                    <div class="card bg-pale-purple">
+                    <div class="card card-soft h-100">
                         <div class="card-body text-center">
                             <span style="font-size:2rem;">🌍</span>
                             <h4 class="h4 mt-2">School-Level Contests</h4>
-                            <p class="body-4">Preparation for in-school competitions and inter-school events.</p>
+                            <p class="body-4 text-grey-200">Preparation for in-school competitions and inter-school events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY ME ===== -->
+    <section class="py-6 bg-soft-blue">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge badge-pill badge-sky mb-3">✨ Why Work With Me?</span>
+                <h2 class="h2">Proven Competition Results</h2>
+                <p class="body-2 text-grey-300" style="max-width:600px;margin:0 auto;">
+                    Experience, expertise, and a track record of success.
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">🏆</span>
+                            <h4 class="h4 mt-2">Winning Results</h4>
+                            <p class="body-4 text-grey-200">My students consistently place in regional and national competitions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">🧑‍🏫</span>
+                            <h4 class="h4 mt-2">Expert Coaching</h4>
+                            <p class="body-4 text-grey-200">Over 10,000 lessons delivered — I know how to prepare students for high-pressure situations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">📚</span>
+                            <h4 class="h4 mt-2">Bespoke Materials</h4>
+                            <p class="body-4 text-grey-200">Proprietary worksheets and resources designed specifically for competition success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">💪</span>
+                            <h4 class="h4 mt-2">Confidence Building</h4>
+                            <p class="body-4 text-grey-200">Beyond the competition, students gain skills and confidence that last a lifetime.</p>
                         </div>
                     </div>
                 </div>
@@ -639,17 +840,17 @@
     </section>
 
     <!-- ===== TESTIMONIAL ===== -->
-    <section class="py-6 bg-light">
+    <section class="py-6">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
-                    <div class="card bg-white text-center">
+                    <div class="card bg-white text-center" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body py-5 px-4">
                             <span style="font-size:3rem;">⭐</span>
-                            <blockquote class="body-1" style="font-style:italic;max-width:600px;margin:1rem auto;">
+                            <blockquote class="body-1" style="font-style:italic;max-width:600px;margin:1rem auto; color:var(--grey-200);">
                                 "Thanks to the competition preparation, my daughter won the regional English competition and got into her dream school."
                             </blockquote>
-                            <p class="body-4 text-grey-200 mb-0">— Parent of student, Age 12</p>
+                            <p class="body-4 text-grey-300 mb-0">— Parent of student, Age 12</p>
                         </div>
                     </div>
                 </div>
@@ -658,58 +859,58 @@
     </section>
 
     <!-- ===== CALENDLY ===== -->
-    <section id="calendly" class="py-6">
+    <section id="calendly" class="py-6 bg-teal-ultra-pale">
         <div class="container">
             <div class="text-center mb-5">
+                <span class="badge badge-pill badge-sage mb-3">📅 Book Now</span>
                 <h2 class="h2">Book a Free Consultation</h2>
-                <p class="body-2 text-grey-200" style="max-width:500px;margin:0 auto;">
+                <p class="body-2 text-grey-300" style="max-width:500px;margin:0 auto;">
                     Choose a time that works for you. Let's discuss your child's goals and how I can help.
                 </p>
+                <div class="section-divider"></div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
-                    <div class="card bg-white p-3">
-                        <div class="card-body p-0">
-                            <!-- Calendly inline widget begin -->
-                            <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-link/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:650px;"></div>
+                    <div class="card" style="border:none; box-shadow: 0 8px 40px rgba(26,60,63,0.08);">
+                        <div class="card-body p-0 overflow-hidden rounded-lg">
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation?hide_gdpr_banner=1" style="min-width:320px;height:650px;"></div>
                             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                            <!-- Calendly inline widget end -->
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p class="body-4 text-grey-200">
-                    ⏰ 30-minute consultation • Free • No obligation
+                <p class="body-4 text-grey-300">
+                    ⏰ 20-minute consultation • Free • No obligation
                 </p>
             </div>
         </div>
     </section>
 
     <!-- ===== CTA ===== -->
-    <section class="py-6 bg-bright-green">
+    <section class="py-6" style="background: var(--teal-pale); border-top:1px solid rgba(26,60,63,0.06);">
         <div class="container text-center">
             <h2 class="h2 mb-3">Ready to start your<br>competition journey?</h2>
-            <p class="body-2 mb-4" style="max-width:500px;margin:0 auto 1.5rem;">
+            <p class="body-2 text-grey-200 mb-4" style="max-width:500px;margin:0 auto 1.5rem;">
                 Let's work together to help your child achieve their competition goals.
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
                 <a href="#calendly" class="btn btn-secondary">Book a consultation</a>
-                <a href="https://aarosakura.github.io/MiedzyNami" class="btn btn-outline-secondary bg-white">Return to homepage</a>
+                <a href="https://aarosakura.github.io/MiedzyNami" class="btn btn-outline-soft" style="background:rgba(255,255,255,0.5);">Return to homepage</a>
             </div>
         </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-lime pt-4 pb-3">
+    <footer class="bg-dark-green pt-4 pb-3" style="color:rgba(255,255,255,0.7);">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6">
-                    <span style="font-family:'Faro','Inter',sans-serif;font-size:1.5rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;">Między Nami</span>
-                    <p class="body-4 mt-1">English tutoring with a British touch.</p>
+                    <span style="font-family:'Faro','Inter',sans-serif;font-size:1.5rem;font-weight:600;color:var(--teal-pale);letter-spacing:-0.03em;">Between us</span>
+                    <p class="body-4 mt-1" style="color:rgba(255,255,255,0.6);">English tutoring with a British touch.</p>
                 </div>
                 <div class="col-12 col-lg-6 text-lg-right">
-                    <p class="body-4">© 2026 All rights reserved.</p>
+                    <p class="body-4" style="color:rgba(255,255,255,0.5);">© 2026 All rights reserved.</p>
                 </div>
             </div>
         </div>
