@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me – Między Nami</title>
+    <title>About Me – Between Us</title>
     <link rel="preconnect" href="https://rsms.me/">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <style>
@@ -16,8 +16,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #242424;
-            background: #fff;
+            color: #1e2b2c;
+            background: #f8fbfa;
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
@@ -27,14 +27,22 @@
             --bright-green: #55ed47;
             --lime: #c9f0b7;
             --pale-lime: #defcd1;
-            --pale-purple: #e4cbfc;
-            --pale-orange: #f8d08b;
-            --pale-yellow: #fff282;
-            --pale-pink: #ffb4a3;
-            --light-mint: #b5dfab;
-            --grey-100: #242424;
-            --grey-200: #515151;
-            --grey-400: #d1d1d1;
+            --grey-100: #1e2b2c;
+            --grey-200: #3d4f52;
+            --grey-300: #6b7f82;
+            --grey-400: #c8d4d6;
+            --teal-dark: #1a3c3f;
+            --teal-mid: #2d5f64;
+            --teal-soft: #4a7f85;
+            --teal-light: #9bbfc4;
+            --teal-pale: #d4e8eb;
+            --teal-ultra-pale: #edf5f6;
+            --sage-green: #b8cdc9;
+            --mint-green: #d4e8e4;
+            --sky-blue: #d4e4ed;
+            --warm-white: #f8fbfa;
+            --soft-blue-bg: #e8f0f2;
+            --card-shadow: rgba(26, 60, 63, 0.08);
         }
 
         .container {
@@ -79,11 +87,11 @@
             text-align: center;
             border: 1px solid transparent;
             border-radius: 50rem;
-            padding: 1.25rem 1.438rem;
-            font-size: 1rem;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.85rem;
             line-height: 1;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.2s ease;
             letter-spacing: -0.02em;
             text-decoration: none;
         }
@@ -97,40 +105,64 @@
             background: #35ea24;
             border-color: #2ae819;
             color: var(--dark-green);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(85, 237, 71, 0.35);
         }
 
         .btn-secondary {
-            background: var(--dark-green);
+            background: var(--teal-dark);
             color: #fff;
-            border-color: var(--dark-green);
+            border-color: var(--teal-dark);
         }
         .btn-secondary:hover {
-            background: #00201a;
-            border-color: #001310;
+            background: #0f282a;
+            border-color: #0a1e1f;
             color: #fff;
+            transform: translateY(-1px);
         }
 
         .btn-outline-secondary {
             background: transparent;
-            color: var(--dark-green);
-            border-color: var(--dark-green);
+            color: var(--teal-dark);
+            border-color: var(--teal-dark);
         }
         .btn-outline-secondary:hover {
-            background: var(--dark-green);
+            background: var(--teal-dark);
             color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-soft {
+            background: transparent;
+            color: var(--teal-dark);
+            border-color: rgba(26, 60, 63, 0.25);
+        }
+        .btn-outline-soft:hover {
+            background: rgba(26, 60, 63, 0.06);
+            border-color: var(--teal-dark);
+            transform: translateY(-1px);
         }
 
         .btn-sm {
-            padding: 0.875rem 0.938rem;
-            font-size: 0.9375rem;
+            padding: 0.4rem 0.7rem;
+            font-size: 0.75rem;
+        }
+
+        .btn-lg {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.1rem;
         }
 
         .btn-link {
             background: none;
             border: none;
-            color: var(--dark-green);
-            font-weight: 600;
-            padding: 1.25rem 1.438rem;
+            color: var(--teal-dark);
+            font-weight: 500;
+            padding: 0.4rem 0.5rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
         }
         .btn-link:hover {
             color: #38d02a;
@@ -142,7 +174,7 @@
             font-size: 4.25rem;
             font-weight: 600;
             line-height: 1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -151,7 +183,7 @@
             font-size: 3.625rem;
             font-weight: 600;
             line-height: 1.1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -160,7 +192,7 @@
             font-size: 1.75rem;
             font-weight: 600;
             line-height: 1.15;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -169,7 +201,7 @@
             font-size: 1.25rem;
             font-weight: 600;
             line-height: 1.15;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -178,7 +210,7 @@
             font-size: 8.75rem;
             font-weight: 600;
             line-height: 1.1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -187,7 +219,7 @@
             font-size: 6.25rem;
             font-weight: 600;
             line-height: 1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -221,26 +253,29 @@
         /* ===== UTILITY ===== */
         .text-center { text-align: center; }
         .text-white { color: #fff; }
-        .text-dark-green { color: var(--dark-green); }
+        .text-dark-green { color: var(--teal-dark); }
         .text-grey-200 { color: var(--grey-200); }
+        .text-grey-300 { color: var(--grey-300); }
         .text-grey-400 { color: var(--grey-400); }
-        .text-lime { color: var(--lime); }
+        .text-teal-soft { color: var(--teal-soft); }
+        .text-teal-light { color: var(--teal-light); }
 
         .bg-white { background: #fff; }
+        .bg-warm-white { background: var(--warm-white); }
+        .bg-soft-blue { background: var(--soft-blue-bg); }
+        .bg-teal-pale { background: var(--teal-pale); }
+        .bg-teal-ultra-pale { background: var(--teal-ultra-pale); }
         .bg-light { background: #f7f6f5; }
         .bg-bright-green { background: var(--bright-green); }
-        .bg-dark-green { background: var(--dark-green); }
-        .bg-pale-lime { background: var(--pale-lime); }
-        .bg-pale-purple { background: var(--pale-purple); }
-        .bg-pale-orange { background: var(--pale-orange); }
-        .bg-pale-yellow { background: var(--pale-yellow); }
-        .bg-pale-pink { background: var(--pale-pink); }
-        .bg-lime { background: var(--lime); }
+        .bg-dark-green { background: var(--teal-dark); }
+        .bg-sage-green { background: var(--sage-green); }
+        .bg-mint-green { background: var(--mint-green); }
+        .bg-sky-blue { background: var(--sky-blue); }
 
         .border-bottom { border-bottom: 1px solid var(--grey-400); }
         .border-top { border-top: 1px solid var(--grey-400); }
-        .border-dark-green-10 { border-color: rgba(0,70,58,0.1); }
-        .border-light-mint { border-color: var(--light-mint); }
+        .border-dark-green-10 { border-color: rgba(26, 60, 63, 0.1); }
+        .border-light-mint { border-color: var(--mint-green); }
 
         .rounded-lg { border-radius: 1.5rem; }
         .rounded { border-radius: 1rem; }
@@ -259,7 +294,10 @@
         .justify-content-end { justify-content: flex-end; }
 
         .w-100 { width: 100%; }
+        .h-100 { height: 100%; }
         .position-relative { position: relative; }
+        .position-absolute { position: absolute; }
+        .overflow-hidden { overflow: hidden; }
 
         .py-3 { padding: 0.75rem 0; }
         .py-4 { padding: 1.25rem 0; }
@@ -272,6 +310,7 @@
         .px-4 { padding: 0 1.25rem; }
         .px-5 { padding: 0 2rem; }
         .px-6 { padding: 0 2.5rem; }
+        .px-0 { padding: 0; }
         .pt-4 { padding-top: 1.25rem; }
         .pt-5 { padding-top: 2rem; }
         .pt-7 { padding-top: 4rem; }
@@ -308,6 +347,14 @@
 
         .gap-3 { gap: 0.75rem; }
         .gap-5 { gap: 2rem; }
+
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--teal-light);
+            border-radius: 10px;
+            margin: 0.5rem auto 1.5rem;
+        }
 
         @media (min-width: 768px) {
             .d-md-flex { display: flex; }
@@ -372,31 +419,49 @@
 
         /* ===== CARD ===== */
         .card {
-            background: #f9f7f1;
+            background: #fff;
             border-radius: 1.5rem;
-            border: 0;
+            border: 1px solid rgba(26, 60, 63, 0.06);
             display: flex;
             flex-direction: column;
             word-wrap: break-word;
             background-clip: border-box;
             position: relative;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.08);
         }
         .card-body { padding: 1.25rem; flex: 1 1 auto; }
         @media (min-width: 992px) { .card-body { padding: 2rem; } }
 
+        .card-soft {
+            background: var(--teal-ultra-pale);
+            border: none;
+        }
+        .card-soft:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.06);
+        }
+
         /* ===== BADGE ===== */
         .badge {
             display: inline-block;
-            padding: 0.75rem 0.875rem;
-            font-size: 0.875rem;
+            padding: 0.5rem 0.875rem;
+            font-size: 0.8rem;
             font-weight: 600;
             line-height: 1;
             border-radius: 0.75rem;
             text-align: center;
         }
         .badge-pill { border-radius: 10rem; }
-        .badge-secondary { background: var(--dark-green); color: #fff; }
+        .badge-secondary { background: var(--teal-dark); color: #fff; }
         .badge-white { background: #fff; color: var(--grey-100); }
+        .badge-teal-soft { background: var(--teal-pale); color: var(--teal-dark); }
+        .badge-sage { background: var(--sage-green); color: var(--teal-dark); }
+        .badge-sky { background: var(--sky-blue); color: var(--teal-dark); }
+        .badge-mint { background: var(--mint-green); color: var(--teal-dark); }
 
         /* ===== SHADOW ===== */
         .shadow-pale-green {
@@ -411,7 +476,7 @@
             left: 1.25rem;
             width: 100%;
             height: 100%;
-            background: #bbdfaa;
+            background: var(--sage-green);
             border-radius: 1rem;
             z-index: 1;
         }
@@ -425,31 +490,51 @@
         .navbar {
             display: flex;
             align-items: center;
-            padding: 0.75rem 1.25rem;
-            background: #fff;
-            border-bottom: 1px solid var(--grey-400);
+            padding: 0.3rem 1rem;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(26, 60, 63, 0.06);
             position: sticky;
             top: 0;
             z-index: 1030;
+            flex-wrap: nowrap;
+            gap: 0.3rem;
+            min-height: 44px;
         }
-        .navbar .logo { margin-right: 2rem; }
+        .navbar .logo {
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
         .navbar .nav-links {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.1rem;
             flex: 1;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
         }
-        .navbar .nav-links a { text-decoration: none; }
+        .navbar .nav-links::-webkit-scrollbar { display: none; }
+        .navbar .nav-links a { 
+            text-decoration: none; 
+            white-space: nowrap;
+        }
+        .navbar .nav-links .btn-link {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.4rem;
+        }
         .hamburger {
             display: none;
             background: var(--bright-green);
             border: none;
             border-radius: 50%;
-            padding: 0.5rem;
+            padding: 0.3rem;
             cursor: pointer;
             margin-left: auto;
+            flex-shrink: 0;
         }
-        @media (max-width: 1260px) {
+        @media (max-width: 1400px) {
             .navbar .nav-links { display: none; }
             .hamburger { display: block; }
         }
@@ -462,7 +547,7 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            background: #fff;
+            background: #f8fbfa;
             z-index: 1040;
             padding: 1.25rem;
             flex-direction: column;
@@ -475,13 +560,14 @@
             font-size: 2rem;
             cursor: pointer;
             margin-left: auto;
+            color: var(--teal-dark);
         }
         .mobile-menu .menu-item {
             padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(0,70,58,0.1);
-            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(26, 60, 63, 0.06);
+            font-size: 1.1rem;
             font-weight: 600;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             text-decoration: none;
             display: flex;
             justify-content: space-between;
@@ -492,8 +578,8 @@
         /* ===== STATS GRID ===== */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(2, auto);
-            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 2rem;
         }
         .stats-grid hr { grid-column: 1 / -1; }
 
@@ -517,16 +603,158 @@
         .list-unstyled { list-style: none; padding-left: 0; }
 
         /* ===== FOOTER ===== */
-        .link-border { border-bottom: 1px solid var(--light-mint); }
+        .link-border { border-bottom: 1px solid var(--mint-green); }
         @media (min-width: 992px) { .link-border { border-bottom: none; } }
+
+        /* ===== HERO WITH BACKGROUND IMAGE ===== */
+        .hero-section {
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section .hero-image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .hero-section .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-section .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 60, 63, 0.45);
+            z-index: 2;
+        }
+        .hero-section .hero-fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(to bottom, transparent, #f8fbfa);
+            z-index: 2;
+        }
+        .hero-section .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+        .hero-section .hero-content .badge {
+            background: rgba(26, 60, 63, 0.75);
+            backdrop-filter: blur(4px);
+            color: #fff;
+        }
+        .hero-section .hero-content h1 {
+            color: #fff;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        .hero-section .hero-content p {
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0.9;
+        }
+        .hero-section .hero-content .btn-primary {
+            box-shadow: 0 8px 30px rgba(85, 237, 71, 0.35);
+        }
+        .hero-section .hero-content .btn-outline-soft {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            border-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+        .hero-section .hero-content .btn-outline-soft:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-section .hero-stats {
+            position: relative;
+            z-index: 3;
+            background: rgba(26, 60, 63, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 1rem;
+            padding: 1.5rem 2rem;
+            margin-top: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-section .hero-stats .stat-item {
+            text-align: center;
+            color: #fff;
+        }
+        .hero-section .hero-stats .stat-item .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--bright-green);
+            display: block;
+        }
+        .hero-section .hero-stats .stat-item .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 65vh;
+            }
+            .hero-section .hero-stats {
+                padding: 1rem;
+                margin-top: 1.5rem;
+            }
+            .hero-section .hero-stats .stat-item .stat-number {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* ===== CREDENTIALS CARD ===== */
+        .credential-card {
+            background: #fff;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(26, 60, 63, 0.06);
+            padding: 1.5rem;
+            height: 100%;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .credential-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.08);
+        }
+        .credential-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .credential-card h4 {
+            margin-bottom: 0.5rem;
+        }
+        .credential-card p {
+            color: var(--grey-200);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 576px) {
+            .container { padding: 0 10px; }
+        }
     </style>
 </head>
 <body>
 
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
-        <a href="https://aarosakura.github.io/MiedzyNami" class="logo" style="font-family:'Faro','Inter',sans-serif;font-size:1.5rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;text-decoration:none;">
-            Między Nami
+        <a href="https://aarosakura.github.io/MiedzyNami" class="logo" style="font-family:'Faro','Inter',sans-serif;font-size:1.1rem;font-weight:600;color:var(--teal-dark);letter-spacing:-0.03em;text-decoration:none;flex-shrink:0;">
+            Between us
         </a>
         <div class="nav-links">
             <a href="https://aarosakura.github.io/MiedzyNami/languagecoaching.html" class="btn btn-link btn-sm">Language coaching</a>
@@ -540,13 +768,13 @@
             <a href="#" class="btn btn-link btn-sm">Lesson plans</a>
             <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="btn btn-link btn-sm">About us</a>
             <a href="#" class="btn btn-link btn-sm ml-auto" style="margin-left:auto;">Login</a>
-            <a href="#" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;padding:0.3rem 0.7rem;font-size:0.75rem;">
+            <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;padding:0.3rem 0.7rem;font-size:0.75rem;">
                 <svg width="10" height="11" viewBox="0 0 12 13" fill="none" style="margin-right:3px;"><circle cx="4.95103" cy="5.89976" r="4.10103" stroke="#00463A" stroke-width="1.7"/><path d="M10.4479 12.6529C10.7798 12.9848 11.318 12.9848 11.65 12.6529C11.9819 12.3209 11.9819 11.7827 11.65 11.4508L10.4479 12.6529ZM7.53958 9.7446L10.4479 12.6529L11.65 11.4508L8.74167 8.54251L7.53958 9.7446Z" fill="#00463A"/></svg>
                 Book a consultation
             </a>
         </div>
         <button class="hamburger" onclick="toggleMobileMenu()">
-            <svg width="42" height="43" viewBox="0 0 42 43"><path d="M14 19.9487H28" stroke="#00463A" stroke-width="2"/><path d="M14 24.9487H28" stroke="#00463A" stroke-width="2"/></svg>
+            <svg width="28" height="29" viewBox="0 0 42 43"><path d="M14 19.9487H28" stroke="#00463A" stroke-width="2"/><path d="M14 24.9487H28" stroke="#00463A" stroke-width="2"/></svg>
         </button>
     </nav>
 
@@ -563,124 +791,142 @@
         <a href="https://aarosakura.github.io/MiedzyNami/Store" class="menu-item">Store <span>›</span></a>
         <a href="#" class="menu-item">Lesson plans <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="menu-item">About us <span>›</span></a>
-        <a href="#" class="btn btn-primary mt-4">Book a consultation</a>
+        <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary mt-4">Book a consultation</a>
         <a href="#" class="btn btn-link mt-2">Login</a>
     </div>
 
-    <!-- ===== HERO / ABOUT INTRO ===== -->
+    <!-- ===== HERO WITH BACKGROUND IMAGE ===== -->
     <section class="hero-section">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12 col-lg-6 order-1 order-lg-0 d-flex flex-column">
-                    <div class="flex-grow-1 mx-auto py-7 px-4" style="max-width: 600px;">
-                        <span class="badge badge-pill badge-secondary mb-4">🇬🇧 Over a decade in the UK</span>
-                        <h1 class="h1 my-4">
-                            About me —<br>
-                            your English<br>
-                            specialist.
-                        </h1>
-                        <p class="body-2 mb-4 text-grey-200">
-                            From school competitions to medical conferences — I've taught English to thousands of students across every level.
-                        </p>
-                        <div class="d-flex gap-3 flex-wrap">
-                            <a href="#" class="btn btn-primary">Book a free consultation</a>
-                            <a href="#credentials" class="btn btn-outline-secondary">View credentials ↓</a>
-                        </div>
+        <div class="hero-image-wrapper">
+            <img src="https://raw.githubusercontent.com/aarosakura/MiedzyNami/refs/heads/main/images/heroimage.png" alt="English tutoring" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-fade"></div>
+
+        <div class="container hero-content">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 text-center">
+                    <span class="badge badge-pill mb-4" style="background:rgba(26,60,63,0.75); backdrop-filter:blur(4px); color:#fff;">
+                        🇬🇧 Over a decade in the UK
+                    </span>
+                    <h1 class="h1">
+                        About me —<br>
+                        your English<br>
+                        specialist.
+                    </h1>
+                    <p class="body-1 mb-4" style="max-width:650px; margin:0 auto;">
+                        From school competitions to medical conferences — I've taught English to thousands of students across every level.
+                    </p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary">Book a free consultation</a>
+                        <a href="#credentials" class="btn btn-outline-soft">View credentials ↓</a>
                     </div>
-                    <div class="bg-pale-lime py-5 px-4">
-                        <div class="d-flex flex-wrap justify-content-around" style="max-width:600px;margin:0 auto;">
-                            <div class="text-center">
-                                <span class="display-2" style="font-size:3.5rem;">10K+</span>
-                                <p class="body-4">Lessons delivered</p>
+
+                    <!-- Stats Bar -->
+                    <div class="hero-stats">
+                        <div class="row justify-content-center">
+                            <div class="col-4 col-md-3 stat-item">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-label">Lessons delivered</span>
                             </div>
-                            <div class="text-center">
-                                <span class="display-2" style="font-size:3.5rem;">100s</span>
-                                <p class="body-4">Satisfied students</p>
+                            <div class="col-4 col-md-3 stat-item">
+                                <span class="stat-number">100s</span>
+                                <span class="stat-label">Satisfied students</span>
                             </div>
-                            <div class="text-center">
-                                <span class="display-2" style="font-size:3.5rem;">2</span>
-                                <p class="body-4">Books published</p>
+                            <div class="col-4 col-md-3 stat-item">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Books published</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 order-0 order-lg-1 d-none d-lg-block" style="background-image: url('https://a.storyblok.com/f/116773/1733x1155/7af67690ec/personalised-private-tuition.jpg/m/200x40:1155x1100'); background-position: 50%; background-repeat: no-repeat; background-size: cover; min-height: 600px;"></div>
             </div>
         </div>
     </section>
 
     <!-- ===== CREDENTIALS SECTION ===== -->
-    <section id="credentials" class="container py-9">
-        <div class="text-center mb-8">
-            <span class="badge badge-pill badge-secondary mb-3">📜 Credentials</span>
-            <h2 class="h2">Why learn with me?</h2>
-            <p class="body-2 text-grey-200 mx-auto" style="max-width:600px;">
-                A decade in the UK. A science degree. Thousands of lessons. And a passion for helping students succeed.
-            </p>
-        </div>
+    <section id="credentials" class="py-9">
+        <div class="container">
+            <div class="text-center mb-8">
+                <span class="badge badge-pill badge-sage mb-3">📜 Credentials</span>
+                <h2 class="h2">Why learn with me?</h2>
+                <p class="body-2 text-grey-300 mx-auto" style="max-width:600px;">
+                    A decade in the UK. A science degree. Thousands of lessons. And a passion for helping students succeed.
+                </p>
+                <div class="section-divider"></div>
+            </div>
 
-        <div class="row">
-            <!-- Left Column: Key Stats -->
-            <div class="col-12 col-lg-5">
-                <div class="card bg-pale-lime h-100">
-                    <div class="card-body">
-                        <h3 class="h3 mb-4">By the numbers</h3>
-                        <div class="stats-grid">
-                            <span class="display-1" style="font-size:4rem;">10+</span>
-                            <span class="body-2">Years in the UK</span>
-                            <hr class="w-100 my-3 border-dark-green-10">
-                            <span class="display-1" style="font-size:4rem;">10K+</span>
-                            <span class="body-2">Lessons delivered</span>
-                            <hr class="w-100 my-3 border-dark-green-10">
-                            <span class="display-1" style="font-size:4rem;">100s</span>
-                            <span class="body-2">Satisfied students</span>
-                            <hr class="w-100 my-3 border-dark-green-10">
-                            <span class="display-1" style="font-size:4rem;">2</span>
-                            <span class="body-2">Books authored</span>
-                            <hr class="w-100 my-3 border-dark-green-10">
-                            <span class="display-1" style="font-size:4rem;">1,000+</span>
-                            <span class="body-2">Custom worksheets &amp; exam papers</span>
+            <div class="row">
+                <!-- Left Column: Key Stats -->
+                <div class="col-12 col-lg-5">
+                    <div class="card" style="background: var(--teal-pale); border: none; border-radius: 1.5rem; height: 100%;">
+                        <div class="card-body">
+                            <h3 class="h3 mb-4">By the numbers</h3>
+                            <div class="stats-grid">
+                                <div>
+                                    <span class="display-1" style="font-size:4rem; color:var(--teal-dark);">10+</span>
+                                    <p class="body-2" style="color:var(--grey-200);">Years in the UK</p>
+                                </div>
+                                <div>
+                                    <span class="display-1" style="font-size:4rem; color:var(--teal-dark);">10K+</span>
+                                    <p class="body-2" style="color:var(--grey-200);">Lessons delivered</p>
+                                </div>
+                                <hr class="w-100 my-3 border-dark-green-10">
+                                <div>
+                                    <span class="display-1" style="font-size:4rem; color:var(--teal-dark);">100s</span>
+                                    <p class="body-2" style="color:var(--grey-200);">Satisfied students</p>
+                                </div>
+                                <div>
+                                    <span class="display-1" style="font-size:4rem; color:var(--teal-dark);">2</span>
+                                    <p class="body-2" style="color:var(--grey-200);">Books authored</p>
+                                </div>
+                                <hr class="w-100 my-3 border-dark-green-10">
+                                <div>
+                                    <span class="display-1" style="font-size:4rem; color:var(--teal-dark);">1,000+</span>
+                                    <p class="body-2" style="color:var(--grey-200);">Custom worksheets</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Right Column: Credentials Details -->
-            <div class="col-12 col-lg-7">
-                <div class="card bg-light h-100">
-                    <div class="card-body">
-                        <h3 class="h3 mb-4">What I bring to every lesson</h3>
-                        
-                        <div class="mb-5">
-                            <p class="body-2 medium text-dark-green">🎓 Academic background</p>
-                            <ul class="list-unstyled body-3">
-                                <li class="mb-2">✓ Science degree from the <strong>University of Coventry</strong>, UK</li>
-                                <li class="mb-2">✓ Over a decade living, working and teaching in <strong>England</strong></li>
-                                <li class="mb-2">✓ Specialised in English language as a full-time career</li>
-                            </ul>
-                        </div>
+                <!-- Right Column: Credentials Details -->
+                <div class="col-12 col-lg-7 mt-4 mt-lg-0">
+                    <div class="card" style="border:1px solid rgba(26,60,63,0.06);">
+                        <div class="card-body">
+                            <h3 class="h3 mb-4">What I bring to every lesson</h3>
+                            
+                            <div class="mb-5">
+                                <p class="body-2 medium" style="color:var(--teal-dark);">🎓 Academic background</p>
+                                <ul class="list-unstyled body-3" style="color:var(--grey-200);">
+                                    <li class="mb-2">✓ Science degree from the <strong style="color:var(--teal-dark);">University of Coventry</strong>, UK</li>
+                                    <li class="mb-2">✓ Over a decade living, working and teaching in <strong style="color:var(--teal-dark);">England</strong></li>
+                                    <li class="mb-2">✓ Specialised in English language as a full-time career</li>
+                                </ul>
+                            </div>
 
-                        <div class="mb-5">
-                            <p class="body-2 medium text-dark-green">👩‍🏫 Teaching experience</p>
-                            <ul class="list-unstyled body-3">
-                                <li class="mb-2">✓ <strong>All levels</strong> — from absolute beginners to advanced professionals</li>
-                                <li class="mb-2">✓ <strong>School competitions</strong> — specialist preparation for regional and national contests</li>
-                                <li class="mb-2">✓ <strong>Medical English</strong> — teaching doctors, nurses and healthcare professionals</li>
-                                <li class="mb-2">✓ <strong>Business English</strong> — training accountants, psychologists and corporate clients</li>
-                                <li class="mb-2">✓ <strong>Exam preparation</strong> — GCSE, A-Level, Cambridge, IELTS and more</li>
-                            </ul>
-                        </div>
+                            <div class="mb-5">
+                                <p class="body-2 medium" style="color:var(--teal-dark);">👩‍🏫 Teaching experience</p>
+                                <ul class="list-unstyled body-3" style="color:var(--grey-200);">
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">All levels</strong> — from absolute beginners to advanced professionals</li>
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">School competitions</strong> — specialist preparation for regional and national contests</li>
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">Medical English</strong> — teaching doctors, nurses and healthcare professionals</li>
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">Business English</strong> — training accountants, psychologists and corporate clients</li>
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">Exam preparation</strong> — GCSE, A-Level, Cambridge, IELTS and more</li>
+                                </ul>
+                            </div>
 
-                        <div>
-                            <p class="body-2 medium text-dark-green">📚 My own materials</p>
-                            <ul class="list-unstyled body-3">
-                                <li class="mb-2">✓ <strong>1,000+ proprietary worksheets</strong> — designed by me, used only by my students</li>
-                                <li class="mb-2">✓ <strong>Custom test and exam papers</strong> — tailored to each student's goals and level</li>
-                                <li class="mb-2">✓ <strong>Author of two books:</strong></li>
-                            </ul>
-                            <div class="d-flex flex-wrap gap-3 mt-3">
-                                <span class="badge badge-pill badge-secondary">📖 "English Tales"</span>
-                                <span class="badge badge-pill badge-secondary">📘 "Competition Polish: A Cheat Code"</span>
+                            <div>
+                                <p class="body-2 medium" style="color:var(--teal-dark);">📚 My own materials</p>
+                                <ul class="list-unstyled body-3" style="color:var(--grey-200);">
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">1,000+ proprietary worksheets</strong> — designed by me, used only by my students</li>
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">Custom test and exam papers</strong> — tailored to each student's goals and level</li>
+                                    <li class="mb-2">✓ <strong style="color:var(--teal-dark);">Author of two books:</strong></li>
+                                </ul>
+                                <div class="d-flex flex-wrap gap-3 mt-3">
+                                    <span class="badge badge-pill badge-sage">📖 "English Tales"</span>
+                                    <span class="badge badge-pill badge-sky">📘 "Competition Polish: A Cheat Code"</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -690,52 +936,54 @@
     </section>
 
     <!-- ===== WHAT I TEACH ===== -->
-    <div class="bg-pale-lime py-8">
+    <div class="bg-soft-blue py-8">
         <div class="container">
             <div class="text-center mb-7">
-                <h2 class="h2">Who I teach</h2>
-                <p class="body-2 text-grey-200 mx-auto" style="max-width:600px;">
+                <span class="badge badge-pill badge-mint mb-3">🎯 Who I Teach</span>
+                <h2 class="h2">Students at every stage</h2>
+                <p class="body-2 text-grey-300 mx-auto" style="max-width:600px;">
                     From primary school to PhD — I've helped students at every stage of their English journey.
                 </p>
+                <div class="section-divider"></div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                    <div class="card bg-white text-center h-100">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <span style="font-size:3rem;">🧒</span>
                             <h4 class="h4 mt-3">School Age</h4>
-                            <p class="body-4">Primary, secondary, GCSE, A-Level — building strong foundations.</p>
-                            <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                            <p class="body-4 text-grey-200">Primary, secondary, GCSE, A-Level — building strong foundations.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                    <div class="card bg-white text-center h-100">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <span style="font-size:3rem;">🏆</span>
                             <h4 class="h4 mt-3">Competitions</h4>
-                            <p class="body-4">Specialist preparation for regional and national English competitions.</p>
-                            <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                            <p class="body-4 text-grey-200">Specialist preparation for regional and national English competitions.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                    <div class="card bg-white text-center h-100">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <span style="font-size:3rem;">👩‍⚕️</span>
                             <h4 class="h4 mt-3">Medical English</h4>
-                            <p class="body-4">For doctors, nurses, psychologists and healthcare professionals.</p>
-                            <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                            <p class="body-4 text-grey-200">For doctors, nurses, psychologists and healthcare professionals.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3 mb-4">
-                    <div class="card bg-white text-center h-100">
+                    <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <span style="font-size:3rem;">💼</span>
                             <h4 class="h4 mt-3">Business English</h4>
-                            <p class="body-4">For accountants, executives, corporate teams and entrepreneurs.</p>
-                            <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                            <p class="body-4 text-grey-200">For accountants, executives, corporate teams and entrepreneurs.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
                         </div>
                     </div>
                 </div>
@@ -747,34 +995,35 @@
     <div class="container py-8">
         <div class="row align-items-center">
             <div class="col-12 col-lg-6">
-                <h2 class="h2 mb-4">My books</h2>
-                <p class="body-2 mb-4">
+                <span class="badge badge-pill badge-teal-soft mb-3">📚 My Books</span>
+                <h2 class="h2 mb-4">Written for your success</h2>
+                <p class="body-2 mb-4 text-grey-200">
                     I've written two books that reflect my unique approach to teaching English — combining practical skills with a deep understanding of how Polish students learn best.
                 </p>
                 <div class="mb-4">
                     <div class="d-flex align-items-center mb-3">
                         <span style="font-size:2rem;margin-right:1rem;">📖</span>
                         <div>
-                            <p class="body-3 medium mb-0">"English Tales"</p>
-                            <p class="body-4 text-grey-200">Engaging stories and exercises for intermediate learners.</p>
+                            <p class="body-3 medium mb-0" style="color:var(--teal-dark);">"English Tales"</p>
+                            <p class="body-4 text-grey-300">Engaging stories and exercises for intermediate learners.</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
                         <span style="font-size:2rem;margin-right:1rem;">📘</span>
                         <div>
-                            <p class="body-3 medium mb-0">"Competition Polish: A Cheat Code"</p>
-                            <p class="body-4 text-grey-200">Your shortcut to winning school English competitions.</p>
+                            <p class="body-3 medium mb-0" style="color:var(--teal-dark);">"Competition Polish: A Cheat Code"</p>
+                            <p class="body-4 text-grey-300">Your shortcut to winning school English competitions.</p>
                         </div>
                     </div>
                 </div>
-                <a href="https://aarosakura.github.io/MiedzyNami/Store" class="btn btn-outline-secondary">Browse my books in the store</a>
+                <a href="https://aarosakura.github.io/MiedzyNami/Store" class="btn btn-outline-soft">Browse my books in the store</a>
             </div>
             <div class="col-12 col-lg-5 offset-lg-1 mt-5 mt-lg-0">
                 <div class="shadow-pale-green">
-                    <div class="bg-pale-yellow rounded-lg p-5 text-center" style="min-height:200px;display:flex;align-items:center;justify-content:center;">
+                    <div class="bg-teal-ultra-pale rounded-lg p-5 text-center" style="min-height:200px;display:flex;align-items:center;justify-content:center; border:1px solid rgba(26,60,63,0.06);">
                         <div>
                             <p style="font-size:4rem;">📚</p>
-                            <p class="body-2 medium">Two books. Thousands of students. One mission.</p>
+                            <p class="body-2 medium" style="color:var(--teal-dark);">Two books. Thousands of students. One mission.</p>
                         </div>
                     </div>
                 </div>
@@ -783,51 +1032,53 @@
     </div>
 
     <!-- ===== TESTIMONIALS ===== -->
-    <div class="bg-light py-8">
+    <div class="bg-soft-blue py-8">
         <div class="container">
             <div class="text-center mb-7">
+                <span class="badge badge-pill badge-sky mb-3">💬 Testimonials</span>
                 <h2 class="h2">What students say</h2>
-                <p class="body-2 text-grey-200">Real feedback from real students — at every level.</p>
+                <p class="body-2 text-grey-300">Real feedback from real students — at every level.</p>
+                <div class="section-divider"></div>
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-white h-100">
+                    <div class="card bg-white h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <div class="mb-3">
                                 <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
                             </div>
-                            <p class="body-3">"Thanks to her, I won the regional English competition and got into my dream school."</p>
+                            <p class="body-3" style="color:var(--grey-200);">"Thanks to her, I won the regional English competition and got into my dream school."</p>
                             <div class="mt-4">
-                                <p class="body-4 medium mb-0">— Kasia, 16</p>
-                                <p class="body-4 text-grey-200">Competition student</p>
+                                <p class="body-4 medium mb-0" style="color:var(--teal-dark);">— Kasia, 16</p>
+                                <p class="body-4 text-grey-300">Competition student</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-white h-100">
+                    <div class="card bg-white h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <div class="mb-3">
                                 <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
                             </div>
-                            <p class="body-3">"As a doctor moving to the UK, her medical English lessons gave me the confidence I needed."</p>
+                            <p class="body-3" style="color:var(--grey-200);">"As a doctor moving to the UK, her medical English lessons gave me the confidence I needed."</p>
                             <div class="mt-4">
-                                <p class="body-4 medium mb-0">— Dr. Nowak</p>
-                                <p class="body-4 text-grey-200">Medical English student</p>
+                                <p class="body-4 medium mb-0" style="color:var(--teal-dark);">— Dr. Nowak</p>
+                                <p class="body-4 text-grey-300">Medical English student</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-white h-100">
+                    <div class="card bg-white h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
                             <div class="mb-3">
                                 <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
                             </div>
-                            <p class="body-3">"Her proprietary worksheets are incredible — nothing else like them. My grades went from B to A*."</p>
+                            <p class="body-3" style="color:var(--grey-200);">"Her proprietary worksheets are incredible — nothing else like them. My grades went from B to A*."</p>
                             <div class="mt-4">
-                                <p class="body-4 medium mb-0">— Michał, 18</p>
-                                <p class="body-4 text-grey-200">A-Level student</p>
+                                <p class="body-4 medium mb-0" style="color:var(--teal-dark);">— Michał, 18</p>
+                                <p class="body-4 text-grey-300">A-Level student</p>
                             </div>
                         </div>
                     </div>
@@ -837,75 +1088,77 @@
     </div>
 
     <!-- ===== CTA ===== -->
-    <div class="bg-bright-green rounded-lg container my-5 p-5">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-6">
-                <h2 class="h2">Ready to take your English to the next level?</h2>
+    <div class="container my-7">
+        <div class="bg-teal-pale rounded-lg p-5" style="border:1px solid rgba(26,60,63,0.08);">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <h2 class="h2">Ready to take your English to the next level?</h2>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p class="body-3 text-grey-200">Whether you're preparing for a competition, a career, or just want to feel more confident — I'm here to help.</p>
+                </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <p class="body-3">Whether you're preparing for a competition, a career, or just want to feel more confident — I'm here to help.</p>
+            <hr class="my-5 border-dark-green-10">
+            <div class="d-flex flex-wrap gap-3">
+                <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-lg">Book a consultation</a>
+                <a href="#" class="btn btn-outline-soft btn-lg bg-white">View my services</a>
             </div>
-        </div>
-        <hr class="my-5 border-dark-green-10">
-        <div class="d-flex flex-wrap gap-3">
-            <a href="#" class="btn btn-secondary btn-lg">Book a consultation</a>
-            <a href="#" class="btn btn-outline-secondary btn-lg bg-white">View my services</a>
         </div>
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-lime pt-5">
+    <footer class="bg-dark-green pt-5" style="color:rgba(255,255,255,0.7);">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <span style="font-family:'Faro','Inter',sans-serif;font-size:2rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;">Między Nami</span>
-                    <p class="body-4 mt-2">English tutoring with a British touch.</p>
+                    <span style="font-family:'Faro','Inter',sans-serif;font-size:2rem;font-weight:600;color:var(--teal-pale);letter-spacing:-0.03em;">Between us</span>
+                    <p class="body-4 mt-2" style="color:rgba(255,255,255,0.6);">English tutoring with a British touch.</p>
                     <div class="my-5">
                         <a href="#" class="d-inline-block mr-2">
-                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#00463A" fill-opacity="0.1"/><path d="M37.41 28.81c2.43 0 2.72.01 3.67.05.89.04 1.37.19 1.69.31.42.16.73.36 1.04.68.32.32.51.62.68 1.04.12.32.27.8.31 1.69.04.96.05 1.24.05 3.67s-.01 2.71-.05 3.67c-.04.89-.19 1.37-.31 1.69-.16.42-.36.73-.68 1.04-.32.32-.62.51-1.04.68-.32.12-.8.27-1.69.31-.96.04-1.24.05-3.67.05s-2.71-.01-3.67-.05c-.89-.04-1.37-.19-1.69-.31-.42-.16-.73-.36-1.04-.68-.32-.32-.51-.62-.68-1.04-.12-.32-.27-.8-.31-1.69-.04-.96-.05-1.24-.05-3.67s.01-2.71.05-3.67c.04-.89.19-1.37.31-1.69.16-.42.36-.73.68-1.04.32-.32.62-.51 1.04-.68.32-.12.8-.27 1.69-.31.96-.04 1.24-.05 3.67-.05zm0-1.64c-2.47 0-2.78.01-3.74.05-.97.04-1.63.2-2.2.42-.6.23-1.11.54-1.61 1.05-.51.5-.82 1.01-1.05 1.61-.22.58-.38 1.24-.42 2.2-.04.97-.05 1.28-.05 3.75s.01 2.78.05 3.74c.04.97.2 1.63.42 2.2.23.6.54 1.11 1.05 1.61.5.51 1.01.82 1.61 1.05.58.22 1.24.38 2.2.42.97.04 1.28.05 3.75.05s2.78-.01 3.74-.05c.97-.04 1.63-.2 2.2-.42.6-.23 1.11-.54 1.61-1.05.5-.5.81-1.01 1.05-1.61.22-.58.38-1.24.42-2.2.04-.97.05-1.28.05-3.75s-.01-2.78-.05-3.74c-.04-.97-.2-1.63-.42-2.2-.23-.6-.54-1.11-1.05-1.61-.5-.5-1.01-.81-1.61-1.05-.58-.22-1.24-.38-2.2-.42-.97-.04-1.28-.05-3.74-.05z" fill="#00463A"/><path d="M37.41 31.59c-2.58 0-4.67 2.09-4.67 4.67s2.09 4.67 4.67 4.67 4.67-2.09 4.67-4.67-2.09-4.67-4.67-4.67zm0 7.69a3.03 3.03 0 1 1 0-6.05 3.03 3.03 0 0 1 0 6.05z" fill="#00463A"/><path d="M43.35 31.41a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0z" fill="#00463A"/></svg>
+                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#fff" fill-opacity="0.1"/><path d="M37.41 28.81c2.43 0 2.72.01 3.67.05.89.04 1.37.19 1.69.31.42.16.73.36 1.04.68.32.32.51.62.68 1.04.12.32.27.8.31 1.69.04.96.05 1.24.05 3.67s-.01 2.71-.05 3.67c-.04.89-.19 1.37-.31 1.69-.16.42-.36.73-.68 1.04-.32.32-.62.51-1.04.68-.32.12-.8.27-1.69.31-.96.04-1.24.05-3.67.05s-2.71-.01-3.67-.05c-.89-.04-1.37-.19-1.69-.31-.42-.16-.73-.36-1.04-.68-.32-.32-.51-.62-.68-1.04-.12-.32-.27-.8-.31-1.69-.04-.96-.05-1.24-.05-3.67s.01-2.71.05-3.67c.04-.89.19-1.37.31-1.69.16-.42.36-.73.68-1.04.32-.32.62-.51 1.04-.68.32-.12.8-.27 1.69-.31.96-.04 1.24-.05 3.67-.05zm0-1.64c-2.47 0-2.78.01-3.74.05-.97.04-1.63.2-2.2.42-.6.23-1.11.54-1.61 1.05-.51.5-.82 1.01-1.05 1.61-.22.58-.38 1.24-.42 2.2-.04.97-.05 1.28-.05 3.75s.01 2.78.05 3.74c.04.97.2 1.63.42 2.2.23.6.54 1.11 1.05 1.61.5.51 1.01.82 1.61 1.05.58.22 1.24.38 2.2.42.97.04 1.28.05 3.75.05s2.78-.01 3.74-.05c.97-.04 1.63-.2 2.2-.42.6-.23 1.11-.54 1.61-1.05.5-.5.81-1.01 1.05-1.61.22-.58.38-1.24.42-2.2.04-.97.05-1.28.05-3.75s-.01-2.78-.05-3.74c-.04-.97-.2-1.63-.42-2.2-.23-.6-.54-1.11-1.05-1.61-.5-.5-1.01-.81-1.61-1.05-.58-.22-1.24-.38-2.2-.42-.97-.04-1.28-.05-3.74-.05z" fill="#fff"/><path d="M37.41 31.59c-2.58 0-4.67 2.09-4.67 4.67s2.09 4.67 4.67 4.67 4.67-2.09 4.67-4.67-2.09-4.67-4.67-4.67zm0 7.69a3.03 3.03 0 1 1 0-6.05 3.03 3.03 0 0 1 0 6.05z" fill="#fff"/><path d="M43.35 31.41a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0z" fill="#fff"/></svg>
                         </a>
                         <a href="#" class="d-inline-block">
-                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#00463A" fill-opacity="0.1"/><path d="M31.44 37.77h2.58v10.62c0 .21.17.38.38.38h4.37c.21 0 .38-.17.38-.38v-10.57h2.97c.19 0 .35-.14.38-.34l.45-3.91a.38.38 0 0 0-.38-.42h-3.42v-2.45c0-.74.4-1.11 1.18-1.11h2.23c.21 0 .38-.17.38-.38v-3.59a.38.38 0 0 0-.38-.38h-3.08c-.02 0-.07 0-.14 0-.53 0-2.39.1-3.86 1.45-1.62 1.5-1.4 3.29-1.34 3.6v2.87h-2.71a.38.38 0 0 0-.38.38v3.86c0 .21.17.38.38.38z" fill="#00463A"/></svg>
+                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#fff" fill-opacity="0.1"/><path d="M31.44 37.77h2.58v10.62c0 .21.17.38.38.38h4.37c.21 0 .38-.17.38-.38v-10.57h2.97c.19 0 .35-.14.38-.34l.45-3.91a.38.38 0 0 0-.38-.42h-3.42v-2.45c0-.74.4-1.11 1.18-1.11h2.23c.21 0 .38-.17.38-.38v-3.59a.38.38 0 0 0-.38-.38h-3.08c-.02 0-.07 0-.14 0-.53 0-2.39.1-3.86 1.45-1.62 1.5-1.4 3.29-1.34 3.6v2.87h-2.71a.38.38 0 0 0-.38.38v3.86c0 .21.17.38.38.38z" fill="#fff"/></svg>
                         </a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <h4 class="body-4 medium mb-4">Między Nami</h4>
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Between us</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="text-dark-green">About me</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/languagecoaching.html" class="text-dark-green">Language coaching</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="text-dark-green">English Competitions</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="text-dark-green">Matura &amp; 8th grade exams</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="text-dark-green">Business &amp; Medical English</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="text-dark-green">IELTS &amp; Cambridge Certificates (C1/C2)</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="text-dark-green">School age General lessons</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="text-dark-green">Adult Lessons</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/aboutus" style="color:rgba(255,255,255,0.6); text-decoration:none;">About me</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/languagecoaching.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Language coaching</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/competitions.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">English Competitions</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" style="color:rgba(255,255,255,0.6); text-decoration:none;">Matura &amp; 8th grade exams</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" style="color:rgba(255,255,255,0.6); text-decoration:none;">Business &amp; Medical English</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" style="color:rgba(255,255,255,0.6); text-decoration:none;">IELTS &amp; Cambridge Certificates (C1/C2)</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" style="color:rgba(255,255,255,0.6); text-decoration:none;">School age General lessons</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" style="color:rgba(255,255,255,0.6); text-decoration:none;">Adult Lessons</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-2">
-                    <h4 class="body-4 medium mb-4">Students</h4>
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Students</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" class="text-dark-green">Student FAQs</a></li>
-                        <li><a href="#" class="text-dark-green">Online tutoring FAQs</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Student FAQs</a></li>
+                        <li><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Online tutoring FAQs</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <h4 class="body-4 medium mb-4">Resources</h4>
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Resources</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" class="text-dark-green">Help centre</a></li>
-                        <li class="mb-3"><a href="#" class="text-dark-green">Blog</a></li>
-                        <li class="mb-3"><a href="#" class="text-dark-green">Guides</a></li>
-                        <li><a href="https://aarosakura.github.io/MiedzyNami/Store" class="text-dark-green">Store</a></li>
-                        <li><a href="#" class="text-dark-green">Lesson plans</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Help centre</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Blog</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Guides</a></li>
+                        <li><a href="https://aarosakura.github.io/MiedzyNami/Store" style="color:rgba(255,255,255,0.6); text-decoration:none;">Store</a></li>
+                        <li><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Lesson plans</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="row border-top border-light-mint py-5">
-                <div class="col-12 col-lg-7 body-4">© 2026 Między Nami. All rights reserved.</div>
+            <div class="row border-top border-light-mint py-5" style="border-color:rgba(255,255,255,0.08) !important;">
+                <div class="col-12 col-lg-7 body-4" style="color:rgba(255,255,255,0.5);">© 2026 Between Us. All rights reserved.</div>
                 <div class="col-12 col-lg-5 d-flex flex-wrap gap-4">
-                    <a href="#" class="body-4 text-dark-green"><u>Privacy Policy</u></a>
-                    <a href="#" class="body-4 text-dark-green"><u>Cookie Policy</u></a>
-                    <a href="#" class="body-4 text-dark-green"><u>Terms & Conditions</u></a>
+                    <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Privacy Policy</u></a>
+                    <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Cookie Policy</u></a>
+                    <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Terms &amp; Conditions</u></a>
                 </div>
             </div>
         </div>
