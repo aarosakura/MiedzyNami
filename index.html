@@ -16,8 +16,8 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #242424;
-            background: #fff;
+            color: #1e2b2c;
+            background: #f8fbfa;
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
@@ -27,14 +27,24 @@
             --bright-green: #55ed47;
             --lime: #c9f0b7;
             --pale-lime: #defcd1;
-            --pale-purple: #e4cbfc;
-            --pale-orange: #f8d08b;
-            --pale-yellow: #fff282;
-            --pale-pink: #ffb4a3;
-            --light-mint: #b5dfab;
-            --grey-100: #242424;
-            --grey-200: #515151;
-            --grey-400: #d1d1d1;
+            --grey-100: #1e2b2c;
+            --grey-200: #3d4f52;
+            --grey-300: #6b7f82;
+            --grey-400: #c8d4d6;
+
+            /* Blue-Green Palette */
+            --teal-dark: #1a3c3f;
+            --teal-mid: #2d5f64;
+            --teal-soft: #4a7f85;
+            --teal-light: #9bbfc4;
+            --teal-pale: #d4e8eb;
+            --teal-ultra-pale: #edf5f6;
+            --sage-green: #b8cdc9;
+            --mint-green: #d4e8e4;
+            --sky-blue: #d4e4ed;
+            --warm-white: #f8fbfa;
+            --soft-blue-bg: #e8f0f2;
+            --card-shadow: rgba(26, 60, 63, 0.08);
         }
 
         .container {
@@ -127,7 +137,7 @@
             font-size: 0.85rem;
             line-height: 1;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.2s ease;
             letter-spacing: -0.02em;
             text-decoration: none;
         }
@@ -141,27 +151,42 @@
             background: #35ea24;
             border-color: #2ae819;
             color: var(--dark-green);
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(85, 237, 71, 0.35);
         }
 
         .btn-secondary {
-            background: var(--dark-green);
+            background: var(--teal-dark);
             color: #fff;
-            border-color: var(--dark-green);
+            border-color: var(--teal-dark);
         }
         .btn-secondary:hover {
-            background: #00201a;
-            border-color: #001310;
+            background: #0f282a;
+            border-color: #0a1e1f;
             color: #fff;
+            transform: translateY(-1px);
         }
 
         .btn-outline-secondary {
             background: transparent;
-            color: var(--dark-green);
-            border-color: var(--dark-green);
+            color: var(--teal-dark);
+            border-color: var(--teal-dark);
         }
         .btn-outline-secondary:hover {
-            background: var(--dark-green);
+            background: var(--teal-dark);
             color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-outline-soft {
+            background: transparent;
+            color: var(--teal-dark);
+            border-color: rgba(26, 60, 63, 0.25);
+        }
+        .btn-outline-soft:hover {
+            background: rgba(26, 60, 63, 0.06);
+            border-color: var(--teal-dark);
+            transform: translateY(-1px);
         }
 
         .btn-sm {
@@ -177,7 +202,7 @@
         .btn-link {
             background: none;
             border: none;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             font-weight: 500;
             padding: 0.4rem 0.5rem;
             font-size: 0.75rem;
@@ -196,7 +221,7 @@
             font-size: 4.25rem;
             font-weight: 600;
             line-height: 1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -206,7 +231,7 @@
             font-size: 3.625rem;
             font-weight: 600;
             line-height: 1.1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -216,7 +241,7 @@
             font-size: 1.75rem;
             font-weight: 600;
             line-height: 1.15;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -226,7 +251,7 @@
             font-size: 1.25rem;
             font-weight: 600;
             line-height: 1.15;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -235,7 +260,7 @@
             font-size: 8.75rem;
             font-weight: 600;
             line-height: 1.1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -244,7 +269,7 @@
             font-size: 6.25rem;
             font-weight: 600;
             line-height: 1;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
@@ -285,20 +310,38 @@
             color: #fff;
         }
         .text-dark-green {
-            color: var(--dark-green);
+            color: var(--teal-dark);
         }
         .text-grey-200 {
             color: var(--grey-200);
         }
+        .text-grey-300 {
+            color: var(--grey-300);
+        }
         .text-grey-400 {
             color: var(--grey-400);
         }
-        .text-lime {
-            color: var(--lime);
+        .text-teal-soft {
+            color: var(--teal-soft);
+        }
+        .text-teal-light {
+            color: var(--teal-light);
         }
 
         .bg-white {
             background: #fff;
+        }
+        .bg-warm-white {
+            background: var(--warm-white);
+        }
+        .bg-soft-blue {
+            background: var(--soft-blue-bg);
+        }
+        .bg-teal-pale {
+            background: var(--teal-pale);
+        }
+        .bg-teal-ultra-pale {
+            background: var(--teal-ultra-pale);
         }
         .bg-light {
             background: #f7f6f5;
@@ -307,25 +350,16 @@
             background: var(--bright-green);
         }
         .bg-dark-green {
-            background: var(--dark-green);
+            background: var(--teal-dark);
         }
-        .bg-pale-lime {
-            background: var(--pale-lime);
+        .bg-sage-green {
+            background: var(--sage-green);
         }
-        .bg-pale-purple {
-            background: var(--pale-purple);
+        .bg-mint-green {
+            background: var(--mint-green);
         }
-        .bg-pale-orange {
-            background: var(--pale-orange);
-        }
-        .bg-pale-yellow {
-            background: var(--pale-yellow);
-        }
-        .bg-pale-pink {
-            background: var(--pale-pink);
-        }
-        .bg-lime {
-            background: var(--lime);
+        .bg-sky-blue {
+            background: var(--sky-blue);
         }
 
         .border-bottom {
@@ -335,10 +369,10 @@
             border-top: 1px solid var(--grey-400);
         }
         .border-dark-green-10 {
-            border-color: rgba(0, 70, 58, 0.1);
+            border-color: rgba(26, 60, 63, 0.1);
         }
         .border-light-mint {
-            border-color: var(--light-mint);
+            border-color: var(--mint-green);
         }
 
         .rounded-lg {
@@ -386,8 +420,14 @@
         .w-100 {
             width: 100%;
         }
+        .h-100 {
+            height: 100%;
+        }
         .position-relative {
             position: relative;
+        }
+        .position-absolute {
+            position: absolute;
         }
         .overflow-hidden {
             overflow: hidden;
@@ -705,14 +745,19 @@
 
         /* ===== CARD ===== */
         .card {
-            background: #f9f7f1;
+            background: #fff;
             border-radius: 1.5rem;
-            border: 0;
+            border: 1px solid rgba(26, 60, 63, 0.06);
             display: flex;
             flex-direction: column;
             word-wrap: break-word;
             background-clip: border-box;
             position: relative;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.08);
         }
         .card-body {
             padding: 1.25rem;
@@ -722,6 +767,24 @@
             .card-body {
                 padding: 2rem;
             }
+        }
+
+        .card-soft {
+            background: var(--teal-ultra-pale);
+            border: none;
+        }
+        .card-soft:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.06);
+        }
+
+        .card-white-soft {
+            background: #ffffff;
+            border: 1px solid rgba(26, 60, 63, 0.06);
+        }
+        .card-white-soft:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(26, 60, 63, 0.08);
         }
 
         /* ===== BADGE ===== */
@@ -738,12 +801,28 @@
             border-radius: 10rem;
         }
         .badge-secondary {
-            background: var(--dark-green);
+            background: var(--teal-dark);
             color: #fff;
         }
         .badge-white {
             background: #fff;
             color: var(--grey-100);
+        }
+        .badge-teal-soft {
+            background: var(--teal-pale);
+            color: var(--teal-dark);
+        }
+        .badge-sage {
+            background: var(--sage-green);
+            color: var(--teal-dark);
+        }
+        .badge-sky {
+            background: var(--sky-blue);
+            color: var(--teal-dark);
+        }
+        .badge-mint {
+            background: var(--mint-green);
+            color: var(--teal-dark);
         }
 
         /* ===== SHADOW ===== */
@@ -759,7 +838,7 @@
             left: 1.25rem;
             width: 100%;
             height: 100%;
-            background: #bbdfaa;
+            background: var(--sage-green);
             border-radius: 1rem;
             z-index: 1;
         }
@@ -784,8 +863,9 @@
             display: flex;
             align-items: center;
             padding: 0.3rem 1rem;
-            background: #fff;
-            border-bottom: 1px solid var(--grey-400);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(26, 60, 63, 0.06);
             position: sticky;
             top: 0;
             z-index: 1030;
@@ -837,11 +917,6 @@
             }
         }
 
-        /* ===== HERO ===== */
-        .hero-section .hero-image {
-            display: none;
-        }
-
         /* ===== STATS GRID ===== */
         .stats-grid {
             display: grid;
@@ -885,7 +960,7 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            background: #fff;
+            background: #f8fbfa;
             z-index: 1040;
             padding: 1.25rem;
             flex-direction: column;
@@ -900,13 +975,14 @@
             font-size: 2rem;
             cursor: pointer;
             margin-left: auto;
+            color: var(--teal-dark);
         }
         .mobile-menu .menu-item {
             padding: 0.75rem 0;
-            border-bottom: 1px solid rgba(0, 70, 58, 0.1);
+            border-bottom: 1px solid rgba(26, 60, 63, 0.06);
             font-size: 1.1rem;
             font-weight: 600;
-            color: var(--dark-green);
+            color: var(--teal-dark);
             text-decoration: none;
             display: flex;
             justify-content: space-between;
@@ -918,7 +994,7 @@
 
         /* ===== FOOTER ===== */
         .link-border {
-            border-bottom: 1px solid var(--light-mint);
+            border-bottom: 1px solid var(--mint-green);
         }
         @media (min-width: 992px) {
             .link-border {
@@ -946,6 +1022,102 @@
             height: 700px;
         }
 
+        /* ===== HERO WITH BACKGROUND IMAGE ===== */
+        .hero-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section .hero-image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .hero-section .hero-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .hero-section .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 60, 63, 0.45);
+            z-index: 2;
+        }
+        .hero-section .hero-fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(to bottom, transparent, #f8fbfa);
+            z-index: 2;
+        }
+        .hero-section .hero-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+        }
+        .hero-section .hero-content .badge {
+            background: rgba(26, 60, 63, 0.75);
+            backdrop-filter: blur(4px);
+            color: #fff;
+        }
+        .hero-section .hero-content h1 {
+            color: #fff;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        .hero-section .hero-content p {
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            opacity: 0.9;
+        }
+        .hero-section .hero-content .btn-primary {
+            box-shadow: 0 8px 30px rgba(85, 237, 71, 0.35);
+        }
+
+        /* ===== SECTION DIVIDERS ===== */
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--teal-light);
+            border-radius: 10px;
+            margin: 1rem auto 2rem;
+        }
+        .section-divider-left {
+            width: 60px;
+            height: 3px;
+            background: var(--teal-light);
+            border-radius: 10px;
+            margin: 1rem 0 2rem;
+        }
+
+        /* ===== CTA SECTION FIX ===== */
+        .cta-section-wrapper {
+            background: var(--teal-ultra-pale);
+            padding: 4rem 0;
+        }
+        .cta-section-wrapper .container {
+            background: var(--teal-pale);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            border: 1px solid rgba(26, 60, 63, 0.08);
+        }
+        @media (max-width: 768px) {
+            .cta-section-wrapper .container {
+                padding: 1.5rem;
+            }
+        }
+
         @media (max-width: 992px) {
             .stats-grid {
                 grid-template-columns: 1fr 1fr;
@@ -953,6 +1125,9 @@
             }
             .calendly-inline-widget {
                 height: 600px;
+            }
+            .hero-section {
+                min-height: 70vh;
             }
         }
         @media (max-width: 576px) {
@@ -963,6 +1138,9 @@
             .calendly-inline-widget {
                 height: 500px;
             }
+            .hero-section {
+                min-height: 60vh;
+            }
         }
     </style>
 </head>
@@ -970,7 +1148,7 @@
 
     <!-- ===== NAVIGATION ===== -->
     <nav class="navbar">
-        <a href="#" class="logo" style="font-family:'Faro','Inter',sans-serif;font-size:1.1rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;text-decoration:none;flex-shrink:0;">
+        <a href="#" class="logo" style="font-family:'Faro','Inter',sans-serif;font-size:1.1rem;font-weight:600;color:var(--teal-dark);letter-spacing:-0.03em;text-decoration:none;flex-shrink:0;">
             Between us
         </a>
         <div class="nav-links">
@@ -1012,21 +1190,30 @@
         <a href="#" class="btn btn-link mt-2">Login</a>
     </div>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ===== HERO SECTION WITH BACKGROUND IMAGE ===== -->
     <section class="hero-section">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12 col-lg-12 d-flex flex-column">
-                    <div class="flex-grow-1 mx-auto py-7 px-4" style="max-width: 800px; text-align:center;">
-                        <h1 class="h1 my-5">
-                            Find a tutor who<br />
-                            you really click with.
-                        </h1>
-                        <p class="body-2 mb-4 text-grey-200">
-                            Personalised English tutoring from a UK-based specialist with over a decade of experience.
-                        </p>
-                        <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-lg">Book your free consultation</a>
-                    </div>
+        <div class="hero-image-wrapper">
+            <img src="https://raw.githubusercontent.com/aarosakura/MiedzyNami/refs/heads/main/images/heroimage.png" alt="English tutoring" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-fade"></div>
+
+        <div class="container hero-content">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                    <span class="badge badge-pill mb-4" style="background:rgba(26,60,63,0.75); backdrop-filter:blur(4px); color:#fff;">
+                        🇬🇧 British English Tutor
+                    </span>
+                    <h1 class="h1">
+                        Find a tutor who<br />
+                        you really click with.
+                    </h1>
+                    <p class="body-2 mb-4">
+                        Personalised English tutoring from a UK-based specialist with over a decade of experience.
+                    </p>
+                    <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-lg">
+                        Book your free consultation
+                    </a>
                 </div>
             </div>
         </div>
@@ -1035,6 +1222,7 @@
     <!-- ===== INTRO TEXT ===== -->
     <section class="d-flex justify-content-center container py-9">
         <div style="max-width:70%; text-align:center;">
+            <div class="section-divider"></div>
             <h2 class="h2" style="font-size:2.8rem;">
                 Book one-to-one tuition with tailored lesson plans. Get the exam results you deserve.
             </h2>
@@ -1042,52 +1230,54 @@
     </section>
 
     <!-- ===== STATS SECTION ===== -->
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-12 col-lg-7">
-                <div class="stats-grid">
-                    <div>
-                        <span class="display-2" style="font-size:4rem;">10,000+</span>
-                        <p class="body-3">Lessons given</p>
+    <div class="bg-teal-ultra-pale py-7">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12 col-lg-7">
+                    <div class="stats-grid">
+                        <div>
+                            <span class="display-2" style="font-size:4rem; color:var(--teal-dark);">10,000+</span>
+                            <p class="body-3 text-grey-200">Lessons given</p>
+                        </div>
+                        <div>
+                            <span class="display-2" style="font-size:4rem; color:var(--teal-dark);">100s of</span>
+                            <p class="body-3 text-grey-200">Happy students</p>
+                        </div>
+                        <hr class="w-100 my-2 border-dark-green-10" />
+                        <div>
+                            <span class="display-2" style="font-size:4rem; color:var(--teal-dark);">100%</span>
+                            <p class="body-3 text-grey-200">IELTS &amp; Cambridge pass rate</p>
+                        </div>
+                        <div>
+                            <span class="display-2" style="font-size:4rem; color:var(--teal-dark);">5,000+</span>
+                            <p class="body-3 text-grey-200">Personalised learning materials</p>
+                        </div>
+                        <hr class="w-100 my-2 border-dark-green-10" />
                     </div>
-                    <div>
-                        <span class="display-2" style="font-size:4rem;">100s of</span>
-                        <p class="body-3">Happy students</p>
-                    </div>
-                    <hr class="w-100 my-2 border-dark-green-10" />
-                    <div>
-                        <span class="display-2" style="font-size:4rem;">100%</span>
-                        <p class="body-3">IELTS &amp; Cambridge pass rate</p>
-                    </div>
-                    <div>
-                        <span class="display-2" style="font-size:4rem;">5,000+</span>
-                        <p class="body-3">Personalised learning materials</p>
-                    </div>
-                    <hr class="w-100 my-2 border-dark-green-10" />
                 </div>
-            </div>
-            <div class="col-12 col-lg-5 mt-5 mt-lg-0">
-                <div class="card bg-bright-green guarantee-card h-100">
-                    <div class="card-body d-flex flex-column">
-                        <div class="pt-3 px-3">
-                            <p class="h3 mb-3">
-                                A great first lesson<br />
-                                Guaranteed.
-                            </p>
-                        </div>
-                        <div class="card bg-white mt-2">
-                            <div class="card-body">
-                                <p class="h3 mb-3">
-                                    Book online lessons<br />
-                                    from just £20p/h.
+                <div class="col-12 col-lg-5 mt-5 mt-lg-0">
+                    <div class="card" style="background: var(--teal-pale); border: none; border-radius: 1.5rem; box-shadow: 0 8px 30px rgba(26, 60, 63, 0.10); height: 100%;">
+                        <div class="card-body d-flex flex-column" style="padding: 2rem;">
+                            <div class="pt-2 px-2">
+                                <p class="h3 mb-3" style="color: var(--teal-dark);">
+                                    A great first lesson<br />
+                                    Guaranteed.
                                 </p>
-                                <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-secondary mb-3">Book a free consultation</a>
                             </div>
-                        </div>
-                        <div class="mt-3 px-3">
-                            <p class="body-3 text-dark-green">
-                                Not happy with your first lesson? Let us know, and we'll make it right.
-                            </p>
+                            <div class="card mt-2" style="background: #ffffff; border: none; border-radius: 1rem; box-shadow: 0 4px 16px rgba(26, 60, 63, 0.06);">
+                                <div class="card-body" style="padding: 1.5rem;">
+                                    <p class="h3 mb-3" style="color: var(--teal-dark);">
+                                        Book online lessons<br />
+                                        from just £20p/h.
+                                    </p>
+                                    <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-secondary mb-3">Book a free consultation</a>
+                                </div>
+                            </div>
+                            <div class="mt-3 px-2">
+                                <p class="body-3" style="color: var(--teal-dark);">
+                                    Not happy with your first lesson? Let us know, and we'll make it right.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1099,18 +1289,19 @@
     <div class="container my-7">
         <div class="d-flex flex-wrap flex-column-reverse flex-lg-row">
             <div class="col-12 col-lg-6 pr-xl-9">
-                <span class="badge badge-pill badge-secondary mb-3">🇬🇧 About me</span>
+                <span class="badge badge-pill badge-teal-soft mb-3">🇬🇧 About me</span>
+                <div class="section-divider-left"></div>
                 <h2 class="mb-4">
                     Over a decade of<br />
                     teaching experience.
                 </h2>
-                <p class="body-2 mb-4">
+                <p class="body-2 mb-4 text-grey-200">
                     I'm a UK-based English specialist with a science degree from Coventry University. I've delivered over 10,000 lessons to students of all ages and levels — from school competition winners to doctors and accountants.
                 </p>
-                <p class="body-2 mb-4">
+                <p class="body-2 mb-4 text-grey-200">
                     I've authored two books, created over 5,000 proprietary learning materials, and helped 100% of my IELTS and Cambridge students pass their exams.
                 </p>
-                <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="btn btn-outline-secondary">Read more about me</a>
+                <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="btn btn-outline-soft">Read more about me</a>
             </div>
             <div class="col d-flex justify-content-center mb-6 justify-content-lg-end offset-lg-1">
                 <div class="shadow-pale-green">
@@ -1121,71 +1312,75 @@
     </div>
 
     <!-- ===== WHAT I TEACH ===== -->
-    <div class="container my-7">
-        <div class="text-center mb-7">
-            <h2 class="h2">What I teach</h2>
-            <p class="body-2 text-grey-200 mx-auto" style="max-width:600px;">
-                From school to career — I cover every level and every goal.
-            </p>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card bg-white h-100">
-                    <div class="card-body">
-                        <span style="font-size:2.5rem;">🏆</span>
-                        <h4 class="h4 mt-2">English Competitions</h4>
-                        <p class="body-4">Specialist preparation for regional and national English competitions.</p>
-                        <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+    <div class="bg-soft-blue py-8">
+        <div class="container my-7">
+            <div class="text-center mb-7">
+                <span class="badge badge-pill badge-sage mb-3">📚 What I teach</span>
+                <h2 class="h2">From school to career</h2>
+                <p class="body-2 text-grey-300 mx-auto" style="max-width:600px;">
+                    I cover every level and every goal.
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-soft h-100">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">🏆</span>
+                            <h4 class="h4 mt-2">English Competitions</h4>
+                            <p class="body-4 text-grey-200">Specialist preparation for regional and national English competitions.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card bg-white h-100">
-                    <div class="card-body">
-                        <span style="font-size:2.5rem;">📝</span>
-                        <h4 class="h4 mt-2">Matura &amp; 8th Grade Exams</h4>
-                        <p class="body-4">Comprehensive exam preparation for Polish school-leaving exams.</p>
-                        <a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-soft h-100">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">📝</span>
+                            <h4 class="h4 mt-2">Matura &amp; 8th Grade Exams</h4>
+                            <p class="body-4 text-grey-200">Comprehensive exam preparation for Polish school-leaving exams.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card bg-white h-100">
-                    <div class="card-body">
-                        <span style="font-size:2.5rem;">👩‍⚕️</span>
-                        <h4 class="h4 mt-2">Business &amp; Medical English</h4>
-                        <p class="body-4">For doctors, accountants, psychologists and corporate professionals.</p>
-                        <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-soft h-100">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">👩‍⚕️</span>
+                            <h4 class="h4 mt-2">Business &amp; Medical English</h4>
+                            <p class="body-4 text-grey-200">For doctors, accountants, psychologists and corporate professionals.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card bg-white h-100">
-                    <div class="card-body">
-                        <span style="font-size:2.5rem;">🎓</span>
-                        <h4 class="h4 mt-2">IELTS &amp; Cambridge Certificates (C1/C2)</h4>
-                        <p class="body-4">C1 and C2 certification preparation with a 100% pass rate.</p>
-                        <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-soft h-100">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">🎓</span>
+                            <h4 class="h4 mt-2">IELTS &amp; Cambridge Certificates (C1/C2)</h4>
+                            <p class="body-4 text-grey-200">C1 and C2 certification preparation with a 100% pass rate.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card bg-white h-100">
-                    <div class="card-body">
-                        <span style="font-size:2.5rem;">🧒</span>
-                        <h4 class="h4 mt-2">School Age General Lessons</h4>
-                        <p class="body-4">Primary and secondary school support for all levels.</p>
-                        <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-soft h-100">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">🧒</span>
+                            <h4 class="h4 mt-2">School Age General Lessons</h4>
+                            <p class="body-4 text-grey-200">Primary and secondary school support for all levels.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="card bg-white h-100">
-                    <div class="card-body">
-                        <span style="font-size:2.5rem;">👤</span>
-                        <h4 class="h4 mt-2">Adult Lessons</h4>
-                        <p class="body-4">From beginners to advanced — learn at your own pace.</p>
-                        <a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="btn btn-outline-secondary btn-sm mt-3">Learn more</a>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card card-soft h-100">
+                        <div class="card-body">
+                            <span style="font-size:2.5rem;">👤</span>
+                            <h4 class="h4 mt-2">Adult Lessons</h4>
+                            <p class="body-4 text-grey-200">From beginners to advanced — learn at your own pace.</p>
+                            <a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="btn btn-outline-soft btn-sm mt-3">Learn more</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1195,63 +1390,69 @@
     <!-- ===== PERSONALISED TUITION ===== -->
     <div class="container py-5">
         <div class="text-center py-5">
-            <h2 class="h2 mb-4">Personalised tuition that gets results.</h2>
-            <p class="body-2 mx-auto" style="max-width:700px;">
+            <span class="badge badge-pill badge-mint mb-3">✨ Personalised</span>
+            <h2 class="h2 mb-4">Tuition that gets results.</h2>
+            <p class="body-2 text-grey-300 mx-auto" style="max-width:700px;">
                 Every student is different. I take the time to understand your goals, your level, and your preferred way of learning.
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3 my-5">
-                <span class="badge badge-pill badge-white">🏆 You achieved level 2!</span>
-                <span class="badge badge-pill badge-white">👏🏼 Well done!</span>
+                <span class="badge badge-pill badge-white" style="background:var(--teal-pale);">🏆 You achieved level 2!</span>
+                <span class="badge badge-pill badge-white" style="background:var(--teal-pale);">👏🏼 Well done!</span>
+                <span class="badge badge-pill badge-white" style="background:var(--teal-pale);">📈 90% improve by one grade</span>
             </div>
-            <p class="body-1 font-weight-bold">90% of my students improve by at least one grade.</p>
-            <p class="body-3 text-grey-200">98% of my students said their lessons made a difference</p>
+            <p class="body-1 font-weight-bold" style="color:var(--teal-dark);">90% of my students improve by at least one grade.</p>
+            <p class="body-3 text-grey-300">98% of my students said their lessons made a difference</p>
             <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary mt-4">Book your free consultation</a>
         </div>
     </div>
 
     <!-- ===== TESTIMONIALS ===== -->
-    <div class="bg-light py-5">
+    <div class="bg-soft-blue py-8">
         <div class="container">
-            <h2 class="h2 text-center mb-5">What my students say</h2>
+            <div class="text-center mb-7">
+                <span class="badge badge-pill badge-sky mb-3">💬 Testimonials</span>
+                <h2 class="h2 text-center">What my students say</h2>
+                <div class="section-divider"></div>
+            </div>
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-white h-100">
+                    <div class="card card-white-soft h-100">
                         <div class="card-body">
                             <div class="mb-3">
                                 <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
                             </div>
-                            <p class="body-3">"Thanks to my tutor, I passed my IELTS with flying colours and got into my dream university."</p>
+                            <p class="body-3" style="color:var(--grey-200);">"Thanks to my tutor, I passed my IELTS with flying colours and got into my dream university."</p>
                             <div class="mt-4">
                                 <p class="body-4 medium mb-0">— Anna</p>
-                                <p class="body-4 text-grey-200">IELTS student</p>
+                                <p class="body-4 text-grey-300">IELTS student</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-white h-100">
+                    <div class="card card-white-soft h-100">
                         <div class="card-body">
                             <div class="mb-3">
                                 <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
                             </div>
-                            <p class="body-3">"As a doctor preparing to work in the UK, the medical English lessons were invaluable."</p>
+                            <p class="body-3" style="color:var(--grey-200);">"As a doctor preparing to work in the UK, the medical English lessons were invaluable."</p>
                             <div class="mt-4">
                                 <p class="body-4 medium mb-0">— Dr. Kowalski</p>
-                                <p class="body-4 text-grey-200">Medical English student</p>
+                                <p class="body-4 text-grey-300">Medical English student</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card bg-white h-100">
+                    <div class="card card-white-soft h-100">
                         <div class="card-body">
                             <div class="mb-3">
                                 <svg width="90" height="15"><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/><path d="M7.71.39l2.27 4.59 5.06.74-3.66 3.58.86 5.04-4.53-2.37-4.53 2.37.86-5.04-3.66-3.58 5.06-.74L7.71.39z" fill="#55ED47"/></svg>
                             </div>
-                            <p class="body-3">"The personalised materials and exam preparation helped me achieve my Cambridge C1 certificate."</p>
+                            <p class="body-3" style="color:var(--grey-200);">"The personalised materials and exam preparation helped me achieve my Cambridge C1 certificate."</p>
                             <div class="mt-4">
                                 <p class="body-4 medium mb-0">— Tomasz</p>
-                                <p class="body-4 text-grey-200">Cambridge student</p>
+                                <p class="body-4 text-grey-300">Cambridge student</p>
                             </div>
                         </div>
                     </div>
@@ -1264,78 +1465,85 @@
     <div class="bg-dark-green py-8">
         <div class="container">
             <div class="row justify-content-between mb-8">
-                <h2 class="h2 text-lime col-12 col-sm-6">Focused learning that fits around your life.</h2>
-                <p class="body-2 text-white col-12 col-sm-5">
+                <h2 class="h2 text-teal-pale col-12 col-sm-6">Focused learning that fits around your life.</h2>
+                <p class="body-2 text-white col-12 col-sm-5" style="opacity:0.85;">
                     With online tutoring, you can create a regular learning schedule with personalised lessons delivered by someone with specialist knowledge.
                 </p>
             </div>
             <div class="row flex-column flex-sm-row justify-content-between">
                 <div class="col-12 col-sm-4 col-md-3 d-flex flex-column align-items-center mb-5 mb-sm-0">
                     <span class="icon mb-3" style="--size:124px;--size-lg:170px;">
-                        <svg width="171" height="171"><path d="M107.7.21H63.3C28.64.21.55 28.3.55 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#E4CBFC"/><path d="M112.03 83.94v15.07c0 .26-.01.68-.03.95l-.04.61c-.03.24-.06.48-.09.72l-.04.39-.06.59-.03.26-.05.42-.05.27-.06.31-.06.33-.04.18-.05.25-.06.24-.06.18-.07.32-.03.11-.08.36-.02.06-.15.6a23.5 23.5 0 0 1-.11.37c-.07.27-.15.53-.23.78l-.05.13-.11.35-.03.06-.1.28-.01.05-.14.39c-.06.14-.11.27-.17.4l-.13.37-.05.1-.04.08-.06.14-.05.09-.03.08-.12.28-.01.02-.08.2-.02.03-.08.19-.03.06-.12.25-.14.28-.05.08-.1.17-.14.24-.21.34-.05.07-.15.23-.1.15-.16.23-.1.14-.22.3-.08.1-.1.13-.15.18-.16.2-.26.29-.11.11-.13.13-.11.1-.21.21-.17.14-.21.2-.14.11-.23.18-.17.12-.2.15-.18.12-.22.13-.2.11-.24.12-.18.08-.37.17-.11.04-.23.09-.3.11-.18.06-.21.07-.21.06-.17.04-.52.14-.38.09-.1.02-.2.04-.38.07h-.02c-1.89.73-3.94 1.14-6.09 1.14H76.18c-2.15 0-4.2-.41-6.09-1.14h-.02c-.11-.04-.22-.09-.33-.14l-.05-.02-.06-.02c-.23-.1-.46-.2-.69-.32l-.04-.02-.07-.03c-.21-.1-.42-.21-.62-.32l-.06-.04-.08-.04c-.16-.09-.32-.19-.48-.28l-.09-.05-.1-.06c-.19-.12-.38-.24-.56-.36l-.06-.04-.04-.03-.02-.01h-.01l-.13-.08-.04-.02-.08-.06-.18-.1-.12-.08-.05-.02-.01-.01c-.2-.12-.4-.24-.59-.37l-.06-.04-.07-.05c-.13-.08-.26-.17-.39-.26l-.03-.02-.06-.04-.12-.08-.07-.04-.03-.02-.05-.03-.1-.07-.01-.01-.08-.05-.02-.01-.15-.1-.08-.06-.07-.05c-.14-.1-.28-.2-.42-.3l-.08-.06-.04-.03-.05-.03-.09-.07-.09-.07-.11-.08-.03-.02-.15-.12-.09-.08-.18-.15-.08-.06-.16-.14-.19-.17-.14-.12-.13-.13-.23-.21-.15-.15-.11-.1-.22-.22-.04-.04-.08-.08-.08-.09-.17-.2-.15-.18-.03-.04-.16-.2-.06-.09-.14-.2-.04-.05-.1-.14-.12-.18-.14-.2-.02-.04-.12-.18-.1-.17-.04-.06-.12-.2-.03-.06-.03-.05-.07-.13-.14-.24-.03-.06-.08-.15-.06-.12-.06-.13-.03-.06-.03-.08-.05-.12-.08-.17-.03-.09-.05-.13-.01-.04c-.09-.26-.18-.52-.26-.79l-.06-.2-.04-.16-.06-.2-.01-.04-.03-.1-.01-.04-.05-.18v-.01l-.03-.12-.02-.08-.02-.09-.03-.09-.01-.05v-.01l-.02-.07-.01-.03-.01-.06c-.03-.27-.05-.53-.08-.8v-.01-.01c-.02-.26-.03-.68-.03-.93V79.87c0-.25.01-.67.03-.93v-.01-.01c.01-.2.03-.41.04-.61v-.08-.03c.03-.24.05-.49.08-.73v-.03-.03c.04-.27.09-.54.14-.8v-.01-.01c.08-.28.14-.55.22-.82v-.02-.03c.05-.23.1-.45.16-.66l.03-.15.02-.07c.07-.25.15-.49.23-.72l.04-.12.02-.08.06-.18.02-.05.08-.22.01-.03.06-.15.01-.03.08-.19.08-.2.02-.05.06-.13.11-.26.02-.05.16-.35.03-.05.01-.03.1-.2.05-.1.09-.18.11-.22.01-.02.03-.05.14-.26.05-.09.14-.26.07-.12.08-.14.11-.2.14-.24.01-.02.03-.05.12-.2.09-.15.09-.14.05-.08.13-.2.15-.23.08-.12.14-.2.18-.25.05-.07.1-.13.16-.21.23-.29.08-.1.1-.11.14-.16.12-.13.19-.19.12-.11.22-.2.14-.12.16-.14.2-.15.1-.08.17-.12.23-.15.15-.1.2-.12.14-.08.27-.14.15-.07.26-.11.09-.04.21-.08.3-.1.1-.03.21-.07.31-.08.14-.04.2-.04.31-.06h.03c1.89-.73 3.94-1.14 6.09-1.14h17.03c2.15 0 4.2.41 6.09 1.14h.02c.11.04.23.09.34.14l.08.02.07.02c.23.1.47.2.7.31l.05.02.06.03c.2.1.4.2.6.32l.07.03.08.05c.17.09.33.18.49.28l.05.03.05.03.07.04.04.03.01.01c.2.12.39.25.58.37l.06.04.07.05.13.08.08.05.04.03.11.07.07.05.03.02.05.03.1.08.07.04.14.1.08.06.06.04.15.11.08.06.07.05.14.1.09.07.07.05.11.08.08.07.03.02.14.11.1.09.07.06.08.07.05.04.09.08.08.08.04.03.14.14.13.13.1.1.17.17.1.11.13.14.06.07.12.13.14.16.14.17.01.01.12.16.04.05.08.1.16.22.03.04.13.2.06.08.09.14.12.18.09.14.08.13.04.06.12.18.12.19.05.09.09.14.11.18.08.14.04.07.06.1.09.15.02.03.07.12.04.07.08.15.03.06.06.11.04.08.07.14.06.12.09.19.05.1.04.09.03.06.05.11.03.07.05.11.02.06.04.09.06.12.08.18.03.06.04.09.05.13.06.13.05.13.06.14.05.14.08.19c.01.04.02.08.03.12l.02.06.03.1.02.06.02.08.02.06.03.09.02.08.01.04.02.08.02.08.02.05.03.13.02.07.02.08.01.05.02.1.02.07.04.15.02.08.02.08.01.05.02.08v.01c.01.04.02.08.02.13.02.08.02.15.03.23v.01c.01.03.01.06.01.08.01.05.01.09.02.14.02.13.03.26.03.4v.01.01c.02.26.03.68.03.93zm-14.7 4.72-9.95 1.98a.96.96 0 0 1-1.13-.77l1.98-9.95c.02-.4.19-.79.47-1.08l22.69-22.69c1.83-1.83 4.8-1.83 6.63 0l3.61 3.61c1.83 1.83 1.83 4.8 0 6.63l-22.69 22.69c-.29.29-.67.45-1.07.47z" fill="#00463A"/><path d="M99.86 101.07l-4.22-19.52h.08l4.22 19.52z" fill="#00463A"/></svg>
+                        <svg width="171" height="171"><path d="M107.7.21H63.3C28.64.21.55 28.3.55 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#d4e8eb"/><path d="M112.03 83.94v15.07c0 .26-.01.68-.03.95l-.04.61c-.03.24-.06.48-.09.72l-.04.39-.06.59-.03.26-.05.42-.05.27-.06.31-.06.33-.04.18-.05.25-.06.24-.06.18-.07.32-.03.11-.08.36-.02.06-.15.6a23.5 23.5 0 0 1-.11.37c-.07.27-.15.53-.23.78l-.05.13-.11.35-.03.06-.1.28-.01.05-.14.39c-.06.14-.11.27-.17.4l-.13.37-.05.1-.04.08-.06.14-.05.09-.03.08-.12.28-.01.02-.08.2-.02.03-.08.19-.03.06-.12.25-.14.28-.05.08-.1.17-.14.24-.21.34-.05.07-.15.23-.1.15-.16.23-.1.14-.22.3-.08.1-.1.13-.15.18-.16.2-.26.29-.11.11-.13.13-.11.1-.21.21-.17.14-.21.2-.14.11-.23.18-.17.12-.2.15-.18.12-.22.13-.2.11-.24.12-.18.08-.37.17-.11.04-.23.09-.3.11-.18.06-.21.07-.21.06-.17.04-.52.14-.38.09-.1.02-.2.04-.38.07h-.02c-1.89.73-3.94 1.14-6.09 1.14H76.18c-2.15 0-4.2-.41-6.09-1.14h-.02c-.11-.04-.22-.09-.33-.14l-.05-.02-.06-.02c-.23-.1-.46-.2-.69-.32l-.04-.02-.07-.03c-.21-.1-.42-.21-.62-.32l-.06-.04-.08-.04c-.16-.09-.32-.19-.48-.28l-.09-.05-.1-.06c-.19-.12-.38-.24-.56-.36l-.06-.04-.04-.03-.02-.01h-.01l-.13-.08-.04-.02-.08-.06-.18-.1-.12-.08-.05-.02-.01-.01c-.2-.12-.4-.24-.59-.37l-.06-.04-.07-.05c-.13-.08-.26-.17-.39-.26l-.03-.02-.06-.04-.12-.08-.07-.04-.03-.02-.05-.03-.1-.07-.01-.01-.08-.05-.02-.01-.15-.1-.08-.06-.07-.05c-.14-.1-.28-.2-.42-.3l-.08-.06-.04-.03-.05-.03-.09-.07-.09-.07-.11-.08-.03-.02-.15-.12-.09-.08-.18-.15-.08-.06-.16-.14-.19-.17-.14-.12-.13-.13-.23-.21-.15-.15-.11-.1-.22-.22-.04-.04-.08-.08-.08-.09-.17-.2-.15-.18-.03-.04-.16-.2-.06-.09-.14-.2-.04-.05-.1-.14-.12-.18-.14-.2-.02-.04-.12-.18-.1-.17-.04-.06-.12-.2-.03-.06-.03-.05-.07-.13-.14-.24-.03-.06-.08-.15-.06-.12-.06-.13-.03-.06-.03-.08-.05-.12-.08-.17-.03-.09-.05-.13-.01-.04c-.09-.26-.18-.52-.26-.79l-.06-.2-.04-.16-.06-.2-.01-.04-.03-.1-.01-.04-.05-.18v-.01l-.03-.12-.02-.08-.02-.09-.03-.09-.01-.05v-.01l-.02-.07-.01-.03-.01-.06c-.03-.27-.05-.53-.08-.8v-.01-.01c-.02-.26-.03-.68-.03-.93V79.87c0-.25.01-.67.03-.93v-.01-.01c.01-.2.03-.41.04-.61v-.08-.03c.03-.24.05-.49.08-.73v-.03-.03c.04-.27.09-.54.14-.8v-.01-.01c.08-.28.14-.55.22-.82v-.02-.03c.05-.23.1-.45.16-.66l.03-.15.02-.07c.07-.25.15-.49.23-.72l.04-.12.02-.08.06-.18.02-.05.08-.22.01-.03.06-.15.01-.03.08-.19.08-.2.02-.05.06-.13.11-.26.02-.05.16-.35.03-.05.01-.03.1-.2.05-.1.09-.18.11-.22.01-.02.03-.05.14-.26.05-.09.14-.26.07-.12.08-.14.11-.2.14-.24.01-.02.03-.05.12-.2.09-.15.09-.14.05-.08.13-.2.15-.23.08-.12.14-.2.18-.25.05-.07.1-.13.16-.21.23-.29.08-.1.1-.11.14-.16.12-.13.19-.19.12-.11.22-.2.14-.12.16-.14.2-.15.1-.08.17-.12.23-.15.15-.1.2-.12.14-.08.27-.14.15-.07.26-.11.09-.04.21-.08.3-.1.1-.03.21-.07.31-.08.14-.04.2-.04.31-.06h.03c1.89-.73 3.94-1.14 6.09-1.14h17.03c2.15 0 4.2.41 6.09 1.14h.02c.11.04.23.09.34.14l.08.02.07.02c.23.1.47.2.7.31l.05.02.06.03c.2.1.4.2.6.32l.07.03.08.05c.17.09.33.18.49.28l.05.03.05.03.07.04.04.03.01.01c.2.12.39.25.58.37l.06.04.07.05.13.08.08.05.04.03.11.07.07.05.03.02.05.03.1.08.07.04.14.1.08.06.06.04.15.11.08.06.07.05.14.1.09.07.07.05.11.08.08.07.03.02.14.11.1.09.07.06.08.07.05.04.09.08.08.08.04.03.14.14.13.13.1.1.17.17.1.11.13.14.06.07.12.13.14.16.14.17.01.01.12.16.04.05.08.1.16.22.03.04.13.2.06.08.09.14.12.18.09.14.08.13.04.06.12.18.12.19.05.09.09.14.11.18.08.14.04.07.06.1.09.15.02.03.07.12.04.07.08.15.03.06.06.11.04.08.07.14.06.12.09.19.05.1.04.09.03.06.05.11.03.07.05.11.02.06.04.09.06.12.08.18.03.06.04.09.05.13.06.13.05.13.06.14.05.14.08.19c.01.04.02.08.03.12l.02.06.03.1.02.06.02.08.02.06.03.09.02.08.01.04.02.08.02.08.02.05.03.13.02.07.02.08.01.05.02.1.02.07.04.15.02.08.02.08.01.05.02.08v.01c.01.04.02.08.02.13.02.08.02.15.03.23v.01c.01.03.01.06.01.08.01.05.01.09.02.14.02.13.03.26.03.4v.01.01c.02.26.03.68.03.93zm-14.7 4.72-9.95 1.98a.96.96 0 0 1-1.13-.77l1.98-9.95c.02-.4.19-.79.47-1.08l22.69-22.69c1.83-1.83 4.8-1.83 6.63 0l3.61 3.61c1.83 1.83 1.83 4.8 0 6.63l-22.69 22.69c-.29.29-.67.45-1.07.47z" fill="#00463A"/><path d="M99.86 101.07l-4.22-19.52h.08l4.22 19.52z" fill="#00463A"/></svg>
                     </span>
-                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">Personalised</span> learning that reflects each student's needs.</p>
+                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">Personalised</span><br /><span style="opacity:0.7;">learning that reflects each student's needs.</span></p>
                 </div>
                 <div class="col-12 col-sm-4 col-md-3 d-flex flex-column align-items-center mb-5 mb-sm-0">
                     <span class="icon mb-3" style="--size:124px;--size-lg:170px;">
-                        <svg width="171" height="171"><path d="M107.81.21H63.4C28.74.21.65 28.3.65 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#C9F0B7"/><path d="M102.55 62.43a22.2 22.2 0 0 0-13.03 3.76 29.8 29.8 0 0 1 9 20.82c0 8.18-3.46 15.58-8.99 20.82a22.2 22.2 0 0 0 13.02 3.76c13.58 0 24.58-11 24.58-24.58s-11-24.58-24.58-24.58z" fill="#00463A"/><path d="M115.97 87.01a13.28 13.28 0 1 1-26.56 0 13.28 13.28 0 0 1 26.56 0" stroke="#C9F0B7" stroke-width="4.61"/><path d="M45.18 87.01a24.58 24.58 0 0 0 41.78 17.32 23.94 23.94 0 0 1-8.19-18.28c0-7.26 3.18-13.79 8.18-18.29a23.97 23.97 0 0 0-16.47-6.29c-13.58 0-24.58 11-24.58 24.58z" fill="#00463A"/><path d="M77.97 87.01a23.94 23.94 0 0 0 8.18 18.28 23.94 23.94 0 0 0 0-36.57 23.94 23.94 0 0 0-8.18 18.29z" fill="#00463A"/><path d="M82.79 87.01a13.28 13.28 0 1 1-26.56 0 13.28 13.28 0 0 1 26.56 0" stroke="#C9F0B7" stroke-width="4.61"/></svg>
+                        <svg width="171" height="171"><path d="M107.81.21H63.4C28.74.21.65 28.3.65 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#b8cdc9"/><path d="M102.55 62.43a22.2 22.2 0 0 0-13.03 3.76 29.8 29.8 0 0 1 9 20.82c0 8.18-3.46 15.58-8.99 20.82a22.2 22.2 0 0 0 13.02 3.76c13.58 0 24.58-11 24.58-24.58s-11-24.58-24.58-24.58z" fill="#00463A"/><path d="M115.97 87.01a13.28 13.28 0 1 1-26.56 0 13.28 13.28 0 0 1 26.56 0" stroke="#b8cdc9" stroke-width="4.61"/><path d="M45.18 87.01a24.58 24.58 0 0 0 41.78 17.32 23.94 23.94 0 0 1-8.19-18.28c0-7.26 3.18-13.79 8.18-18.29a23.97 23.97 0 0 0-16.47-6.29c-13.58 0-24.58 11-24.58 24.58z" fill="#00463A"/><path d="M77.97 87.01a23.94 23.94 0 0 0 8.18 18.28 23.94 23.94 0 0 0 0-36.57 23.94 23.94 0 0 0-8.18 18.29z" fill="#00463A"/><path d="M82.79 87.01a13.28 13.28 0 1 1-26.56 0 13.28 13.28 0 0 1 26.56 0" stroke="#b8cdc9" stroke-width="4.61"/></svg>
                     </span>
-                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">One-to-one</span> attention that makes a bigger impact, faster.</p>
+                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">One-to-one</span><br /><span style="opacity:0.7;">attention that makes a bigger impact, faster.</span></p>
                 </div>
                 <div class="col-12 col-sm-4 col-md-3 d-flex flex-column align-items-center">
                     <span class="icon mb-3" style="--size:124px;--size-lg:170px;">
-                        <svg width="171" height="171"><path d="M107.31.21H62.9C28.24.21.15 28.3.15 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#FFF282"/><path d="M99.79 64.68v-8.46h-6.56v7.32h-17.51v-7.32h-6.56v8.46c-6.15 2.43-10.5 8.5-10.5 15.6v18.95c0 9.25 7.38 16.74 16.49 16.74h18.66c9.11 0 16.49-7.49 16.49-16.74V80.28c0-7.1-4.36-13.16-10.5-15.6zm-11.97 37.32h-5.33v-14.54l-2.76 2.96-3.87-3.72 7.36-7.89c.75-.8 1.9-1.06 2.92-.65 1.01.41 1.68 1.4 1.68 2.51v21.33z" fill="#00463A"/></svg>
+                        <svg width="171" height="171"><path d="M107.31.21H62.9C28.24.21.15 28.3.15 62.95v44.42c0 34.65 28.09 62.74 62.74 62.74h44.41c34.65 0 62.74-28.09 62.74-62.74V62.95c0-34.65-28.09-62.74-62.74-62.74z" fill="#d4e4ed"/><path d="M99.79 64.68v-8.46h-6.56v7.32h-17.51v-7.32h-6.56v8.46c-6.15 2.43-10.5 8.5-10.5 15.6v18.95c0 9.25 7.38 16.74 16.49 16.74h18.66c9.11 0 16.49-7.49 16.49-16.74V80.28c0-7.1-4.36-13.16-10.5-15.6zm-11.97 37.32h-5.33v-14.54l-2.76 2.96-3.87-3.72 7.36-7.89c.75-.8 1.9-1.06 2.92-.65 1.01.41 1.68 1.4 1.68 2.51v21.33z" fill="#00463A"/></svg>
                     </span>
-                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">Flexibility</span> to fit around school and family life.</p>
+                    <p class="body-2 text-grey-400 text-center"><span class="body-2 medium text-white">Flexibility</span><br /><span style="opacity:0.7;">to fit around school and family life.</span></p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ===== CALENDLY BOOKING SECTION ===== -->
-    <div class="container py-8" id="book">
-        <div class="text-center mb-7">
-            <h2 class="h2 mb-4">Book your free 20-minute consultation</h2>
-            <p class="body-2 text-grey-200 mx-auto" style="max-width:600px;">
-                Choose a time that works for you. No commitment, just a friendly chat about your goals.
-            </p>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="card shadow-sm">
-                    <div class="card-body p-0 overflow-hidden rounded-lg">
-                        <!-- Calendly inline widget begin -->
-                        <div class="calendly-inline-widget" data-url="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-                        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                        <!-- Calendly inline widget end -->
+    <div class="bg-teal-ultra-pale py-8" id="book">
+        <div class="container">
+            <div class="text-center mb-7">
+                <span class="badge badge-pill badge-sage mb-3">📅 Book now</span>
+                <h2 class="h2 mb-4">Book your free 20-minute consultation</h2>
+                <p class="body-2 text-grey-300 mx-auto" style="max-width:600px;">
+                    Choose a time that works for you. No commitment, just a friendly chat about your goals.
+                </p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="card shadow-sm" style="border:none; box-shadow: 0 8px 40px rgba(26,60,63,0.08);">
+                        <div class="card-body p-0 overflow-hidden rounded-lg">
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== CTA SECTION ===== -->
-    <div class="bg-pale-lime rounded-lg container my-5 p-5">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-6">
-                <h2 class="h2">Let's work together<br />to achieve your goals.</h2>
+    <!-- ===== CTA SECTION - FIXED ===== -->
+    <div class="cta-section-wrapper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <h2 class="h2">Let's work together<br />to achieve your goals.</h2>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <p class="body-3" style="color: var(--grey-200);">
+                        I handpick every resource and tailor every lesson to your needs. Let me help you get the results you deserve.
+                    </p>
+                </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <p class="body-3">I handpick every resource and tailor every lesson to your needs. Let me help you get the results you deserve.</p>
+            <hr class="my-5" style="border-color: rgba(26, 60, 63, 0.12);" />
+            <div class="d-flex flex-wrap gap-3">
+                <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-lg">Book a free consultation</a>
+                <a href="#book" class="btn btn-outline-soft btn-lg" style="background: rgba(255,255,255,0.5);">View my availability</a>
             </div>
-        </div>
-        <hr class="my-5 border-dark-green-10" />
-        <div class="d-flex flex-wrap gap-3">
-            <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-lg">Book a free consultation</a>
-            <a href="#book" class="btn btn-outline-secondary btn-lg bg-white">View my availability</a>
         </div>
     </div>
 
     <!-- ===== FINAL CTA ===== -->
-    <div class="bg-light text-center py-7">
+    <div class="bg-soft-blue text-center py-8" style="border-top:1px solid rgba(26,60,63,0.06);">
         <div class="container">
+            <span class="badge badge-pill badge-sky mb-4">🎯 Guaranteed</span>
             <h2 class="h1 mb-4">Have a great first lesson.<br />Guaranteed.</h2>
-            <p class="body-2 mb-5" style="max-width:600px;margin:0 auto 2rem;">
+            <p class="body-2 mb-5 text-grey-300" style="max-width:600px;margin:0 auto 2rem;">
                 Free first lesson to ensure satisfaction
             </p>
             <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-lg">Book your free consultation</a>
@@ -1343,70 +1551,69 @@
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-lime pt-5">
+    <footer class="bg-dark-green pt-5" style="color:rgba(255,255,255,0.7);">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-12">
-                    <span style="font-family:'Faro','Inter',sans-serif;font-size:2rem;font-weight:600;color:var(--dark-green);letter-spacing:-0.03em;">Between us</span>
-                    <p class="body-4 mt-2">English tutoring with a British touch.</p>
+                    <span style="font-family:'Faro','Inter',sans-serif;font-size:2rem;font-weight:600;color:var(--teal-pale);letter-spacing:-0.03em;">Between us</span>
+                    <p class="body-4 mt-2" style="color:rgba(255,255,255,0.6);">English tutoring with a British touch.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-4">
-                    <p class="body-4 medium">Find a tutor who you really click with.</p>
+                    <p class="body-4 medium" style="color:rgba(255,255,255,0.8);">Find a tutor who you really click with.</p>
                     <div class="my-5">
                         <a href="#" class="d-inline-block mr-2">
-                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#00463A" fill-opacity="0.1"/><path d="M37.41 28.81c2.43 0 2.72.01 3.67.05.89.04 1.37.19 1.69.31.42.16.73.36 1.04.68.32.32.51.62.68 1.04.12.32.27.8.31 1.69.04.96.05 1.24.05 3.67s-.01 2.71-.05 3.67c-.04.89-.19 1.37-.31 1.69-.16.42-.36.73-.68 1.04-.32.32-.62.51-1.04.68-.32.12-.8.27-1.69.31-.96.04-1.24.05-3.67.05s-2.71-.01-3.67-.05c-.89-.04-1.37-.19-1.69-.31-.42-.16-.73-.36-1.04-.68-.32-.32-.51-.62-.68-1.04-.12-.32-.27-.8-.31-1.69-.04-.96-.05-1.24-.05-3.67s.01-2.71.05-3.67c.04-.89.19-1.37.31-1.69.16-.42.36-.73.68-1.04.32-.32.62-.51 1.04-.68.32-.12.8-.27 1.69-.31.96-.04 1.24-.05 3.67-.05zm0-1.64c-2.47 0-2.78.01-3.74.05-.97.04-1.63.2-2.2.42-.6.23-1.11.54-1.61 1.05-.51.5-.82 1.01-1.05 1.61-.22.58-.38 1.24-.42 2.2-.04.97-.05 1.28-.05 3.75s.01 2.78.05 3.74c.04.97.2 1.63.42 2.2.23.6.54 1.11 1.05 1.61.5.51 1.01.82 1.61 1.05.58.22 1.24.38 2.2.42.97.04 1.28.05 3.75.05s2.78-.01 3.74-.05c.97-.04 1.63-.2 2.2-.42.6-.23 1.11-.54 1.61-1.05.5-.5.81-1.01 1.05-1.61.22-.58.38-1.24.42-2.2.04-.97.05-1.28.05-3.75s-.01-2.78-.05-3.74c-.04-.97-.2-1.63-.42-2.2-.23-.6-.54-1.11-1.05-1.61-.5-.5-1.01-.81-1.61-1.05-.58-.22-1.24-.38-2.2-.42-.97-.04-1.28-.05-3.74-.05z" fill="#00463A"/><path d="M37.41 31.59c-2.58 0-4.67 2.09-4.67 4.67s2.09 4.67 4.67 4.67 4.67-2.09 4.67-4.67-2.09-4.67-4.67-4.67zm0 7.69a3.03 3.03 0 1 1 0-6.05 3.03 3.03 0 0 1 0 6.05z" fill="#00463A"/><path d="M43.35 31.41a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0z" fill="#00463A"/></svg>
+                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#fff" fill-opacity="0.1"/><path d="M37.41 28.81c2.43 0 2.72.01 3.67.05.89.04 1.37.19 1.69.31.42.16.73.36 1.04.68.32.32.51.62.68 1.04.12.32.27.8.31 1.69.04.96.05 1.24.05 3.67s-.01 2.71-.05 3.67c-.04.89-.19 1.37-.31 1.69-.16.42-.36.73-.68 1.04-.32.32-.62.51-1.04.68-.32.12-.8.27-1.69.31-.96.04-1.24.05-3.67.05s-2.71-.01-3.67-.05c-.89-.04-1.37-.19-1.69-.31-.42-.16-.73-.36-1.04-.68-.32-.32-.51-.62-.68-1.04-.12-.32-.27-.8-.31-1.69-.04-.96-.05-1.24-.05-3.67s.01-2.71.05-3.67c.04-.89.19-1.37.31-1.69.16-.42.36-.73.68-1.04.32-.32.62-.51 1.04-.68.32-.12.8-.27 1.69-.31.96-.04 1.24-.05 3.67-.05zm0-1.64c-2.47 0-2.78.01-3.74.05-.97.04-1.63.2-2.2.42-.6.23-1.11.54-1.61 1.05-.51.5-.82 1.01-1.05 1.61-.22.58-.38 1.24-.42 2.2-.04.97-.05 1.28-.05 3.75s.01 2.78.05 3.74c.04.97.2 1.63.42 2.2.23.6.54 1.11 1.05 1.61.5.51 1.01.82 1.61 1.05.58.22 1.24.38 2.2.42.97.04 1.28.05 3.75.05s2.78-.01 3.74-.05c.97-.04 1.63-.2 2.2-.42.6-.23 1.11-.54 1.61-1.05.5-.5.81-1.01 1.05-1.61.22-.58.38-1.24.42-2.2.04-.97.05-1.28.05-3.75s-.01-2.78-.05-3.74c-.04-.97-.2-1.63-.42-2.2-.23-.6-.54-1.11-1.05-1.61-.5-.5-1.01-.81-1.61-1.05-.58-.22-1.24-.38-2.2-.42-.97-.04-1.28-.05-3.74-.05z" fill="#fff"/><path d="M37.41 31.59c-2.58 0-4.67 2.09-4.67 4.67s2.09 4.67 4.67 4.67 4.67-2.09 4.67-4.67-2.09-4.67-4.67-4.67zm0 7.69a3.03 3.03 0 1 1 0-6.05 3.03 3.03 0 0 1 0 6.05z" fill="#fff"/><path d="M43.35 31.41a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0z" fill="#fff"/></svg>
                         </a>
                         <a href="#" class="d-inline-block">
-                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#00463A" fill-opacity="0.1"/><path d="M31.44 37.77h2.58v10.62c0 .21.17.38.38.38h4.37c.21 0 .38-.17.38-.38v-10.57h2.97c.19 0 .35-.14.38-.34l.45-3.91a.38.38 0 0 0-.38-.42h-3.42v-2.45c0-.74.4-1.11 1.18-1.11h2.23c.21 0 .38-.17.38-.38v-3.59a.38.38 0 0 0-.38-.38h-3.08c-.02 0-.07 0-.14 0-.53 0-2.39.1-3.86 1.45-1.62 1.5-1.4 3.29-1.34 3.6v2.87h-2.71a.38.38 0 0 0-.38.38v3.86c0 .21.17.38.38.38z" fill="#00463A"/></svg>
+                            <svg width="74" height="74" viewBox="0 0 74 74"><path d="M46.67 0H27.33C12.24 0 0 12.24 0 27.33v19.34C0 61.76 12.24 74 27.33 74h19.34C61.76 74 74 61.76 74 46.67V27.33C74 12.24 61.76 0 46.67 0z" fill="#fff" fill-opacity="0.1"/><path d="M31.44 37.77h2.58v10.62c0 .21.17.38.38.38h4.37c.21 0 .38-.17.38-.38v-10.57h2.97c.19 0 .35-.14.38-.34l.45-3.91a.38.38 0 0 0-.38-.42h-3.42v-2.45c0-.74.4-1.11 1.18-1.11h2.23c.21 0 .38-.17.38-.38v-3.59a.38.38 0 0 0-.38-.38h-3.08c-.02 0-.07 0-.14 0-.53 0-2.39.1-3.86 1.45-1.62 1.5-1.4 3.29-1.34 3.6v2.87h-2.71a.38.38 0 0 0-.38.38v3.86c0 .21.17.38.38.38z" fill="#fff"/></svg>
                         </a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <h4 class="body-4 medium mb-4">Between us</h4>
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Between us</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="text-dark-green">About me</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/languagecoaching.html" class="text-dark-green">Language coaching</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="text-dark-green">English Competitions</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="text-dark-green">Matura &amp; 8th grade exams</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="text-dark-green">Business &amp; Medical English</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="text-dark-green">IELTS &amp; Cambridge Certificates (C1/C2)</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="text-dark-green">School age General lessons</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="text-dark-green">Adult Lessons</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/aboutus" style="color:rgba(255,255,255,0.6); text-decoration:none;">About me</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/languagecoaching.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Language coaching</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/competitions.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">English Competitions</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" style="color:rgba(255,255,255,0.6); text-decoration:none;">Matura &amp; 8th grade exams</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" style="color:rgba(255,255,255,0.6); text-decoration:none;">Business &amp; Medical English</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" style="color:rgba(255,255,255,0.6); text-decoration:none;">IELTS &amp; Cambridge Certificates (C1/C2)</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" style="color:rgba(255,255,255,0.6); text-decoration:none;">School age General lessons</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" style="color:rgba(255,255,255,0.6); text-decoration:none;">Adult Lessons</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-2">
-                    <h4 class="body-4 medium mb-4">Students</h4>
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Students</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" class="text-dark-green">Student FAQs</a></li>
-                        <li><a href="#" class="text-dark-green">Online tutoring FAQs</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Student FAQs</a></li>
+                        <li><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Online tutoring FAQs</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3">
-                    <h4 class="body-4 medium mb-4">Resources</h4>
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Resources</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" class="text-dark-green">Help centre</a></li>
-                        <li class="mb-3"><a href="#" class="text-dark-green">Blog</a></li>
-                        <li class="mb-3"><a href="#" class="text-dark-green">Guides</a></li>
-                        <li><a href="https://aarosakura.github.io/MiedzyNami/Store" class="text-dark-green">Store</a></li>
-                        <li><a href="#" class="text-dark-green">Lesson plan</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Help centre</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Blog</a></li>
+                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Guides</a></li>
+                        <li><a href="https://aarosakura.github.io/MiedzyNami/Store" style="color:rgba(255,255,255,0.6); text-decoration:none;">Store</a></li>
+                        <li><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Lesson plan</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="row border-top border-light-mint py-5">
-                <div class="col-12 col-lg-7 body-4">© 2026 Between Us. All rights reserved.</div>
+            <div class="row border-top border-light-mint py-5" style="border-color:rgba(255,255,255,0.08) !important;">
+                <div class="col-12 col-lg-7 body-4" style="color:rgba(255,255,255,0.5);">© 2026 Between Us. All rights reserved.</div>
                 <div class="col-12 col-lg-5 d-flex flex-wrap gap-4">
-                    <a href="#" class="body-4 text-dark-green"><u>Privacy Policy</u></a>
-                    <a href="#" class="body-4 text-dark-green"><u>Cookie Policy</u></a>
-                    <a href="#" class="body-4 text-dark-green"><u>Terms & Conditions</u></a>
+                    <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Privacy Policy</u></a>
+                    <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Cookie Policy</u></a>
+                    <a href="#" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Terms &amp; Conditions</u></a>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // ===== MOBILE MENU TOGGLE =====
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('open');
