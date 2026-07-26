@@ -1052,7 +1052,7 @@
 
         /* ===== HERO WITH BACKGROUND IMAGE ===== */
         .hero-section {
-            min-height: 60vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             position: relative;
@@ -1175,6 +1175,23 @@
             }
         }
 
+        /* ===== CTA SECTION ===== */
+        .cta-section-wrapper {
+            background: var(--teal-ultra-pale);
+            padding: 4rem 0;
+        }
+        .cta-section-wrapper .container {
+            background: var(--teal-pale);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            border: 1px solid rgba(26, 60, 63, 0.08);
+        }
+        @media (max-width: 768px) {
+            .cta-section-wrapper .container {
+                padding: 1.5rem;
+            }
+        }
+
         /* ===== MOBILE MENU OVERLAY ===== */
         .mobile-menu {
             display: none;
@@ -1228,11 +1245,12 @@
             <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="btn btn-link btn-sm">English Competitions</a>
             <a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="btn btn-link btn-sm">Matura &amp; 8th grade exams</a>
             <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-link btn-sm">Business &amp; Medical English</a>
-            <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="btn btn-link btn-sm">IELTS &amp; Cambridge Certificates (C1/C2)</a>
+            <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="btn btn-link btn-sm">IELTS &amp; Cambridge Certificates</a>
             <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="btn btn-link btn-sm">School age General lessons</a>
             <a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="btn btn-link btn-sm">Adult Lessons</a>
             <a href="https://aarosakura.github.io/MiedzyNami/Store" class="btn btn-link btn-sm">Store</a>
             <a href="https://aarosakura.github.io/MiedzyNami/resources.html" class="btn btn-link btn-sm">Resources</a>
+            <a href="https://aarosakura.github.io/MiedzyNami/blog.html" class="btn btn-link btn-sm">Blog</a>
             <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="btn btn-link btn-sm">About me</a>
 
             <!-- SOCIAL ICONS IN HEADER -->
@@ -1267,11 +1285,12 @@
         <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="menu-item">English Competitions <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="menu-item">Matura &amp; 8th grade exams <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="menu-item">Business &amp; Medical English <span>›</span></a>
-        <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="menu-item">IELTS &amp; Cambridge Certificates (C1/C2) <span>›</span></a>
+        <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="menu-item">IELTS &amp; Cambridge Certificates <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="menu-item">School age General lessons <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="menu-item">Adult Lessons <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/Store" class="menu-item">Store <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/resources.html" class="menu-item">Resources <span>›</span></a>
+        <a href="https://aarosakura.github.io/MiedzyNami/blog.html" class="menu-item">Blog <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="menu-item">About us <span>›</span></a>
 
         <!-- Social links in mobile menu -->
@@ -1312,9 +1331,6 @@
         <div class="container hero-content">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8 text-center">
-                    <span class="badge badge-pill mb-4" style="background:rgba(26,60,63,0.75); backdrop-filter:blur(4px); color:#fff;">
-                        📚 Free &amp; Paid Resources
-                    </span>
                     <h1 class="h1">
                         Everything you need<br />
                         to succeed in English.
@@ -1347,7 +1363,6 @@
     <div class="bg-soft-blue py-8" id="free-resources">
         <div class="container">
             <div class="text-center mb-7">
-                <span class="badge badge-pill badge-sage mb-3">🎁 Free</span>
                 <h2 class="h2">Free Resources</h2>
                 <p class="body-2 text-grey-300 mx-auto" style="max-width:600px;">
                     Download these free resources to start improving your English today.
@@ -1435,7 +1450,6 @@
     <div class="bg-teal-ultra-pale py-8" id="store">
         <div class="container">
             <div class="text-center mb-7">
-                <span class="badge badge-pill badge-mint mb-3">🛍️ Premium</span>
                 <h2 class="h2">Premium Resources</h2>
                 <p class="body-2 text-grey-300 mx-auto" style="max-width:600px;">
                     In-depth materials and courses designed for serious learners.
@@ -1484,7 +1498,6 @@
     <div class="bg-soft-blue py-8">
         <div class="container">
             <div class="text-center mb-7">
-                <span class="badge badge-pill badge-sky mb-3">🔗 Useful Links</span>
                 <h2 class="h2">Other Useful Resources</h2>
                 <p class="body-2 text-grey-300 mx-auto" style="max-width:600px;">
                     Handpicked external resources to support your English learning.
@@ -1580,7 +1593,7 @@
                         <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/competitions.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">English Competitions</a></li>
                         <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" style="color:rgba(255,255,255,0.6); text-decoration:none;">Matura &amp; 8th grade exams</a></li>
                         <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" style="color:rgba(255,255,255,0.6); text-decoration:none;">Business &amp; Medical English</a></li>
-                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" style="color:rgba(255,255,255,0.6); text-decoration:none;">IELTS &amp; Cambridge Certificates (C1/C2)</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" style="color:rgba(255,255,255,0.6); text-decoration:none;">IELTS &amp; Cambridge Certificates</a></li>
                         <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" style="color:rgba(255,255,255,0.6); text-decoration:none;">School age General lessons</a></li>
                         <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" style="color:rgba(255,255,255,0.6); text-decoration:none;">Adult Lessons</a></li>
                     </ul>
@@ -1588,16 +1601,13 @@
                 <div class="col-12 col-lg-2">
                     <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Students</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Student FAQs</a></li>
-                        <li><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Online tutoring FAQs</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/faq.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Student FAQs</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-lg-3">
                     <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Resources</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Help centre</a></li>
-                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Blog</a></li>
-                        <li class="mb-3"><a href="#" style="color:rgba(255,255,255,0.6); text-decoration:none;">Guides</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/blog.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Blog</a></li>
                         <li><a href="https://aarosakura.github.io/MiedzyNami/Store" style="color:rgba(255,255,255,0.6); text-decoration:none;">Store</a></li>
                         <li><a href="https://aarosakura.github.io/MiedzyNami/resources.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Resources</a></li>
                     </ul>
