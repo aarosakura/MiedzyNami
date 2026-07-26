@@ -43,10 +43,11 @@
             --warm-white: #f8fbfa;
             --soft-blue-bg: #e8f0f2;
             --card-shadow: rgba(26, 60, 63, 0.08);
+            --whatsapp-green: #25D366;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1370px;
             margin: 0 auto;
             padding: 0 15px;
         }
@@ -65,13 +66,15 @@
         .col-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
         .col-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
         .col-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+        .col-7 { flex: 0 0 58.333%; max-width: 58.333%; padding: 0 15px; }
         .col-lg-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
         .col-lg-5 { flex: 0 0 41.666%; max-width: 41.666%; padding: 0 15px; }
         .col-lg-4 { flex: 0 0 33.333%; max-width: 33.333%; padding: 0 15px; }
         .col-lg-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; }
+        .col-lg-2 { flex: 0 0 16.666%; max-width: 16.666%; padding: 0 15px; }
 
         @media (max-width: 992px) {
-            .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3 {
+            .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2 {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
@@ -85,7 +88,7 @@
             text-align: center;
             border: 1px solid transparent;
             border-radius: 50rem;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             font-size: 0.85rem;
             line-height: 1;
             cursor: pointer;
@@ -147,8 +150,8 @@
         }
 
         .btn-lg {
-            padding: 1rem 2rem;
-            font-size: 1rem;
+            padding: 1.5rem 2.5rem;
+            font-size: 1.25rem;
         }
 
         .btn-link {
@@ -166,66 +169,213 @@
             color: #38d02a;
         }
 
+        /* ===== SOCIAL ICON BUTTONS ===== */
+        .social-icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: transparent;
+            color: var(--teal-dark);
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+        .social-icon-btn:hover {
+            background: rgba(26, 60, 63, 0.08);
+            transform: translateY(-2px);
+        }
+        .social-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .social-icon-btn.whatsapp {
+            color: var(--whatsapp-green);
+        }
+        .social-icon-btn.whatsapp:hover {
+            background: rgba(37, 211, 102, 0.12);
+        }
+
+        .social-icon-btn.instagram {
+            color: #E4405F;
+        }
+        .social-icon-btn.instagram:hover {
+            background: rgba(228, 64, 95, 0.12);
+        }
+
+        .social-icon-btn.facebook {
+            color: #1877F2;
+        }
+        .social-icon-btn.facebook:hover {
+            background: rgba(24, 119, 242, 0.12);
+        }
+
+        /* ===== FLOATING WHATSAPP ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 1050;
+            background: var(--whatsapp-green);
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+        }
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: #fff;
+        }
+        .whatsapp-float .tooltip {
+            position: absolute;
+            right: 72px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+        .whatsapp-float:hover .tooltip {
+            opacity: 1;
+        }
+        .whatsapp-float .tooltip::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-left: 6px solid rgba(0, 0, 0, 0.8);
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+        }
+
+        /* ===== PHONE LINK IN HEADER ===== */
+        .phone-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: var(--teal-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 50rem;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .phone-link:hover {
+            background: rgba(26, 60, 63, 0.06);
+            color: var(--teal-dark);
+        }
+        .phone-link svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
         /* ===== TYPOGRAPHY ===== */
         .h1, h1 {
             font-family: 'Faro', 'Inter', sans-serif;
-            font-size: 3.2rem;
+            font-size: 4.25rem;
             font-weight: 600;
-            line-height: 1.1;
+            line-height: 1;
             color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
         .h2, h2 {
             font-family: 'Faro', 'Inter', sans-serif;
-            font-size: 2.2rem;
+            font-size: 3.625rem;
             font-weight: 600;
-            line-height: 1.2;
+            line-height: 1.1;
             color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
         .h3, h3 {
             font-family: 'Faro', 'Inter', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.75rem;
             font-weight: 600;
-            line-height: 1.2;
+            line-height: 1.15;
             color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
         .h4, h4 {
             font-family: 'Faro', 'Inter', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 600;
-            line-height: 1.2;
+            line-height: 1.15;
+            color: var(--teal-dark);
+            letter-spacing: -0.03em;
+        }
+
+        .display-1 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 8.75rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--teal-dark);
+            letter-spacing: -0.03em;
+        }
+
+        .display-2 {
+            font-family: 'Faro', 'Inter', sans-serif;
+            font-size: 6.25rem;
+            font-weight: 600;
+            line-height: 1;
             color: var(--teal-dark);
             letter-spacing: -0.03em;
         }
 
         .body-1 {
-            font-size: 1.2rem;
+            font-size: 1.625rem;
             font-weight: 500;
             letter-spacing: -0.02em;
-            line-height: 1.4;
+            line-height: 1.2;
         }
 
         .body-2 {
-            font-size: 1.1rem;
+            font-size: 1.375rem;
             letter-spacing: -0.02em;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .body-3 {
-            font-size: 1rem;
+            font-size: 1.25rem;
             letter-spacing: -0.02em;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .body-4 {
-            font-size: 0.9rem;
+            font-size: 1.0625rem;
             letter-spacing: -0.015em;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         .medium { font-weight: 500; }
@@ -279,54 +429,86 @@
         .position-absolute { position: absolute; }
         .overflow-hidden { overflow: hidden; }
 
-        .py-2 { padding: 0.5rem 0; }
         .py-3 { padding: 0.75rem 0; }
         .py-4 { padding: 1.25rem 0; }
         .py-5 { padding: 2rem 0; }
-        .py-6 { padding: 3rem 0; }
         .py-7 { padding: 4rem 0; }
         .py-8 { padding: 4.5rem 0; }
+        .py-9 { padding: 6.5rem 0; }
         .px-2 { padding: 0 0.5rem; }
         .px-3 { padding: 0 0.75rem; }
         .px-4 { padding: 0 1.25rem; }
         .px-5 { padding: 0 2rem; }
+        .px-6 { padding: 0 2.5rem; }
         .px-0 { padding: 0; }
         .pt-4 { padding-top: 1.25rem; }
         .pt-5 { padding-top: 2rem; }
+        .pt-7 { padding-top: 4rem; }
+        .pt-8 { padding-top: 4.5rem; }
         .pb-4 { padding-bottom: 1.25rem; }
         .pb-5 { padding-bottom: 2rem; }
+        .pb-7 { padding-bottom: 4rem; }
+        .pb-8 { padding-bottom: 4.5rem; }
+        .pb-0 { padding-bottom: 0; }
 
-        .my-3 { margin: 0.75rem 0; }
         .my-4 { margin: 1.25rem 0; }
         .my-5 { margin: 2rem 0; }
+        .my-6 { margin: 2.5rem 0; }
         .mt-2 { margin-top: 0.5rem; }
         .mt-3 { margin-top: 0.75rem; }
         .mt-4 { margin-top: 1.25rem; }
         .mt-5 { margin-top: 2rem; }
+        .mt-6 { margin-top: 2.5rem; }
+        .mt-7 { margin-top: 4rem; }
         .mb-2 { margin-bottom: 0.5rem; }
         .mb-3 { margin-bottom: 0.75rem; }
         .mb-4 { margin-bottom: 1.25rem; }
         .mb-5 { margin-bottom: 2rem; }
+        .mb-6 { margin-bottom: 2.5rem; }
+        .mb-7 { margin-bottom: 4rem; }
+        .mb-8 { margin-bottom: 4.5rem; }
+        .mb-0 { margin-bottom: 0; }
         .mx-auto { margin: 0 auto; }
         .ml-auto { margin-left: auto; }
+        .mr-auto { margin-right: auto; }
         .mr-2 { margin-right: 0.5rem; }
         .ml-2 { margin-left: 0.5rem; }
+        .mr-4 { margin-right: 1.25rem; }
 
+        .gap-1 { gap: 0.25rem; }
         .gap-2 { gap: 0.5rem; }
         .gap-3 { gap: 0.75rem; }
-        .gap-4 { gap: 1.25rem; }
+        .gap-5 { gap: 2rem; }
 
         .section-divider {
             width: 60px;
             height: 3px;
             background: var(--teal-light);
             border-radius: 10px;
-            margin: 0.5rem auto 1.5rem;
+            margin: 1rem auto 2rem;
+        }
+        .section-divider-left {
+            width: 60px;
+            height: 3px;
+            background: var(--teal-light);
+            border-radius: 10px;
+            margin: 1rem 0 2rem;
         }
 
         @media (min-width: 768px) {
             .d-md-flex { display: flex; }
             .d-md-none { display: none; }
+            .py-md-10 { padding: 8.75rem 0; }
+            .py-md-8 { padding: 4.5rem 0; }
+            .px-md-5 { padding: 0 2rem; }
+            .px-md-8 { padding: 0 4.5rem; }
+            .mb-md-0 { margin-bottom: 0; }
+            .mb-md-5 { margin-bottom: 2rem; }
+            .mb-md-6 { margin-bottom: 2.5rem; }
+            .mb-md-8 { margin-bottom: 4.5rem; }
+            .mb-md-11 { margin-bottom: 12.5rem; }
+            .pt-md-8 { padding-top: 4.5rem; }
+            .pb-md-10 { padding-bottom: 8.75rem; }
         }
 
         @media (min-width: 992px) {
@@ -336,15 +518,42 @@
             .flex-lg-row { flex-direction: row; }
             .flex-lg-row-reverse { flex-direction: row-reverse; }
             .py-lg-0 { padding: 0; }
+            .px-lg-4 { padding: 0 1.25rem; }
+            .px-lg-6 { padding: 0 2.5rem; }
+            .px-lg-8 { padding: 0 4.5rem; }
+            .pt-lg-6 { padding-top: 2.5rem; }
+            .pt-lg-7 { padding-top: 4rem; }
+            .pt-lg-8 { padding-top: 4.5rem; }
+            .pt-lg-9 { padding-top: 6.5rem; }
+            .pb-lg-6 { padding-bottom: 2.5rem; }
+            .pb-lg-7 { padding-bottom: 4rem; }
+            .pb-lg-9 { padding-bottom: 6.5rem; }
             .mb-lg-0 { margin-bottom: 0; }
+            .mb-lg-5 { margin-bottom: 2rem; }
+            .mb-lg-6 { margin-bottom: 2.5rem; }
+            .mb-lg-8 { margin-bottom: 4.5rem; }
+            .mt-lg-0 { margin-top: 0; }
+            .mt-lg-5 { margin-top: 2rem; }
+            .mt-lg-6 { margin-top: 2.5rem; }
+            .mt-lg-9 { margin-top: 6.5rem; }
+        }
+
+        @media (max-width: 992px) {
+            .h1, h1 { font-size: 2.688rem; }
+            .h2, h2 { font-size: 2.5rem; }
+            .display-1 { font-size: 6.875rem; }
+            .display-2 { font-size: 5rem; }
+            .body-1 { font-size: 1.25rem; }
+            .body-2 { font-size: 1.063rem; }
+            .body-3 { font-size: 0.9375rem; }
+            .body-4 { font-size: 0.9375rem; }
         }
 
         @media (max-width: 768px) {
-            .h1, h1 { font-size: 2.2rem; }
-            .h2, h2 { font-size: 1.8rem; }
-            .body-1 { font-size: 1rem; }
-            .body-2 { font-size: 0.95rem; }
-            .body-3 { font-size: 0.9rem; }
+            .h1, h1 { font-size: 2.625rem; }
+            .h2, h2 { font-size: 2rem; }
+            .display-1 { font-size: 6.25rem; }
+            .display-2 { font-size: 3.125rem; }
         }
 
         /* ===== CARD ===== */
@@ -364,7 +573,7 @@
             box-shadow: 0 12px 40px rgba(26, 60, 63, 0.08);
         }
         .card-body { padding: 1.25rem; flex: 1 1 auto; }
-        @media (min-width: 992px) { .card-body { padding: 1.5rem; } }
+        @media (min-width: 992px) { .card-body { padding: 2rem; } }
 
         .card-soft {
             background: var(--teal-ultra-pale);
@@ -378,8 +587,8 @@
         /* ===== BADGE ===== */
         .badge {
             display: inline-block;
-            padding: 0.5rem 0.875rem;
-            font-size: 0.8rem;
+            padding: 0.75rem 0.875rem;
+            font-size: 0.875rem;
             font-weight: 600;
             line-height: 1;
             border-radius: 0.75rem;
@@ -482,18 +691,19 @@
         }
         .mobile-menu .menu-item:last-child { border-bottom: none; }
 
-        /* ===== FOOTER ===== */
-        .link-border { border-bottom: 1px solid var(--mint-green); }
-        @media (min-width: 992px) { .link-border { border-bottom: none; } }
-
         /* ===== CALENDLY ===== */
         .calendly-inline-widget {
             min-width: 320px;
-            height: 650px;
+            height: 700px;
         }
         @media (max-width: 768px) {
             .calendly-inline-widget {
-                height: 550px;
+                height: 600px;
+            }
+        }
+        @media (max-width: 576px) {
+            .calendly-inline-widget {
+                height: 500px;
             }
         }
 
@@ -521,7 +731,7 @@
 
         /* ===== HERO WITH BACKGROUND IMAGE ===== */
         .hero-section {
-            min-height: 65vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             position: relative;
@@ -592,9 +802,34 @@
             border-color: rgba(255, 255, 255, 0.5);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .hero-section {
-                min-height: 55vh;
+                min-height: 70vh;
+            }
+            .whatsapp-float {
+                width: 52px;
+                height: 52px;
+                bottom: 16px;
+                right: 16px;
+            }
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-section {
+                min-height: 60vh;
+            }
+            .whatsapp-float {
+                width: 48px;
+                height: 48px;
+                bottom: 12px;
+                right: 12px;
+            }
+            .whatsapp-float svg {
+                width: 24px;
+                height: 24px;
             }
         }
 
@@ -616,12 +851,28 @@
             <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="btn btn-link btn-sm">English Competitions</a>
             <a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="btn btn-link btn-sm">Matura &amp; 8th grade exams</a>
             <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="btn btn-link btn-sm">Business &amp; Medical English</a>
-            <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="btn btn-link btn-sm">IELTS &amp; Cambridge Certificates (C1/C2)</a>
+            <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="btn btn-link btn-sm">IELTS &amp; Cambridge Certificates</a>
             <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="btn btn-link btn-sm">School age General lessons</a>
             <a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="btn btn-link btn-sm">Adult Lessons</a>
             <a href="https://aarosakura.github.io/MiedzyNami/Store" class="btn btn-link btn-sm">Store</a>
-            <a href="#" class="btn btn-link btn-sm">Lesson plans</a>
-            <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="btn btn-link btn-sm">About us</a>
+            <a href="https://aarosakura.github.io/MiedzyNami/resources.html" class="btn btn-link btn-sm">Resources</a>
+            <a href="https://aarosakura.github.io/MiedzyNami/blog.html" class="btn btn-link btn-sm">Blog</a>
+            <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="btn btn-link btn-sm">About me</a>
+
+            <!-- SOCIAL ICONS IN HEADER -->
+            <a href="https://www.instagram.com/polished_english_karolina/" target="_blank" class="social-icon-btn instagram" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61561344302832" target="_blank" class="social-icon-btn facebook" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+
+            <!-- PHONE NUMBER -->
+            <a href="tel:+48888400705" class="phone-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>+48 888 400 705</span>
+            </a>
+
             <a href="#" class="btn btn-link btn-sm ml-auto" style="margin-left:auto;">Login</a>
             <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;padding:0.3rem 0.7rem;font-size:0.75rem;">
                 <svg width="10" height="11" viewBox="0 0 12 13" fill="none" style="margin-right:3px;"><circle cx="4.95103" cy="5.89976" r="4.10103" stroke="#00463A" stroke-width="1.7"/><path d="M10.4479 12.6529C10.7798 12.9848 11.318 12.9848 11.65 12.6529C11.9819 12.3209 11.9819 11.7827 11.65 11.4508L10.4479 12.6529ZM7.53958 9.7446L10.4479 12.6529L11.65 11.4508L8.74167 8.54251L7.53958 9.7446Z" fill="#00463A"/></svg>
@@ -640,15 +891,40 @@
         <a href="https://aarosakura.github.io/MiedzyNami/competitions.html" class="menu-item">English Competitions <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" class="menu-item">Matura &amp; 8th grade exams <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" class="menu-item">Business &amp; Medical English <span>›</span></a>
-        <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="menu-item">IELTS &amp; Cambridge Certificates (C1/C2) <span>›</span></a>
+        <a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" class="menu-item">IELTS &amp; Cambridge Certificates <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" class="menu-item">School age General lessons <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" class="menu-item">Adult Lessons <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/Store" class="menu-item">Store <span>›</span></a>
-        <a href="#" class="menu-item">Lesson plans <span>›</span></a>
+        <a href="https://aarosakura.github.io/MiedzyNami/resources.html" class="menu-item">Resources <span>›</span></a>
+        <a href="https://aarosakura.github.io/MiedzyNami/blog.html" class="menu-item">Blog <span>›</span></a>
         <a href="https://aarosakura.github.io/MiedzyNami/aboutus" class="menu-item">About us <span>›</span></a>
-        <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary mt-4">Book a consultation</a>
+
+        <!-- Social links in mobile menu -->
+        <div class="d-flex gap-3 mt-4 mb-3">
+            <a href="https://www.instagram.com/polished_english_karolina/" target="_blank" class="social-icon-btn instagram" style="width:44px;height:44px;font-size:1.5rem;">
+                <svg viewBox="0 0 24 24" style="width:28px;height:28px;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61561344302832" target="_blank" class="social-icon-btn facebook" style="width:44px;height:44px;font-size:1.5rem;">
+                <svg viewBox="0 0 24 24" style="width:28px;height:28px;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/48888400705" target="_blank" class="social-icon-btn whatsapp" style="width:44px;height:44px;font-size:1.5rem;">
+                <svg viewBox="0 0 24 24" style="width:28px;height:28px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="tel:+48888400705" class="phone-link" style="font-size:1rem;padding:0.5rem 0.75rem;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>+48 888 400 705</span>
+            </a>
+        </div>
+
+        <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary mt-2">Book a consultation</a>
         <a href="#" class="btn btn-link mt-2">Login</a>
     </div>
+
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/48888400705" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="tooltip">Chat on WhatsApp</span>
+    </a>
 
     <!-- ===== HERO WITH BACKGROUND IMAGE ===== -->
     <section class="hero-section">
@@ -661,9 +937,6 @@
         <div class="container hero-content">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8 text-center">
-                    <span class="badge badge-pill mb-3" style="background:rgba(26,60,63,0.75); backdrop-filter:blur(4px); color:#fff;">
-                        🧒 School Age Lessons
-                    </span>
                     <h1 class="h1">
                         English Lessons<br>
                         for School-Aged Children
@@ -682,11 +955,10 @@
     </section>
 
     <!-- ===== WHAT WE DO ===== -->
-    <section id="what-we-do" class="py-6 bg-soft-blue">
+    <section id="what-we-do" class="py-8 bg-soft-blue">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-lg-6">
-                    <span class="badge badge-pill badge-sage mb-3">📚 What We Do</span>
                     <h2 class="h2 mb-4">Supporting Young Learners</h2>
                     <p class="body-2 mb-3 text-grey-200">
                         I provide one-to-one English lessons for school-aged children — from their very first words in English right through to near-native fluency. Whether your child needs to catch up, build confidence, or prepare for exams, I tailor every lesson to their needs.
@@ -757,65 +1029,64 @@
     </section>
 
     <!-- ===== WHAT WE COVER ===== -->
-    <section class="py-6">
+    <section class="py-8">
         <div class="container text-center">
-            <span class="badge badge-pill badge-mint mb-3">🎯 What We Cover</span>
             <h2 class="h2 mb-3">Everything Your Child Needs</h2>
             <p class="body-2 text-grey-300 mb-5" style="max-width:600px;margin:0 auto 2rem;">
                 To succeed in English — at school and beyond.
             </p>
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
                     <div class="card card-soft h-100">
                         <div class="card-body text-center">
-                            <span style="font-size:2rem;">📖</span>
+                            <span style="font-size:3rem;">📖</span>
                             <h4 class="h4 mt-2">Reading</h4>
-                            <p class="body-4 text-grey-200">Building reading skills from simple texts to complex literature and comprehension.</p>
+                            <p class="body-3 text-grey-200">Building reading skills from simple texts to complex literature and comprehension.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
                     <div class="card card-soft h-100">
                         <div class="card-body text-center">
-                            <span style="font-size:2rem;">✍️</span>
+                            <span style="font-size:3rem;">✍️</span>
                             <h4 class="h4 mt-2">Writing</h4>
-                            <p class="body-4 text-grey-200">From sentences to essays — structured writing for school and exams.</p>
+                            <p class="body-3 text-grey-200">From sentences to essays — structured writing for school and exams.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
                     <div class="card card-soft h-100">
                         <div class="card-body text-center">
-                            <span style="font-size:2rem;">💬</span>
+                            <span style="font-size:3rem;">💬</span>
                             <h4 class="h4 mt-2">Speaking</h4>
-                            <p class="body-4 text-grey-200">Building fluency, pronunciation, and confidence in spoken English.</p>
+                            <p class="body-3 text-grey-200">Building fluency, pronunciation, and confidence in spoken English.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
                     <div class="card card-soft h-100">
                         <div class="card-body text-center">
-                            <span style="font-size:2rem;">🎧</span>
+                            <span style="font-size:3rem;">🎧</span>
                             <h4 class="h4 mt-2">Listening</h4>
-                            <p class="body-4 text-grey-200">Developing skills to understand spoken English in different accents and contexts.</p>
+                            <p class="body-3 text-grey-200">Developing skills to understand spoken English in different accents and contexts.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
                     <div class="card card-soft h-100">
                         <div class="card-body text-center">
-                            <span style="font-size:2rem;">🧠</span>
+                            <span style="font-size:3rem;">🧠</span>
                             <h4 class="h4 mt-2">Grammar &amp; Vocabulary</h4>
-                            <p class="body-4 text-grey-200">Mastering the language structures and words needed for school success.</p>
+                            <p class="body-3 text-grey-200">Mastering the language structures and words needed for school success.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
                     <div class="card card-soft h-100">
                         <div class="card-body text-center">
-                            <span style="font-size:2rem;">📝</span>
+                            <span style="font-size:3rem;">📝</span>
                             <h4 class="h4 mt-2">Exam &amp; Test Preparation</h4>
-                            <p class="body-4 text-grey-200">Preparing for school tests, exams, and beyond — with confidence.</p>
+                            <p class="body-3 text-grey-200">Preparing for school tests, exams, and beyond — with confidence.</p>
                         </div>
                     </div>
                 </div>
@@ -824,10 +1095,9 @@
     </section>
 
     <!-- ===== WHY ME ===== -->
-    <section class="py-6 bg-soft-blue">
+    <section class="py-8 bg-soft-blue">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge badge-pill badge-sky mb-3">✨ Why Work With Me?</span>
                 <h2 class="h2">Experience, Expertise, Commitment</h2>
                 <p class="body-2 text-grey-300" style="max-width:600px;margin:0 auto;">
                     A genuine commitment to every student's success.
@@ -835,39 +1105,39 @@
                 <div class="section-divider"></div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
-                            <span style="font-size:2.5rem;">🧑‍🏫</span>
+                            <span style="font-size:3rem;">🧑‍🏫</span>
                             <h4 class="h4 mt-2">10,000+ Lessons</h4>
-                            <p class="body-4 text-grey-200">Over 10,000 lessons delivered to school-aged students of all levels.</p>
+                            <p class="body-3 text-grey-200">Over 10,000 lessons delivered to school-aged students of all levels.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
-                            <span style="font-size:2.5rem;">🇬🇧</span>
+                            <span style="font-size:3rem;">🇬🇧</span>
                             <h4 class="h4 mt-2">UK Expertise</h4>
-                            <p class="body-4 text-grey-200">Over a decade in England — I know how English is taught and spoken.</p>
+                            <p class="body-3 text-grey-200">Over a decade in England — I know how English is taught and spoken.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
-                            <span style="font-size:2.5rem;">📚</span>
+                            <span style="font-size:3rem;">📚</span>
                             <h4 class="h4 mt-2">Bespoke Materials</h4>
-                            <p class="body-4 text-grey-200">Over 5,000 proprietary worksheets designed for school-aged learners.</p>
+                            <p class="body-3 text-grey-200">Over 5,000 proprietary worksheets designed for school-aged learners.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-4">
                     <div class="card bg-white text-center h-100" style="border:1px solid rgba(26,60,63,0.06);">
                         <div class="card-body">
-                            <span style="font-size:2.5rem;">❤️</span>
+                            <span style="font-size:3rem;">❤️</span>
                             <h4 class="h4 mt-2">Confidence First</h4>
-                            <p class="body-4 text-grey-200">Building confidence is the first step — the results follow naturally.</p>
+                            <p class="body-3 text-grey-200">Building confidence is the first step — the results follow naturally.</p>
                         </div>
                     </div>
                 </div>
@@ -876,7 +1146,7 @@
     </section>
 
     <!-- ===== TESTIMONIAL ===== -->
-    <section class="py-6">
+    <section class="py-8">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-8">
@@ -895,10 +1165,9 @@
     </section>
 
     <!-- ===== CALENDLY ===== -->
-    <section id="calendly" class="py-6 bg-teal-ultra-pale">
+    <section id="calendly" class="py-8 bg-teal-ultra-pale">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge badge-pill badge-sage mb-3">📅 Book Now</span>
                 <h2 class="h2">Book a Free Consultation</h2>
                 <p class="body-2 text-grey-300" style="max-width:500px;margin:0 auto;">
                     Choose a time that works for you. Let's discuss your child's goals and how I can help.
@@ -909,7 +1178,7 @@
                 <div class="col-12 col-lg-8">
                     <div class="card" style="border:none; box-shadow: 0 8px 40px rgba(26,60,63,0.08);">
                         <div class="card-body p-0 overflow-hidden rounded-lg">
-                            <div class="calendly-inline-widget" data-url="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation?hide_gdpr_banner=1" style="min-width:320px;height:650px;"></div>
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
                             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                         </div>
                     </div>
@@ -924,7 +1193,7 @@
     </section>
 
     <!-- ===== CTA ===== -->
-    <section class="py-6" style="background: var(--teal-pale); border-top:1px solid rgba(26,60,63,0.06);">
+    <section class="py-8" style="background: var(--teal-pale); border-top:1px solid rgba(26,60,63,0.06);">
         <div class="container text-center">
             <h2 class="h2 mb-3">Ready to help your child<br>succeed in English?</h2>
             <p class="body-2 text-grey-200 mb-4" style="max-width:500px;margin:0 auto 1.5rem;">
@@ -938,15 +1207,69 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-dark-green pt-4 pb-3" style="color:rgba(255,255,255,0.7);">
+    <footer class="bg-dark-green pt-5" style="color:rgba(255,255,255,0.7);">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6">
-                    <span style="font-family:'Faro','Inter',sans-serif;font-size:1.5rem;font-weight:600;color:var(--teal-pale);letter-spacing:-0.03em;">Between us</span>
-                    <p class="body-4 mt-1" style="color:rgba(255,255,255,0.6);">English tutoring with a British touch.</p>
+            <div class="row mb-5">
+                <div class="col-12">
+                    <span style="font-family:'Faro','Inter',sans-serif;font-size:2rem;font-weight:600;color:var(--teal-pale);letter-spacing:-0.03em;">Between us</span>
+                    <p class="body-4 mt-2" style="color:rgba(255,255,255,0.6);">English tutoring with a British touch.</p>
                 </div>
-                <div class="col-12 col-lg-6 text-lg-right">
-                    <p class="body-4" style="color:rgba(255,255,255,0.5);">© 2026 All rights reserved.</p>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <p class="body-4 medium" style="color:rgba(255,255,255,0.8);">Find a tutor who you really click with.</p>
+                    <div class="my-5 d-flex gap-3">
+                        <a href="https://www.instagram.com/polished_english_karolina/" target="_blank" class="social-icon-btn instagram" style="width:44px;height:44px;background:rgba(255,255,255,0.08);">
+                            <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#fff;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61561344302832" target="_blank" class="social-icon-btn facebook" style="width:44px;height:44px;background:rgba(255,255,255,0.08);">
+                            <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#fff;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://wa.me/48888400705" target="_blank" class="social-icon-btn whatsapp" style="width:44px;height:44px;background:rgba(255,255,255,0.08);">
+                            <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#fff;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
+                        <a href="tel:+48888400705" class="phone-link" style="color:rgba(255,255,255,0.8);font-size:0.9rem;padding:0.5rem 0.75rem;background:rgba(255,255,255,0.08);border-radius:50rem;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <span>+48 888 400 705</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Between us</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/aboutus" style="color:rgba(255,255,255,0.6); text-decoration:none;">About me</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/languagecoaching.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Language coaching</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/competitions.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">English Competitions</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/Matura8thGradeExam" style="color:rgba(255,255,255,0.6); text-decoration:none;">Matura &amp; 8th grade exams</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/businessandMedical" style="color:rgba(255,255,255,0.6); text-decoration:none;">Business &amp; Medical English</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/IELTSandCambridge" style="color:rgba(255,255,255,0.6); text-decoration:none;">IELTS &amp; Cambridge Certificates</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/SchoolAgeGeneralLessons" style="color:rgba(255,255,255,0.6); text-decoration:none;">School age General lessons</a></li>
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/AdultLearning" style="color:rgba(255,255,255,0.6); text-decoration:none;">Adult Lessons</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-2">
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Students</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/faq.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Student FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h4 class="body-4 medium mb-4" style="color:rgba(255,255,255,0.8);">Resources</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><a href="https://aarosakura.github.io/MiedzyNami/blog.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Blog</a></li>
+                        <li><a href="https://aarosakura.github.io/MiedzyNami/Store" style="color:rgba(255,255,255,0.6); text-decoration:none;">Store</a></li>
+                        <li><a href="https://aarosakura.github.io/MiedzyNami/resources.html" style="color:rgba(255,255,255,0.6); text-decoration:none;">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row border-top border-light-mint py-5" style="border-color:rgba(255,255,255,0.08) !important;">
+                <div class="col-12 col-lg-7 body-4" style="color:rgba(255,255,255,0.5);">© 2026 Between Us. All rights reserved.</div>
+                <div class="col-12 col-lg-5 d-flex flex-wrap" style="gap: 0.5rem 1.25rem; align-items: center;">
+                    <a href="/MiedzyNami/privacy-policy.html" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Privacy Policy</u></a>
+                    <span style="color:rgba(255,255,255,0.3);">|</span>
+                    <a href="/MiedzyNami/cookie-policy.html" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Cookie Policy</u></a>
+                    <span style="color:rgba(255,255,255,0.3);">|</span>
+                    <a href="/MiedzyNami/terms-conditions.html" style="color:rgba(255,255,255,0.5); text-decoration:none;"><u>Terms &amp; Conditions</u></a>
                 </div>
             </div>
         </div>
