@@ -319,17 +319,16 @@
             border-bottom: 6px solid transparent;
         }
 
-        /* ===== PHONE LINK - ICON ONLY ===== */
+        /* ===== PHONE LINK ===== */
         .phone-link {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 0px;
+            gap: 4px;
             color: var(--teal-dark);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.7rem;
-            padding: 0.15rem 0.25rem;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
             border-radius: 50rem;
             transition: all 0.2s ease;
             white-space: nowrap;
@@ -339,12 +338,9 @@
             background: rgba(26, 60, 63, 0.06);
             color: var(--teal-dark);
         }
-        .phone-link span {
-            display: none !important;
-        }
         .phone-link svg {
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             flex-shrink: 0;
         }
 
@@ -996,7 +992,7 @@
         .navbar {
             display: flex;
             align-items: center;
-            padding: 0.3rem 0.8rem;
+            padding: 0.3rem 1rem;
             background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(26, 60, 63, 0.06);
@@ -1004,13 +1000,13 @@
             top: 0;
             z-index: 1030;
             flex-wrap: nowrap;
-            gap: 0.15rem;
-            min-height: 40px;
+            gap: 0.3rem;
+            min-height: 44px;
         }
         .navbar .logo {
-            margin-right: 0.3rem;
+            margin-right: 0.5rem;
             flex-shrink: 0;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             font-family: 'Faro', 'Inter', sans-serif;
             font-weight: 600;
             color: var(--teal-dark);
@@ -1020,7 +1016,7 @@
         .navbar .nav-links {
             display: flex;
             align-items: center;
-            gap: 0.05rem;
+            gap: 0.1rem;
             flex: 1;
             flex-wrap: nowrap;
             overflow-x: auto;
@@ -1034,9 +1030,8 @@
             white-space: nowrap;
         }
         .navbar .nav-links .btn-link {
-            font-size: 0.6rem;
-            padding: 0.15rem 0.3rem;
-            white-space: nowrap;
+            font-size: 0.75rem;
+            padding: 0.25rem 0.4rem;
         }
         .hamburger {
             display: none;
@@ -1049,27 +1044,59 @@
             flex-shrink: 0;
         }
 
-        /* ===== SMALLER CONSULTATION BUTTON ===== */
-        .navbar .nav-links .btn-primary.btn-sm {
-            font-size: 0.5rem;
-            padding: 0.15rem 0.4rem;
-            gap: 2px;
-            flex-shrink: 0;
-        }
-        .navbar .nav-links .btn-primary.btn-sm svg {
-            width: 8px;
-            height: 8px;
-            margin-right: 2px;
-        }
-
-        /* ===== SMALLER SOCIAL ICONS ===== */
-        .navbar .nav-links .social-icon-btn {
-            width: 24px;
-            height: 24px;
-        }
-        .navbar .nav-links .social-icon-btn svg {
-            width: 14px;
-            height: 14px;
+        /* ===== LAPTOP FIX (992px - 1400px) ===== */
+        @media (max-width: 1400px) and (min-width: 993px) {
+            /* Shrink nav links */
+            .navbar .nav-links .btn-link {
+                font-size: 0.6rem;
+                padding: 0.15rem 0.3rem;
+            }
+            
+            /* Shrink social icons */
+            .navbar .nav-links .social-icon-btn {
+                width: 26px;
+                height: 26px;
+            }
+            .navbar .nav-links .social-icon-btn svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            /* Hide phone number text - show only icon */
+            .phone-link span {
+                display: none;
+            }
+            .phone-link {
+                padding: 0.15rem 0.3rem;
+            }
+            .phone-link svg {
+                width: 14px;
+                height: 14px;
+            }
+            
+            /* Shrink consultation button */
+            .navbar .nav-links .btn-primary.btn-sm {
+                font-size: 0.55rem;
+                padding: 0.15rem 0.4rem;
+            }
+            .navbar .nav-links .btn-primary.btn-sm svg {
+                width: 8px;
+                height: 8px;
+                margin-right: 2px;
+            }
+            
+            /* Smaller gap between items */
+            .navbar .nav-links {
+                gap: 0.05rem;
+            }
+            .navbar {
+                gap: 0.15rem;
+                padding: 0.3rem 0.6rem;
+            }
+            .navbar .logo {
+                font-size: 0.95rem;
+                margin-right: 0.3rem;
+            }
         }
 
         /* ===== HAMBURGER ONLY ON SMALL SCREENS ===== */
@@ -1352,16 +1379,16 @@
                 <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
 
-            <!-- PHONE NUMBER - ICON ONLY -->
+            <!-- PHONE NUMBER -->
             <a href="tel:+48888400705" class="phone-link">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0122 16.92z"/></svg>
                 <span>+48 888 400 705</span>
             </a>
 
-            <!-- CONSULTATION BUTTON - SMALLER -->
-            <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;padding:0.15rem 0.4rem;font-size:0.5rem;gap:2px;">
-                <svg width="8" height="8" viewBox="0 0 12 13" fill="none" style="margin-right:2px;"><circle cx="4.95103" cy="5.89976" r="4.10103" stroke="#00463A" stroke-width="1.7"/><path d="M10.4479 12.6529C10.7798 12.9848 11.318 12.9848 11.65 12.6529C11.9819 12.3209 11.9819 11.7827 11.65 11.4508L10.4479 12.6529ZM7.53958 9.7446L10.4479 12.6529L11.65 11.4508L8.74167 8.54251L7.53958 9.7446Z" fill="#00463A"/></svg>
-                Umów
+            <!-- CONSULTATION BUTTON -->
+            <a href="https://calendly.com/d/dvn8-4pn-9v8/free-20-minute-consultation" target="_blank" class="btn btn-primary btn-sm d-flex align-items-center" style="flex-shrink:0;">
+                <svg width="10" height="11" viewBox="0 0 12 13" fill="none" style="margin-right:3px;"><circle cx="4.95103" cy="5.89976" r="4.10103" stroke="#00463A" stroke-width="1.7"/><path d="M10.4479 12.6529C10.7798 12.9848 11.318 12.9848 11.65 12.6529C11.9819 12.3209 11.9819 11.7827 11.65 11.4508L10.4479 12.6529ZM7.53958 9.7446L10.4479 12.6529L11.65 11.4508L8.74167 8.54251L7.53958 9.7446Z" fill="#00463A"/></svg>
+                Umów konsultację
             </a>
         </div>
         <button class="hamburger" onclick="toggleMobileMenu()">
