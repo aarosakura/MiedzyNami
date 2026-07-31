@@ -3,7 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Between Us – Nauka angielskiego z brytyjskim akcentem</title>
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -1286,6 +1285,63 @@
             .whatsapp-float svg {
                 width: 24px;
                 height: 24px;
+            }
+        }
+
+        /* ===== FIX: NAVIGATION OVERFLOW ON MEDIUM SCREENS ===== */
+
+        /* For laptop screens between 768px and 1400px */
+        @media (max-width: 1400px) and (min-width: 769px) {
+            .navbar .nav-links {
+                display: flex !important;  /* Keep showing the links */
+                overflow-x: auto;          /* Allow horizontal scrolling if needed */
+                flex-wrap: nowrap;
+                gap: 0.05rem;
+            }
+            
+            .navbar .nav-links .btn-link {
+                font-size: 0.6rem;         /* Make text smaller */
+                padding: 0.2rem 0.3rem;
+                white-space: nowrap;
+            }
+            
+            .navbar .nav-links .social-icon-btn {
+                width: 26px;
+                height: 26px;
+            }
+            
+            .navbar .nav-links .social-icon-btn svg {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .phone-link span {
+                font-size: 0.65rem;        /* Smaller phone number */
+            }
+            
+            .navbar .nav-links .btn-primary {
+                font-size: 0.6rem;
+                padding: 0.2rem 0.5rem;
+            }
+        }
+
+        /* For smaller laptops/screens between 992px and 1400px - HIDE PHONE NUMBER */
+        @media (max-width: 1200px) and (min-width: 992px) {
+            .navbar .phone-link span {
+                display: none;             /* Hide the phone number text, keep icon */
+            }
+            .navbar .phone-link {
+                padding: 0.2rem 0.3rem;
+            }
+        }
+
+        /* For tablets and very small laptops (768px - 992px) - SHOW HAMBURGER */
+        @media (max-width: 992px) {
+            .navbar .nav-links {
+                display: none !important;  /* Hide all nav links */
+            }
+            .hamburger {
+                display: block !important; /* Show hamburger menu */
             }
         }
     </style>
