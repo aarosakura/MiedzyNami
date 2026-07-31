@@ -1025,7 +1025,6 @@ h4 {
     padding: 0.25rem 0.4rem;
 }
 .hamburger {
-    display: none;
     background: var(--bright-green);
     border: none;
     border-radius: 50%;
@@ -1033,28 +1032,6 @@ h4 {
     cursor: pointer;
     margin-left: auto;
     flex-shrink: 0;
-}
-
-/* ===== HAMBURGER ON LAPTOPS & SMALLER SCREENS ===== */
-/* Hide nav links, show hamburger on screens smaller than 1600px */
-@media (max-width: 1600px) {
-    .navbar .nav-links {
-        display: none !important;
-    }
-    .hamburger {
-        display: block !important;
-    }
-}
-
-/* ===== FULL NAVBAR ON LARGE DESKTOPS ===== */
-/* Show all nav links, hide hamburger on screens 1600px and wider */
-@media (min-width: 1601px) {
-    .navbar .nav-links {
-        display: flex !important;
-    }
-    .hamburger {
-        display: none !important;
-    }
 }
 
 /* ===== STATS GRID ===== */
@@ -1295,5 +1272,27 @@ h4 {
     .whatsapp-float svg {
         width: 24px;
         height: 24px;
+    }
+}
+
+/* ===== NAVIGATION RESPONSIVE: HAMBURGER ON LAPTOPS, FULL ON DESKTOPS ===== */
+
+/* On screens smaller than 1600px (laptops and below): Show hamburger, hide nav links */
+@media (max-width: 1600px) {
+    .navbar .nav-links {
+        display: none !important;
+    }
+    .hamburger {
+        display: block !important;
+    }
+}
+
+/* On screens 1600px and wider (large desktops): Show full navbar, hide hamburger */
+@media (min-width: 1601px) {
+    .navbar .nav-links {
+        display: flex !important;
+    }
+    .hamburger {
+        display: none !important;
     }
 }
