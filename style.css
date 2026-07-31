@@ -1296,3 +1296,4 @@ h4 {
         display: none !important;
     }
 }
+.hamburger { display: block !important; }
